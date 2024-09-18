@@ -17,5 +17,12 @@ namespace NOC_Email
 		{
 			InitializeComponent();
 		}
+//		Button responsável por encaminhar informações
+		void ButtonEncaminharEmail(object sender, EventArgs e)
+		{
+			if()
+			{
+			}
+		}
 	}
 }
