@@ -1,0 +1,8 @@
+C:\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe.config
+C:\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe
+C:\NOC_Email\NOC_Email\bin\Debug\NOC_Email.pdb
+C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csprojResolveAssemblyReference.cache
+C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.MainForm.resources
+C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csproj.GenerateResource.Cache
+C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.exe
+C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
