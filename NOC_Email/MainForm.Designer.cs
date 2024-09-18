@@ -19,7 +19,7 @@ namespace NOC_Email
 		private System.Windows.Forms.TextBox expedienteDoCliente;
 		private System.Windows.Forms.TextBox motivoDoReparo;
 		private System.Windows.Forms.TextBox formaDeContato;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button buttonEncaminharEmail;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
@@ -53,7 +53,7 @@ namespace NOC_Email
 			this.expedienteDoCliente = new System.Windows.Forms.TextBox();
 			this.motivoDoReparo = new System.Windows.Forms.TextBox();
 			this.formaDeContato = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.buttonEncaminharEmail = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -112,14 +112,15 @@ namespace NOC_Email
 			this.formaDeContato.Size = new System.Drawing.Size(250, 27);
 			this.formaDeContato.TabIndex = 5;
 			// 
-			// button1
+			// buttonEncaminharEmail
 			// 
-			this.button1.Location = new System.Drawing.Point(317, 202);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(84, 32);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "Encaminhar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.buttonEncaminharEmail.Location = new System.Drawing.Point(317, 202);
+			this.buttonEncaminharEmail.Name = "buttonEncaminharEmail";
+			this.buttonEncaminharEmail.Size = new System.Drawing.Size(84, 32);
+			this.buttonEncaminharEmail.TabIndex = 8;
+			this.buttonEncaminharEmail.Text = "Encaminhar";
+			this.buttonEncaminharEmail.UseVisualStyleBackColor = true;
+			this.buttonEncaminharEmail.Click += new System.EventHandler(this.ButtonEncaminharEmail);
 			// 
 			// label1
 			// 
@@ -192,7 +193,7 @@ namespace NOC_Email
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.buttonEncaminharEmail);
 			this.Controls.Add(this.motivoDoReparo);
 			this.Controls.Add(this.formaDeContato);
 			this.Controls.Add(this.expedienteDoCliente);
