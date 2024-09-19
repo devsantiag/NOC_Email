@@ -17,12 +17,25 @@ namespace NOC_Email
 		{
 			InitializeComponent();
 		}
+		
 //		Button responsável por encaminhar informações
 		void ButtonEncaminharEmail(object sender, EventArgs e)
 		{
-			if()
-			{
-			}
+			
+			string containerTexto = nomeCliente.Text + " " +
+				designacao.Text + " " +
+				expedienteDoCliente.Text + " " +
+				formaDeContato.Text + " " +
+				motivoDoReparo.Text;
+			
+			string resultado = string.IsNullOrWhiteSpace(containerTexto) ? "Um ou mais campos encontram-se vazios. Tente novamente, por favor!" : "";
+			MessageBox.Show(resultado);
+		}
+		
+//		Responsável por processar o corpo de texto
+		void sendEmail (object sender, EventArgs e)
+		{
+			
 		}
 	}
 }
