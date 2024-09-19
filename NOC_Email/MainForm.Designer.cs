@@ -23,7 +23,6 @@ namespace NOC_Email
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox textBox1;
-
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing) {
@@ -190,6 +189,7 @@ namespace NOC_Email
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(250, 27);
 			this.textBox1.TabIndex = 16;
+//			this.textBox1.TextChanged += new System.EventHandler(this.TextBox1TextChanged);
 			// 
 			// MainForm
 			// 
@@ -218,6 +218,31 @@ namespace NOC_Email
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
+		}// 
+//			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+//			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+//			this.BackColor = System.Drawing.SystemColors.Menu;
+//			this.ClientSize = new System.Drawing.Size(417, 291);
+//			this.Controls.Add(this.label6);
+//			this.Controls.Add(this.textBox1);
+//			this.Controls.Add(this.button3);
+//			this.Controls.Add(this.label5);
+//			this.Controls.Add(this.label4);
+//			this.Controls.Add(this.label3);
+//			this.Controls.Add(this.label2);
+//			this.Controls.Add(this.label1);
+//			this.Controls.Add(this.buttonEncaminharEmail);
+//			this.Controls.Add(this.motivoDoReparo);
+//			this.Controls.Add(this.formaDeContato);
+//			this.Controls.Add(this.expedienteDoCliente);
+//			this.Controls.Add(this.designacao);
+//			this.Controls.Add(this.nomeCliente);
+//			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+//			this.MaximizeBox = false;
+//			this.Name = "MainForm";
+//			this.Text = "NOC_Email";
+//			this.ResumeLayout(false);
+//			this.PerformLayout();
+
 		}
 	}
-}
