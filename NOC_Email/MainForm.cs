@@ -72,7 +72,7 @@ namespace NOC_Email
 			designacao.Text = "";
 			expedienteDoCliente.Text = "";
 			formaDeContato.Text = "";
-			motivoDoReparo.Text = ""; 
+			motivoDoReparo.Text = "";
 		}
 	}
 }
