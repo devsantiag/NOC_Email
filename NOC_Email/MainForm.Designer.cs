@@ -20,7 +20,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button buttonApagar;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox tituloDeReparo;
 		protected override void Dispose(bool disposing)
@@ -46,7 +46,7 @@ namespace NOC_Email
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
+			this.buttonApagar = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
@@ -161,14 +161,15 @@ namespace NOC_Email
 			this.label5.TabIndex = 14;
 			this.label5.Text = "Forma de Contato";
 			// 
-			// button3
+			// buttonApagar
 			// 
-			this.button3.Location = new System.Drawing.Point(230, 235);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(84, 47);
-			this.button3.TabIndex = 15;
-			this.button3.Text = "Apagar";
-			this.button3.UseVisualStyleBackColor = true;
+			this.buttonApagar.Location = new System.Drawing.Point(230, 235);
+			this.buttonApagar.Name = "buttonApagar";
+			this.buttonApagar.Size = new System.Drawing.Size(84, 47);
+			this.buttonApagar.TabIndex = 15;
+			this.buttonApagar.Text = "Apagar";
+			this.buttonApagar.UseVisualStyleBackColor = true;
+			this.buttonApagar.Click += new System.EventHandler(this.ButtonApagarClick);
 			// 
 			// label6
 			// 
@@ -198,7 +199,7 @@ namespace NOC_Email
 			this.ClientSize = new System.Drawing.Size(417, 291);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.tituloDeReparo);
-			this.Controls.Add(this.button3);
+			this.Controls.Add(this.buttonApagar);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
