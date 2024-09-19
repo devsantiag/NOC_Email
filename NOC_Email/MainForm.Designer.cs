@@ -84,7 +84,7 @@ namespace NOC_Email
 			// motivoDoReparo
 			// 
 			this.motivoDoReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.motivoDoReparo.Location = new System.Drawing.Point(154, 200);
+			this.motivoDoReparo.Location = new System.Drawing.Point(154, 202);
 			this.motivoDoReparo.MaxLength = 70;
 			this.motivoDoReparo.Multiline = true;
 			this.motivoDoReparo.Name = "motivoDoReparo";
@@ -183,13 +183,12 @@ namespace NOC_Email
 			// textBox1
 			// 
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(155, 10);
+			this.textBox1.Location = new System.Drawing.Point(154, 10);
 			this.textBox1.MaxLength = 70;
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(250, 27);
 			this.textBox1.TabIndex = 16;
-//			this.textBox1.TextChanged += new System.EventHandler(this.TextBox1TextChanged);
 			// 
 			// MainForm
 			// 
