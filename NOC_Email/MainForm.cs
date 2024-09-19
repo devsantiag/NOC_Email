@@ -15,6 +15,14 @@ namespace NOC_Email
 		public MainForm()
 		{
 			InitializeComponent();
+			tituloDeReparo.TabIndex = 0;
+			nomeCliente.TabIndex = 1;
+			designacao.TabIndex = 2;
+			expedienteDoCliente.TabIndex = 3;
+			formaDeContato.TabIndex = 4;
+			motivoDoReparo.TabIndex = 5;
+			buttonEncaminharEmail.TabIndex = 6;
+			buttonApagar.TabIndex = 7;
 		}
 		
 //		Button responsável por encaminhar informações
@@ -39,7 +47,7 @@ namespace NOC_Email
 		}
 		
 //		Responsável por processar o corpo de texto
-		void CreateOutlookEmail (string title, string body)	
+		void CreateOutlookEmail (string title, string body)
 		{
 			try {
 				
@@ -54,6 +62,17 @@ namespace NOC_Email
 				throw;
 			}
 			
+		}
+		
+//		Responsável por apagar os Campos de informações contratuais
+		void ButtonApagarClick(object sender, EventArgs e)
+		{
+			tituloDeReparo.Text = "";
+			nomeCliente.Text = "";
+			designacao.Text = "";
+			expedienteDoCliente.Text = "";
+			formaDeContato.Text = "";
+			motivoDoReparo.Text = ""; 
 		}
 	}
 }
