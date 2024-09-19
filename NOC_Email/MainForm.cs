@@ -20,7 +20,7 @@ namespace NOC_Email
 //		Button responsável por encaminhar informações
 		void ButtonEncaminharEmail(object sender, EventArgs e)
 		{
-			
+			string tituloReparo = tituloDeReparo.Text;
 			string textContainer = "Prezados," +Environment.NewLine+ "\nFavor prosseguir com a abertura de reparo para o Contrato abaixo" +Environment.NewLine+   "\nNome do Cliente: " + nomeCliente.Text + Environment.NewLine +
 				"Designação Contratual: " + designacao.Text + Environment.NewLine +
 				"Expediente da unidade: " + expedienteDoCliente.Text + Environment.NewLine +
@@ -34,18 +34,18 @@ namespace NOC_Email
 			}
 			else
 			{
-				CreateOutlookEmail(textContainer);
+				CreateOutlookEmail(tituloReparo, textContainer);
 			}
 		}
 		
 //		Responsável por processar o corpo de texto
-		void CreateOutlookEmail (string body)
+		void CreateOutlookEmail (string title, string body)	
 		{
 			try {
 				
 				Outlook.Application outlookApp = new Outlook.Application();
 				Outlook.MailItem mailItem = (Outlook.MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
-				mailItem.Subject = "Solicitação de Abertura de Reparo";
+				mailItem.Subject = title;
 				mailItem.Body = body;
 				mailItem.Display(true);
 				
