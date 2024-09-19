@@ -22,7 +22,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox tituloDeReparo;
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing) {
@@ -48,7 +48,7 @@ namespace NOC_Email
 			this.label5 = new System.Windows.Forms.Label();
 			this.button3 = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.tituloDeReparo = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// nomeCliente
@@ -176,19 +176,19 @@ namespace NOC_Email
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.Location = new System.Drawing.Point(16, 15);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(89, 16);
+			this.label6.Size = new System.Drawing.Size(109, 16);
 			this.label6.TabIndex = 17;
-			this.label6.Text = "Nome Cliente";
+			this.label6.Text = "Título de Reparo";
 			// 
-			// textBox1
+			// tituloDeReparo
 			// 
-			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(154, 10);
-			this.textBox1.MaxLength = 70;
-			this.textBox1.Multiline = true;
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(250, 27);
-			this.textBox1.TabIndex = 16;
+			this.tituloDeReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tituloDeReparo.Location = new System.Drawing.Point(154, 10);
+			this.tituloDeReparo.MaxLength = 70;
+			this.tituloDeReparo.Multiline = true;
+			this.tituloDeReparo.Name = "tituloDeReparo";
+			this.tituloDeReparo.Size = new System.Drawing.Size(250, 27);
+			this.tituloDeReparo.TabIndex = 16;
 			// 
 			// MainForm
 			// 
@@ -197,7 +197,7 @@ namespace NOC_Email
 			this.BackColor = System.Drawing.SystemColors.Menu;
 			this.ClientSize = new System.Drawing.Size(417, 291);
 			this.Controls.Add(this.label6);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.tituloDeReparo);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
