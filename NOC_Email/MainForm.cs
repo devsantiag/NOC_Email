@@ -33,7 +33,9 @@ namespace NOC_Email
 				"Designação Contratual: " + designacao.Text + Environment.NewLine +
 				"Expediente da unidade: " + expedienteDoCliente.Text + Environment.NewLine +
 				"Formas de Contato: " + formaDeContato.Text + Environment.NewLine +
-				"Motivo do Reparo: " + motivoDoReparo.Text;
+				"Motivo do Reparo: \n\n" + motivoDoReparo.Text +
+				"Atenciosamente,";
+			
 
 			
 			if(string.IsNullOrWhiteSpace(textContainer))
