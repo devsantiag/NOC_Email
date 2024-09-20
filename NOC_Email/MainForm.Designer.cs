@@ -23,6 +23,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Button buttonApagar;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox tituloDeReparo;
+		
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing) {
