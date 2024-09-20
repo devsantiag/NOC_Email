@@ -17,8 +17,8 @@ namespace NOC_Email
 		{
 			InitializeComponent();
 			tituloDeReparo.TabIndex = 0;
-			nomeCliente.TabIndex = 1;
-			designacao.TabIndex = 2;
+			designacao.TabIndex = 1;
+			enderecoComercial.TabIndex = 2;
 			expedienteDoCliente.TabIndex = 3;
 			formaDeContato.TabIndex = 4;
 			motivoDoReparo.TabIndex = 5;
@@ -30,11 +30,11 @@ namespace NOC_Email
 		void ButtonEncaminharEmail(object sender, EventArgs e)
 		{
 			string tituloReparo = tituloDeReparo.Text;
-			string textContainer = "Prezados," +Environment.NewLine+ "\nFavor prosseguir com a abertura de reparo para o Contrato abaixo" +Environment.NewLine+   "\nNome do Cliente: " + nomeCliente.Text + Environment.NewLine +
-				"Designação Contratual: " + designacao.Text + Environment.NewLine +
+			string textContainer = "Prezados," +Environment.NewLine+ "\nFavor prosseguir com a abertura de reparo para o Contrato abaixo" +Environment.NewLine+   "\nDesignação Contratual: " + designacao.Text + Environment.NewLine +
+				"Endereço Comercial: " + enderecoComercial.Text + Environment.NewLine +
 				"Expediente da unidade: " + expedienteDoCliente.Text + Environment.NewLine +
 				"Formas de Contato: " + formaDeContato.Text + Environment.NewLine +
-				"Motivo do Reparo: " + motivoDoReparo.Text +
+				"Motivo do Reparo: " + motivoDoReparo.Text + 
 				"\n\nAtenciosamente,";
 			
 			if(string.IsNullOrWhiteSpace(textContainer))
@@ -69,8 +69,8 @@ namespace NOC_Email
 		void ButtonApagarClick(object sender, EventArgs e)
 		{
 			tituloDeReparo.Text = "";
-			nomeCliente.Text = "";
 			designacao.Text = "";
+			enderecoComercial.Text = "";
 			expedienteDoCliente.Text = "";
 			formaDeContato.Text = "";
 			motivoDoReparo.Text = "";
