@@ -4,6 +4,7 @@
  * Date: 17/09/2024
  * Time: 10:57
  */
+ 
 using System;
 using System.Windows.Forms;
 using Outlook = Microsoft.Office.Interop.Outlook;
@@ -33,10 +34,8 @@ namespace NOC_Email
 				"Designação Contratual: " + designacao.Text + Environment.NewLine +
 				"Expediente da unidade: " + expedienteDoCliente.Text + Environment.NewLine +
 				"Formas de Contato: " + formaDeContato.Text + Environment.NewLine +
-				"Motivo do Reparo: \n\n" + motivoDoReparo.Text +
-				"Atenciosamente,";
-			
-
+				"Motivo do Reparo: " + motivoDoReparo.Text +
+				"\n\nAtenciosamente,";
 			
 			if(string.IsNullOrWhiteSpace(textContainer))
 			{
