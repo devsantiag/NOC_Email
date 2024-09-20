@@ -9,8 +9,8 @@ namespace NOC_Email
 	partial class MainForm
 	{
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.TextBox nomeCliente;
 		private System.Windows.Forms.TextBox designacao;
+		private System.Windows.Forms.TextBox enderecoComercial;
 		private System.Windows.Forms.TextBox expedienteDoCliente;
 		private System.Windows.Forms.TextBox motivoDoReparo;
 		private System.Windows.Forms.TextBox formaDeContato;
@@ -35,8 +35,8 @@ namespace NOC_Email
 		
 		private void InitializeComponent()
 		{
-			this.nomeCliente = new System.Windows.Forms.TextBox();
 			this.designacao = new System.Windows.Forms.TextBox();
+			this.enderecoComercial = new System.Windows.Forms.TextBox();
 			this.expedienteDoCliente = new System.Windows.Forms.TextBox();
 			this.motivoDoReparo = new System.Windows.Forms.TextBox();
 			this.formaDeContato = new System.Windows.Forms.TextBox();
@@ -51,25 +51,25 @@ namespace NOC_Email
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
-			// nomeCliente
-			// 
-			this.nomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.nomeCliente.Location = new System.Drawing.Point(155, 47);
-			this.nomeCliente.MaxLength = 70;
-			this.nomeCliente.Multiline = true;
-			this.nomeCliente.Name = "nomeCliente";
-			this.nomeCliente.Size = new System.Drawing.Size(250, 27);
-			this.nomeCliente.TabIndex = 0;
-			// 
 			// designacao
 			// 
 			this.designacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.designacao.Location = new System.Drawing.Point(154, 84);
+			this.designacao.Location = new System.Drawing.Point(154, 47);
 			this.designacao.MaxLength = 70;
 			this.designacao.Multiline = true;
 			this.designacao.Name = "designacao";
 			this.designacao.Size = new System.Drawing.Size(250, 27);
-			this.designacao.TabIndex = 1;
+			this.designacao.TabIndex = 0;
+			// 
+			// enderecoComercial
+			// 
+			this.enderecoComercial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.enderecoComercial.Location = new System.Drawing.Point(154, 84);
+			this.enderecoComercial.MaxLength = 70;
+			this.enderecoComercial.Multiline = true;
+			this.enderecoComercial.Name = "enderecoComercial";
+			this.enderecoComercial.Size = new System.Drawing.Size(250, 27);
+			this.enderecoComercial.TabIndex = 1;
 			// 
 			// expedienteDoCliente
 			// 
@@ -117,9 +117,9 @@ namespace NOC_Email
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(16, 52);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(89, 16);
+			this.label1.Size = new System.Drawing.Size(82, 16);
 			this.label1.TabIndex = 10;
-			this.label1.Text = "Nome Cliente";
+			this.label1.Text = "Designação";
 			// 
 			// label2
 			// 
@@ -127,9 +127,9 @@ namespace NOC_Email
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.Location = new System.Drawing.Point(16, 89);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(82, 16);
+			this.label2.Size = new System.Drawing.Size(67, 16);
 			this.label2.TabIndex = 11;
-			this.label2.Text = "Designação";
+			this.label2.Text = "Endereço";
 			// 
 			// label3
 			// 
@@ -209,8 +209,8 @@ namespace NOC_Email
 			this.Controls.Add(this.motivoDoReparo);
 			this.Controls.Add(this.formaDeContato);
 			this.Controls.Add(this.expedienteDoCliente);
+			this.Controls.Add(this.enderecoComercial);
 			this.Controls.Add(this.designacao);
-			this.Controls.Add(this.nomeCliente);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
