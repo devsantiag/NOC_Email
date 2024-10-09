@@ -54,59 +54,60 @@ namespace NOC_Email
 			// 
 			// designacao
 			// 
-			this.designacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.designacao.Location = new System.Drawing.Point(154, 47);
+			this.designacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.designacao.Location = new System.Drawing.Point(145, 49);
 			this.designacao.MaxLength = 70;
 			this.designacao.Multiline = true;
 			this.designacao.Name = "designacao";
-			this.designacao.Size = new System.Drawing.Size(250, 27);
+			this.designacao.Size = new System.Drawing.Size(250, 26);
 			this.designacao.TabIndex = 0;
 			// 
 			// enderecoComercial
 			// 
-			this.enderecoComercial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.enderecoComercial.Location = new System.Drawing.Point(154, 84);
+			this.enderecoComercial.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.enderecoComercial.Location = new System.Drawing.Point(145, 86);
 			this.enderecoComercial.MaxLength = 70;
 			this.enderecoComercial.Multiline = true;
 			this.enderecoComercial.Name = "enderecoComercial";
-			this.enderecoComercial.Size = new System.Drawing.Size(250, 27);
+			this.enderecoComercial.Size = new System.Drawing.Size(250, 26);
 			this.enderecoComercial.TabIndex = 1;
 			// 
 			// expedienteDoCliente
 			// 
-			this.expedienteDoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.expedienteDoCliente.Location = new System.Drawing.Point(154, 121);
+			this.expedienteDoCliente.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.expedienteDoCliente.Location = new System.Drawing.Point(145, 123);
 			this.expedienteDoCliente.MaxLength = 70;
 			this.expedienteDoCliente.Multiline = true;
 			this.expedienteDoCliente.Name = "expedienteDoCliente";
-			this.expedienteDoCliente.Size = new System.Drawing.Size(250, 27);
+			this.expedienteDoCliente.Size = new System.Drawing.Size(250, 26);
 			this.expedienteDoCliente.TabIndex = 4;
 			// 
 			// motivoDoReparo
 			// 
-			this.motivoDoReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.motivoDoReparo.Location = new System.Drawing.Point(154, 193);
+			this.motivoDoReparo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.motivoDoReparo.Location = new System.Drawing.Point(145, 195);
 			this.motivoDoReparo.MaxLength = 70;
 			this.motivoDoReparo.Multiline = true;
 			this.motivoDoReparo.Name = "motivoDoReparo";
-			this.motivoDoReparo.Size = new System.Drawing.Size(250, 27);
+			this.motivoDoReparo.Size = new System.Drawing.Size(250, 26);
 			this.motivoDoReparo.TabIndex = 6;
 			// 
 			// formaDeContato
 			// 
-			this.formaDeContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.formaDeContato.Location = new System.Drawing.Point(154, 157);
+			this.formaDeContato.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.formaDeContato.Location = new System.Drawing.Point(145, 159);
 			this.formaDeContato.MaxLength = 70;
 			this.formaDeContato.Multiline = true;
 			this.formaDeContato.Name = "formaDeContato";
-			this.formaDeContato.Size = new System.Drawing.Size(250, 27);
+			this.formaDeContato.Size = new System.Drawing.Size(250, 26);
 			this.formaDeContato.TabIndex = 5;
 			// 
 			// buttonEncaminharEmail
 			// 
-			this.buttonEncaminharEmail.Location = new System.Drawing.Point(320, 231);
+			this.buttonEncaminharEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonEncaminharEmail.Location = new System.Drawing.Point(181, 232);
 			this.buttonEncaminharEmail.Name = "buttonEncaminharEmail";
-			this.buttonEncaminharEmail.Size = new System.Drawing.Size(84, 47);
+			this.buttonEncaminharEmail.Size = new System.Drawing.Size(104, 47);
 			this.buttonEncaminharEmail.TabIndex = 8;
 			this.buttonEncaminharEmail.Text = "Encaminhar";
 			this.buttonEncaminharEmail.UseVisualStyleBackColor = true;
@@ -116,7 +117,7 @@ namespace NOC_Email
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(16, 52);
+			this.label1.Location = new System.Drawing.Point(16, 53);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(82, 16);
 			this.label1.TabIndex = 10;
@@ -126,7 +127,7 @@ namespace NOC_Email
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(16, 89);
+			this.label2.Location = new System.Drawing.Point(16, 90);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(67, 16);
 			this.label2.TabIndex = 11;
@@ -136,7 +137,7 @@ namespace NOC_Email
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(16, 126);
+			this.label3.Location = new System.Drawing.Point(16, 127);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(76, 16);
 			this.label3.TabIndex = 12;
@@ -146,7 +147,7 @@ namespace NOC_Email
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(16, 198);
+			this.label4.Location = new System.Drawing.Point(16, 199);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(116, 16);
 			this.label4.TabIndex = 13;
@@ -156,7 +157,7 @@ namespace NOC_Email
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(16, 162);
+			this.label5.Location = new System.Drawing.Point(16, 163);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(115, 16);
 			this.label5.TabIndex = 14;
@@ -164,9 +165,10 @@ namespace NOC_Email
 			// 
 			// buttonApagar
 			// 
-			this.buttonApagar.Location = new System.Drawing.Point(230, 231);
+			this.buttonApagar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonApagar.Location = new System.Drawing.Point(291, 232);
 			this.buttonApagar.Name = "buttonApagar";
-			this.buttonApagar.Size = new System.Drawing.Size(84, 47);
+			this.buttonApagar.Size = new System.Drawing.Size(104, 47);
 			this.buttonApagar.TabIndex = 15;
 			this.buttonApagar.Text = "Apagar";
 			this.buttonApagar.UseVisualStyleBackColor = true;
@@ -176,7 +178,7 @@ namespace NOC_Email
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(16, 16);
+			this.label6.Location = new System.Drawing.Point(16, 17);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(109, 16);
 			this.label6.TabIndex = 17;
@@ -184,12 +186,12 @@ namespace NOC_Email
 			// 
 			// tituloDeReparo
 			// 
-			this.tituloDeReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tituloDeReparo.Location = new System.Drawing.Point(154, 11);
+			this.tituloDeReparo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tituloDeReparo.Location = new System.Drawing.Point(145, 13);
 			this.tituloDeReparo.MaxLength = 70;
 			this.tituloDeReparo.Multiline = true;
 			this.tituloDeReparo.Name = "tituloDeReparo";
-			this.tituloDeReparo.Size = new System.Drawing.Size(250, 27);
+			this.tituloDeReparo.Size = new System.Drawing.Size(250, 26);
 			this.tituloDeReparo.TabIndex = 16;
 			// 
 			// MainForm
@@ -197,7 +199,7 @@ namespace NOC_Email
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Menu;
-			this.ClientSize = new System.Drawing.Size(417, 291);
+			this.ClientSize = new System.Drawing.Size(413, 290);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.tituloDeReparo);
 			this.Controls.Add(this.buttonApagar);
@@ -219,31 +221,6 @@ namespace NOC_Email
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
-		}// 
-//			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-//			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-//			this.BackColor = System.Drawing.SystemColors.Menu;
-//			this.ClientSize = new System.Drawing.Size(417, 291);
-//			this.Controls.Add(this.label6);
-//			this.Controls.Add(this.textBox1);
-//			this.Controls.Add(this.button3);
-//			this.Controls.Add(this.label5);
-//			this.Controls.Add(this.label4);
-//			this.Controls.Add(this.label3);
-//			this.Controls.Add(this.label2);
-//			this.Controls.Add(this.label1);
-//			this.Controls.Add(this.buttonEncaminharEmail);
-//			this.Controls.Add(this.motivoDoReparo);
-//			this.Controls.Add(this.formaDeContato);
-//			this.Controls.Add(this.expedienteDoCliente);
-//			this.Controls.Add(this.designacao);
-//			this.Controls.Add(this.nomeCliente);
-//			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-//			this.MaximizeBox = false;
-//			this.Name = "MainForm";
-//			this.Text = "NOC_Email";
-//			this.ResumeLayout(false);
-//			this.PerformLayout();
-
 		}
 	}
+}
