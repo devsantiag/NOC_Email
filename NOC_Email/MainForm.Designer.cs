@@ -23,6 +23,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Button buttonApagar;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox tituloDeReparo;
+		private System.Windows.Forms.Button btnSair;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -50,13 +51,14 @@ namespace NOC_Email
 			this.buttonApagar = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
+			this.btnSair = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// designacao
 			// 
 			this.designacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.designacao.Location = new System.Drawing.Point(145, 49);
-			this.designacao.MaxLength = 70;
+			this.designacao.MaxLength = 700000;
 			this.designacao.Multiline = true;
 			this.designacao.Name = "designacao";
 			this.designacao.Size = new System.Drawing.Size(250, 26);
@@ -66,7 +68,7 @@ namespace NOC_Email
 			// 
 			this.enderecoComercial.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.enderecoComercial.Location = new System.Drawing.Point(145, 86);
-			this.enderecoComercial.MaxLength = 70;
+			this.enderecoComercial.MaxLength = 700000;
 			this.enderecoComercial.Multiline = true;
 			this.enderecoComercial.Name = "enderecoComercial";
 			this.enderecoComercial.Size = new System.Drawing.Size(250, 26);
@@ -76,7 +78,7 @@ namespace NOC_Email
 			// 
 			this.expedienteDoCliente.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.expedienteDoCliente.Location = new System.Drawing.Point(145, 123);
-			this.expedienteDoCliente.MaxLength = 70;
+			this.expedienteDoCliente.MaxLength = 700000;
 			this.expedienteDoCliente.Multiline = true;
 			this.expedienteDoCliente.Name = "expedienteDoCliente";
 			this.expedienteDoCliente.Size = new System.Drawing.Size(250, 26);
@@ -86,7 +88,7 @@ namespace NOC_Email
 			// 
 			this.motivoDoReparo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.motivoDoReparo.Location = new System.Drawing.Point(145, 195);
-			this.motivoDoReparo.MaxLength = 70;
+			this.motivoDoReparo.MaxLength = 700000;
 			this.motivoDoReparo.Multiline = true;
 			this.motivoDoReparo.Name = "motivoDoReparo";
 			this.motivoDoReparo.Size = new System.Drawing.Size(250, 26);
@@ -96,7 +98,7 @@ namespace NOC_Email
 			// 
 			this.formaDeContato.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.formaDeContato.Location = new System.Drawing.Point(145, 159);
-			this.formaDeContato.MaxLength = 70;
+			this.formaDeContato.MaxLength = 700000;
 			this.formaDeContato.Multiline = true;
 			this.formaDeContato.Name = "formaDeContato";
 			this.formaDeContato.Size = new System.Drawing.Size(250, 26);
@@ -188,11 +190,22 @@ namespace NOC_Email
 			// 
 			this.tituloDeReparo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.tituloDeReparo.Location = new System.Drawing.Point(145, 13);
-			this.tituloDeReparo.MaxLength = 70;
+			this.tituloDeReparo.MaxLength = 700000;
 			this.tituloDeReparo.Multiline = true;
 			this.tituloDeReparo.Name = "tituloDeReparo";
 			this.tituloDeReparo.Size = new System.Drawing.Size(250, 26);
 			this.tituloDeReparo.TabIndex = 16;
+			// 
+			// btnSair
+			// 
+			this.btnSair.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSair.Location = new System.Drawing.Point(16, 232);
+			this.btnSair.Name = "btnSair";
+			this.btnSair.Size = new System.Drawing.Size(104, 47);
+			this.btnSair.TabIndex = 18;
+			this.btnSair.Text = "Sair";
+			this.btnSair.UseVisualStyleBackColor = true;
+			this.btnSair.Click += new System.EventHandler(this.BtnSairClick);
 			// 
 			// MainForm
 			// 
@@ -200,6 +213,7 @@ namespace NOC_Email
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Menu;
 			this.ClientSize = new System.Drawing.Size(413, 290);
+			this.Controls.Add(this.btnSair);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.tituloDeReparo);
 			this.Controls.Add(this.buttonApagar);

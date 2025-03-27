@@ -6,6 +6,7 @@
  */
 
 using System;
+using System.Text;
 using System.Windows.Forms;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
@@ -16,6 +17,14 @@ namespace NOC_Email
 		public MainForm()
 		{
 			InitializeComponent();
+			InicializaTabIndex();
+//			CommandCloSeApplication();
+			
+			tituloDeReparo.TextChanged += new EventHandler(CommandCloSeApplication);
+		}
+
+		private void InicializaTabIndex()
+		{
 			tituloDeReparo.TabIndex = 0;
 			designacao.TabIndex = 1;
 			enderecoComercial.TabIndex = 2;
@@ -25,56 +34,78 @@ namespace NOC_Email
 			buttonApagar.TabIndex = 7;
 			buttonEncaminharEmail.TabIndex = 6;
 		}
-		
-//		Certifica que os campos de preenchimento encontram-se corretamente preenchidos
+
+		private void MessageBoxErrorWarning(string mensagem)
+		{
+			MessageBox.Show(mensagem, "ATENÇÃO:", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+		}
+
 		private bool FieldsAreFilled()
 		{
-			return
-				!string.IsNullOrWhiteSpace(tituloDeReparo.Text) &&
+			return !string.IsNullOrWhiteSpace(tituloDeReparo.Text) &&
 				!string.IsNullOrWhiteSpace(designacao.Text) &&
 				!string.IsNullOrWhiteSpace(enderecoComercial.Text) &&
 				!string.IsNullOrWhiteSpace(expedienteDoCliente.Text) &&
 				!string.IsNullOrWhiteSpace(formaDeContato.Text) &&
 				!string.IsNullOrWhiteSpace(motivoDoReparo.Text);
 		}
-		
-//		Button responsável por encaminhar informações
-		void ButtonEncaminharEmail(object sender, EventArgs e)
+
+		private string CreateBodyEmail()
 		{
-			if(!FieldsAreFilled())
+			StringBuilder corpo = new StringBuilder();
+			corpo.AppendLine("Prezados,");
+			corpo.AppendLine();
+			corpo.AppendLine("Favor prosseguir com a abertura de reparo para o Contrato abaixo:");
+			corpo.AppendLine();
+			corpo.AppendLine("Designação Contratual: " + designacao.Text);
+			corpo.AppendLine("Endereço Comercial: "+ enderecoComercial.Text);
+			corpo.AppendLine("Expediente da Unidade: " + expedienteDoCliente.Text);
+			corpo.AppendLine("Formas de Contato: " + formaDeContato.Text);
+			corpo.AppendLine("Motivo do Reparo: " + motivoDoReparo.Text);
+			corpo.AppendLine();
+			corpo.AppendLine("Atenciosamente,");
+			return corpo.ToString();
+		}
+
+		private void ButtonEncaminharEmail(object sender, EventArgs e)
+		{
+			if (!FieldsAreFilled())
 			{
-				MessageBox.Show("Um ou mais campos encontram-se vazios. Tente novamente, por favor.");
+				MessageBoxErrorWarning("Um ou mais campos encontram-se vazios. Tente novamente, por favor.");
 				return;
 			}
 			
-			string tituloReparo = "REPARO DE CIRCUITO | " +tituloDeReparo.Text;
-			string textContainer = "Prezados," +Environment.NewLine+ "\nFavor prosseguir com a abertura de reparo para o Contrato abaixo" +Environment.NewLine+   "\nDesignação Contratual: " + designacao.Text + Environment.NewLine +
-				"Endereço Comercial: " + enderecoComercial.Text + Environment.NewLine +
-				"Expediente da unidade: " + expedienteDoCliente.Text + Environment.NewLine +
-				"Formas de Contato: " + formaDeContato.Text + Environment.NewLine +
-				"Motivo do Reparo: " + motivoDoReparo.Text +
-				"\n\nAtenciosamente,";
+			string tituloReparo = "ABERTURA DE REPARO | " + tituloDeReparo.Text;
+			string email = CreateBodyEmail();
 			
-//			Realiza a criação do E-mail no Outlook
-			CreateOutlookEmail(tituloReparo, textContainer);
+			CreateOutlookEmail(tituloReparo, email);
 		}
-		
-//		Responsável por processar o corpo de texto
-		void CreateOutlookEmail (string title, string body)
+
+		private void CreateOutlookEmail(string title, string body)
 		{
-			try {
+			try
+			{
 				Outlook.Application outlookApp = new Outlook.Application();
 				Outlook.MailItem mailItem = (Outlook.MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
+				
 				mailItem.Subject = title;
 				mailItem.Body = body;
+				
 				mailItem.Display(true);
-			} catch (Exception ex) {
-				MessageBox.Show("Erro de Envio", ex.Message);
+			}
+			catch (Exception ex)
+			{
+				MessageBoxErrorWarning("Erro ao tentar encaminhar o Email: " + ex.Message);
 				throw;
 			}
 		}
-		
-		void ClearContent()
+
+		private void ButtonApagarClick(object sender, EventArgs e)
+		{
+			ClearContent();
+		}
+
+		private void ClearContent()
 		{
 			tituloDeReparo.Text = "";
 			designacao.Text = "";
@@ -83,11 +114,18 @@ namespace NOC_Email
 			formaDeContato.Text = "";
 			motivoDoReparo.Text = "";
 		}
-		
-//		Responsável por apagar os Campos de informações contratuais
-		void ButtonApagarClick(object sender, EventArgs e)
+
+		private void BtnSairClick(object sender, EventArgs e)
 		{
-			ClearContent();
+			Application.Exit();
+		}
+		
+		private void CommandCloSeApplication(object sender, EventArgs e)
+		{
+			if (tituloDeReparo.Text.Trim().ToLower() == "exit")
+			{
+				Application.Exit();
+			}
 		}
 	}
 }

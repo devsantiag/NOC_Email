@@ -6,3 +6,11 @@ C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.MainForm.resources
 C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csproj.GenerateResource.Cache
 C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.exe
 C:\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csprojResolveAssemblyReference.cache
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.MainForm.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csproj.GenerateResource.Cache
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.exe
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe.config
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\bin\Debug\NOC_Email.pdb
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
