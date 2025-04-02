@@ -18,6 +18,5 @@ namespace NOC_Email
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainForm());
 		}
-		
 	}
 }

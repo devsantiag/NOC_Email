@@ -18,11 +18,10 @@ namespace NOC_Email
 		{
 			InitializeComponent();
 			InicializaTabIndex();
-//			CommandCloSeApplication();
-			
 			tituloDeReparo.TextChanged += new EventHandler(CommandCloSeApplication);
 		}
-
+		
+//		Organiza o Tab Index (atalho)
 		private void InicializaTabIndex()
 		{
 			tituloDeReparo.TabIndex = 0;
@@ -35,11 +34,13 @@ namespace NOC_Email
 			buttonEncaminharEmail.TabIndex = 6;
 		}
 
+//		Aviso de erro ao usuário
 		private void MessageBoxErrorWarning(string mensagem)
 		{
 			MessageBox.Show(mensagem, "ATENÇÃO:", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 		}
-
+		
+//		Certifica se os campos não estão vazios
 		private bool FieldsAreFilled()
 		{
 			return !string.IsNullOrWhiteSpace(tituloDeReparo.Text) &&
@@ -49,7 +50,8 @@ namespace NOC_Email
 				!string.IsNullOrWhiteSpace(formaDeContato.Text) &&
 				!string.IsNullOrWhiteSpace(motivoDoReparo.Text);
 		}
-
+		
+//		Organiza o Corpo do E-mail
 		private string CreateBodyEmail()
 		{
 			StringBuilder corpo = new StringBuilder();
@@ -67,6 +69,7 @@ namespace NOC_Email
 			return corpo.ToString();
 		}
 
+//		Responsável por redirecionar as informações formatadas pelo 'CreateOutlookEmail' para a aplicação Outlook
 		private void ButtonEncaminharEmail(object sender, EventArgs e)
 		{
 			if (!FieldsAreFilled())
@@ -81,6 +84,7 @@ namespace NOC_Email
 			CreateOutlookEmail(tituloReparo, email);
 		}
 
+//		Cria o Titulo e Corpo do E-mail
 		private void CreateOutlookEmail(string title, string body)
 		{
 			try
@@ -99,7 +103,7 @@ namespace NOC_Email
 				throw;
 			}
 		}
-
+//		Limpa os campos do formulário
 		private void ButtonApagarClick(object sender, EventArgs e)
 		{
 			ClearContent();
@@ -115,17 +119,25 @@ namespace NOC_Email
 			motivoDoReparo.Text = "";
 		}
 
+//		Fecha a aplicação quando o botão "Sair" é clicado ou quando o texto "exit" é
 		private void BtnSairClick(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
-		
+
 		private void CommandCloSeApplication(object sender, EventArgs e)
 		{
 			if (tituloDeReparo.Text.Trim().ToLower() == "exit")
 			{
 				Application.Exit();
 			}
+		}
+		
+//		Abre a aplicação "NotificarClientePorMensagemDeTexto"
+		void BtnMensagemAoClientePorEmailClick(object sender, EventArgs e)
+		{
+			NotificarClientePorMensagemDeTexto notificarClientePorMensagemDeTexto = new NotificarClientePorMensagemDeTexto();
+			notificarClientePorMensagemDeTexto.Show();
 		}
 	}
 }
