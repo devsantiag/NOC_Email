@@ -16,6 +16,7 @@ namespace NOC_Email
 		public NotificarClientePorMensagemDeTexto()
 		{
 			InitializeComponent();
+			OrdenarTabIndex();
 		}
 
 //		Button responsável por executar o Corpo de E-mail
@@ -43,7 +44,7 @@ namespace NOC_Email
 				email.Body = corpoMensagemTexto;
 				email.Display(false);
 				string mailtoLink = string.Format("outlook:?subject={0}&body={1}", encodedTitulo, encodedCorpoMensagem);
-				OrdenarTabIndex();
+				
 			} catch (Exception ex)
 			{
 				MessageBox.Show("Erro ao tentar encaminhar o Email: " + ex.Message);
@@ -66,8 +67,10 @@ namespace NOC_Email
 //		Organiza o atalho TAB
 		void OrdenarTabIndex()
 		{
-			btnEncaminharEmail.TabIndex = 0;
-			btnApagarMensagem.TabIndex = 1;
+			textBox1_TitutloEmail.TabIndex = 0;
+			richTextBox1_CorpoDeMensagemDeTexto.TabIndex = 1;
+			btnEncaminharEmail.TabIndex = 2;
+			btnApagarMensagem.TabIndex = 3;
 		}
 
 	}
