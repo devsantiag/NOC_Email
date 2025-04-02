@@ -64,6 +64,7 @@ namespace NOC_Email
 			this.btnApagarMensagem.TabIndex = 1;
 			this.btnApagarMensagem.Text = "Apagar";
 			this.btnApagarMensagem.UseVisualStyleBackColor = true;
+			this.btnApagarMensagem.Click += new System.EventHandler(this.BtnApagarMensagemClick);
 			// 
 			// btnEncaminharEmail
 			// 

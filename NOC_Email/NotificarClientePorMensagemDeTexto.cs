@@ -43,12 +43,32 @@ namespace NOC_Email
 				email.Body = corpoMensagemTexto;
 				email.Display(false);
 				string mailtoLink = string.Format("outlook:?subject={0}&body={1}", encodedTitulo, encodedCorpoMensagem);
-				
+				OrdenarTabIndex();
 			} catch (Exception ex)
 			{
 				MessageBox.Show("Erro ao tentar encaminhar o Email: " + ex.Message);
 				throw;
 			}
 		}
+		
+//		Button responsável por apagar os campos de Texto
+		void BtnApagarMensagemClick(object sender, EventArgs e)
+		{
+			ApagarConteudo();
+		}
+		
+		void ApagarConteudo()
+		{
+			textBox1_TitutloEmail.Clear();
+			richTextBox1_CorpoDeMensagemDeTexto.Clear();
+		}
+		
+//		Organiza o atalho TAB
+		void OrdenarTabIndex()
+		{
+			btnEncaminharEmail.TabIndex = 0;
+			btnApagarMensagem.TabIndex = 1;
+		}
+
 	}
 }
