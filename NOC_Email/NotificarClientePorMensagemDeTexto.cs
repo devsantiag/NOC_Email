@@ -72,6 +72,5 @@ namespace NOC_Email
 			btnEncaminharEmail.TabIndex = 2;
 			btnApagarMensagem.TabIndex = 3;
 		}
-
 	}
 }

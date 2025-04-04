@@ -30,5 +30,12 @@ namespace NOC_Email
 		{
 			textBox_ConteudoEscrito.Clear();
 		}
+		
+//		Organiza a tecla de atalho Tab
+		void TabIndexOrdenar()
+		{
+			btnCopiar.TabIndex = 0;
+			btnApagar.TabIndex = 1;
+		}
 	}
 }
