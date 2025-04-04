@@ -17,10 +17,15 @@ namespace NOC_Email
 			InitializeComponent();
 			
 		}
+		
+//		Responsável por copiar o conteúdo expresso no textBox_ConteudoEscrito
 		void BtnCopiarClick(object sender, EventArgs e)
 		{
 			Clipboard.SetText(textBox_ConteudoEscrito.Text);
+			textBox_ConteudoEscrito.Clear();
 		}
+		
+//		Responsável por apagar o campo
 		void BtnApagarClick(object sender, EventArgs e)
 		{
 			textBox_ConteudoEscrito.Clear();
