@@ -15,3 +15,5 @@ C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe
 C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\bin\Debug\NOC_Email.pdb
 C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
 C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.NotificarClientePorMensagemDeTexto.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.obj.NoteClipBoard.resources
+C:\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.PageNote.resources

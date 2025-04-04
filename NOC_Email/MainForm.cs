@@ -139,5 +139,11 @@ namespace NOC_Email
 			NotificarClientePorMensagemDeTexto notificarClientePorMensagemDeTexto = new NotificarClientePorMensagemDeTexto();
 			notificarClientePorMensagemDeTexto.Show();
 		}
+		
+		void BtnNoteClipBoardClick(object sender, EventArgs e)
+		{
+			PageNote noteClipboard = new PageNote();
+			noteClipboard.Show();
+		}
 	}
 }

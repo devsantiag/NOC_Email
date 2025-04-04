@@ -58,6 +58,14 @@
     <Compile Include="NotificarClientePorMensagemDeTexto.Designer.cs">
       <DependentUpon>NotificarClientePorMensagemDeTexto.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\NoteClipBoard.cs" />
+    <Compile Include="obj\NoteClipBoard.Designer.cs">
+      <DependentUpon>NoteClipBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageNote.cs" />
+    <Compile Include="PageNote.Designer.cs">
+      <DependentUpon>PageNote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +78,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotificarClientePorMensagemDeTexto.resx">
       <DependentUpon>NotificarClientePorMensagemDeTexto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\NoteClipBoard.resx">
+      <DependentUpon>NoteClipBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageNote.resx">
+      <DependentUpon>PageNote.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
