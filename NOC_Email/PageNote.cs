@@ -15,7 +15,7 @@ namespace NOC_Email
 		public PageNote()
 		{
 			InitializeComponent();
-			
+			TabIndexOrdenar();
 		}
 		
 //		Responsável por copiar o conteúdo expresso no textBox_ConteudoEscrito
