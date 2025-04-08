@@ -34,8 +34,9 @@ namespace NOC_Email
 //		Organiza a tecla de atalho Tab
 		void TabIndexOrdenar()
 		{
-			btnCopiar.TabIndex = 0;
-			btnApagar.TabIndex = 1;
+			btnCopiar.TabIndex = 1;
+			btnApagar.TabIndex = 2;
+			
 		}
 	}
 }

@@ -48,15 +48,15 @@ namespace NOC_Email
 			// 
 			this.textBox_ConteudoEscrito.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox_ConteudoEscrito.ForeColor = System.Drawing.Color.Red;
-			this.textBox_ConteudoEscrito.Location = new System.Drawing.Point(5, 5);
+			this.textBox_ConteudoEscrito.Location = new System.Drawing.Point(8, 5);
 			this.textBox_ConteudoEscrito.Name = "textBox_ConteudoEscrito";
-			this.textBox_ConteudoEscrito.Size = new System.Drawing.Size(339, 175);
+			this.textBox_ConteudoEscrito.Size = new System.Drawing.Size(572, 175);
 			this.textBox_ConteudoEscrito.TabIndex = 0;
 			this.textBox_ConteudoEscrito.Text = "";
 			// 
 			// btnApagar
 			// 
-			this.btnApagar.Location = new System.Drawing.Point(238, 186);
+			this.btnApagar.Location = new System.Drawing.Point(481, 186);
 			this.btnApagar.Name = "btnApagar";
 			this.btnApagar.Size = new System.Drawing.Size(99, 45);
 			this.btnApagar.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace NOC_Email
 			// 
 			// btnCopiar
 			// 
-			this.btnCopiar.Location = new System.Drawing.Point(133, 186);
+			this.btnCopiar.Location = new System.Drawing.Point(376, 186);
 			this.btnCopiar.Name = "btnCopiar";
 			this.btnCopiar.Size = new System.Drawing.Size(99, 45);
 			this.btnCopiar.TabIndex = 2;
@@ -76,12 +76,12 @@ namespace NOC_Email
 			// 
 			// PageNote
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(349, 239);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.ClientSize = new System.Drawing.Size(589, 239);
 			this.Controls.Add(this.btnCopiar);
 			this.Controls.Add(this.btnApagar);
 			this.Controls.Add(this.textBox_ConteudoEscrito);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.MaximizeBox = false;
 			this.Name = "PageNote";
 			this.Text = "PageNote";
