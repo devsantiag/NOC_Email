@@ -25,7 +25,6 @@ namespace NOC_Email
 		private System.Windows.Forms.TextBox tituloDeReparo;
 		private System.Windows.Forms.Button btnSair;
 		private System.Windows.Forms.Button btnMensagemAoClientePorEmail;
-		private System.Windows.Forms.Button btnNoteClipBoard;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -55,7 +54,6 @@ namespace NOC_Email
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
 			this.btnSair = new System.Windows.Forms.Button();
 			this.btnMensagemAoClientePorEmail = new System.Windows.Forms.Button();
-			this.btnNoteClipBoard = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// designacao
@@ -214,7 +212,7 @@ namespace NOC_Email
 			// btnMensagemAoClientePorEmail
 			// 
 			this.btnMensagemAoClientePorEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnMensagemAoClientePorEmail.Location = new System.Drawing.Point(55, 219);
+			this.btnMensagemAoClientePorEmail.Location = new System.Drawing.Point(146, 219);
 			this.btnMensagemAoClientePorEmail.Name = "btnMensagemAoClientePorEmail";
 			this.btnMensagemAoClientePorEmail.Size = new System.Drawing.Size(85, 40);
 			this.btnMensagemAoClientePorEmail.TabIndex = 19;
@@ -222,24 +220,12 @@ namespace NOC_Email
 			this.btnMensagemAoClientePorEmail.UseVisualStyleBackColor = true;
 			this.btnMensagemAoClientePorEmail.Click += new System.EventHandler(this.BtnMensagemAoClientePorEmailClick);
 			// 
-			// btnNoteClipBoard
-			// 
-			this.btnNoteClipBoard.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnNoteClipBoard.Location = new System.Drawing.Point(146, 219);
-			this.btnNoteClipBoard.Name = "btnNoteClipBoard";
-			this.btnNoteClipBoard.Size = new System.Drawing.Size(85, 40);
-			this.btnNoteClipBoard.TabIndex = 20;
-			this.btnNoteClipBoard.Text = "ClipBoard";
-			this.btnNoteClipBoard.UseVisualStyleBackColor = true;
-			this.btnNoteClipBoard.Click += new System.EventHandler(this.BtnNoteClipBoardClick);
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Menu;
 			this.ClientSize = new System.Drawing.Size(464, 266);
-			this.Controls.Add(this.btnNoteClipBoard);
 			this.Controls.Add(this.btnMensagemAoClientePorEmail);
 			this.Controls.Add(this.btnSair);
 			this.Controls.Add(this.label6);
