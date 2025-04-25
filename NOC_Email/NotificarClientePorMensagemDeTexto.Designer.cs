@@ -51,14 +51,14 @@ namespace NOC_Email
 			this.richTextBox1_CorpoDeMensagemDeTexto.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.richTextBox1_CorpoDeMensagemDeTexto.Location = new System.Drawing.Point(12, 45);
 			this.richTextBox1_CorpoDeMensagemDeTexto.Name = "richTextBox1_CorpoDeMensagemDeTexto";
-			this.richTextBox1_CorpoDeMensagemDeTexto.Size = new System.Drawing.Size(358, 164);
+			this.richTextBox1_CorpoDeMensagemDeTexto.Size = new System.Drawing.Size(482, 164);
 			this.richTextBox1_CorpoDeMensagemDeTexto.TabIndex = 0;
 			this.richTextBox1_CorpoDeMensagemDeTexto.Text = "";
 			// 
 			// btnApagarMensagem
 			// 
 			this.btnApagarMensagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnApagarMensagem.Location = new System.Drawing.Point(236, 215);
+			this.btnApagarMensagem.Location = new System.Drawing.Point(360, 215);
 			this.btnApagarMensagem.Name = "btnApagarMensagem";
 			this.btnApagarMensagem.Size = new System.Drawing.Size(134, 47);
 			this.btnApagarMensagem.TabIndex = 1;
@@ -69,7 +69,7 @@ namespace NOC_Email
 			// btnEncaminharEmail
 			// 
 			this.btnEncaminharEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEncaminharEmail.Location = new System.Drawing.Point(96, 215);
+			this.btnEncaminharEmail.Location = new System.Drawing.Point(220, 215);
 			this.btnEncaminharEmail.Name = "btnEncaminharEmail";
 			this.btnEncaminharEmail.Size = new System.Drawing.Size(134, 47);
 			this.btnEncaminharEmail.TabIndex = 2;
@@ -82,7 +82,7 @@ namespace NOC_Email
 			this.textBox1_TitutloEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.textBox1_TitutloEmail.Location = new System.Drawing.Point(12, 12);
 			this.textBox1_TitutloEmail.Name = "textBox1_TitutloEmail";
-			this.textBox1_TitutloEmail.Size = new System.Drawing.Size(358, 26);
+			this.textBox1_TitutloEmail.Size = new System.Drawing.Size(482, 26);
 			this.textBox1_TitutloEmail.TabIndex = 3;
 			// 
 			// NotificarClientePorMensagemDeTexto
@@ -90,7 +90,7 @@ namespace NOC_Email
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
-			this.ClientSize = new System.Drawing.Size(379, 267);
+			this.ClientSize = new System.Drawing.Size(506, 267);
 			this.Controls.Add(this.textBox1_TitutloEmail);
 			this.Controls.Add(this.btnEncaminharEmail);
 			this.Controls.Add(this.btnApagarMensagem);

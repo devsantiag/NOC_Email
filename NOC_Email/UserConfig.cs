@@ -15,5 +15,9 @@ namespace NOC_Email
 		{
 			InitializeComponent();
 		}
+		void BtnExitApplicationClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }
