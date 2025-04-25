@@ -131,6 +131,11 @@ namespace NOC_Email
 			{
 				Application.Exit();
 			}
+			else if (tituloDeReparo.Text.Trim().ToLower() == "config")
+			{
+				UserConfig userConfig = new UserConfig();
+				userConfig.ShowDialog();
+			}
 		}
 		
 //		Abre a aplicação "NotificarClientePorMensagemDeTexto"
