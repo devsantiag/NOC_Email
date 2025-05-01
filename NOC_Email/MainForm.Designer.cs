@@ -13,7 +13,6 @@ namespace NOC_Email
 		private System.Windows.Forms.TextBox enderecoComercial;
 		private System.Windows.Forms.TextBox expedienteDoCliente;
 		private System.Windows.Forms.TextBox motivoDoReparo;
-		private System.Windows.Forms.TextBox formaDeContato;
 		private System.Windows.Forms.Button buttonEncaminharEmail;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
@@ -26,6 +25,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Button btnMensagemAoClientePorEmail;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox formaDeContato;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -43,7 +43,6 @@ namespace NOC_Email
 			this.enderecoComercial = new System.Windows.Forms.TextBox();
 			this.expedienteDoCliente = new System.Windows.Forms.TextBox();
 			this.motivoDoReparo = new System.Windows.Forms.TextBox();
-			this.formaDeContato = new System.Windows.Forms.TextBox();
 			this.buttonEncaminharEmail = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@ namespace NOC_Email
 			this.btnMensagemAoClientePorEmail = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.formaDeContato = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
 			// designacao
@@ -97,16 +97,6 @@ namespace NOC_Email
 			this.motivoDoReparo.Name = "motivoDoReparo";
 			this.motivoDoReparo.Size = new System.Drawing.Size(268, 26);
 			this.motivoDoReparo.TabIndex = 6;
-			// 
-			// formaDeContato
-			// 
-			this.formaDeContato.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.formaDeContato.Location = new System.Drawing.Point(145, 183);
-			this.formaDeContato.MaxLength = 700000;
-			this.formaDeContato.Multiline = true;
-			this.formaDeContato.Name = "formaDeContato";
-			this.formaDeContato.Size = new System.Drawing.Size(268, 26);
-			this.formaDeContato.TabIndex = 5;
 			// 
 			// buttonEncaminharEmail
 			// 
@@ -199,7 +189,6 @@ namespace NOC_Email
 			this.tituloDeReparo.Name = "tituloDeReparo";
 			this.tituloDeReparo.Size = new System.Drawing.Size(268, 26);
 			this.tituloDeReparo.TabIndex = 16;
-//			this.tituloDeReparo.TextChanged += new System.EventHandler(this.TituloDeReparoTextChanged);
 			// 
 			// btnMensagemAoClientePorEmail
 			// 
@@ -231,12 +220,22 @@ namespace NOC_Email
 			this.comboBox1.Size = new System.Drawing.Size(268, 26);
 			this.comboBox1.TabIndex = 22;
 			// 
+			// formaDeContato
+			// 
+			this.formaDeContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.formaDeContato.FormattingEnabled = true;
+			this.formaDeContato.Location = new System.Drawing.Point(146, 182);
+			this.formaDeContato.Name = "formaDeContato";
+			this.formaDeContato.Size = new System.Drawing.Size(268, 26);
+			this.formaDeContato.TabIndex = 23;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Menu;
 			this.ClientSize = new System.Drawing.Size(424, 302);
+			this.Controls.Add(this.formaDeContato);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnMensagemAoClientePorEmail);
@@ -250,7 +249,6 @@ namespace NOC_Email
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.buttonEncaminharEmail);
 			this.Controls.Add(this.motivoDoReparo);
-			this.Controls.Add(this.formaDeContato);
 			this.Controls.Add(this.expedienteDoCliente);
 			this.Controls.Add(this.enderecoComercial);
 			this.Controls.Add(this.designacao);

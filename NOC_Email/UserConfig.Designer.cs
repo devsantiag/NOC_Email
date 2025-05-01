@@ -17,21 +17,21 @@ namespace NOC_Email
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.ComboBox comboBox1;
-		private System.Windows.Forms.ComboBox comboBox2;
+		private System.Windows.Forms.ComboBox comboBox_EmailDaTelecom;
+		private System.Windows.Forms.ComboBox comboBox_ContatoTelecom;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.ComboBox comboBox4;
-		private System.Windows.Forms.ComboBox comboBox3;
+		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
+		private System.Windows.Forms.ComboBox comboBox_ExpedienteDoCliente;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button btnExitApplication;
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.Button btnSalvarExpedienteDoCliente;
+		private System.Windows.Forms.Button btnSalvarRazaoSocial;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button btnHistórico;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -57,21 +57,21 @@ namespace NOC_Email
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.button5 = new System.Windows.Forms.Button();
-			this.comboBox4 = new System.Windows.Forms.ComboBox();
+			this.btnSalvarExpedienteDoCliente = new System.Windows.Forms.Button();
+			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
 			this.button2 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
+			this.btnSalvarRazaoSocial = new System.Windows.Forms.Button();
 			this.button1 = new System.Windows.Forms.Button();
-			this.comboBox3 = new System.Windows.Forms.ComboBox();
+			this.comboBox_ExpedienteDoCliente = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
-			this.comboBox2 = new System.Windows.Forms.ComboBox();
+			this.comboBox_EmailDaTelecom = new System.Windows.Forms.ComboBox();
+			this.comboBox_ContatoTelecom = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.button3 = new System.Windows.Forms.Button();
 			this.btnExitApplication = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
+			this.btnHistórico = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -80,7 +80,7 @@ namespace NOC_Email
 			this.label1.AutoSize = true;
 			this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 9);
+			this.label1.Location = new System.Drawing.Point(12, 16);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(97, 21);
 			this.label1.TabIndex = 0;
@@ -101,40 +101,40 @@ namespace NOC_Email
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-			this.panel1.Controls.Add(this.button5);
-			this.panel1.Controls.Add(this.comboBox4);
+			this.panel1.Controls.Add(this.btnSalvarExpedienteDoCliente);
+			this.panel1.Controls.Add(this.comboBox_RazaoSocial);
 			this.panel1.Controls.Add(this.button2);
-			this.panel1.Controls.Add(this.button6);
+			this.panel1.Controls.Add(this.btnSalvarRazaoSocial);
 			this.panel1.Controls.Add(this.button1);
-			this.panel1.Controls.Add(this.comboBox3);
+			this.panel1.Controls.Add(this.comboBox_ExpedienteDoCliente);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label4);
-			this.panel1.Controls.Add(this.comboBox1);
-			this.panel1.Controls.Add(this.comboBox2);
+			this.panel1.Controls.Add(this.comboBox_EmailDaTelecom);
+			this.panel1.Controls.Add(this.comboBox_ContatoTelecom);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label6);
-			this.panel1.Location = new System.Drawing.Point(-7, 0);
+			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(470, 230);
+			this.panel1.Size = new System.Drawing.Size(463, 230);
 			this.panel1.TabIndex = 9;
 			// 
-			// button5
+			// btnSalvarExpedienteDoCliente
 			// 
-			this.button5.Location = new System.Drawing.Point(375, 45);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(75, 23);
-			this.button5.TabIndex = 13;
-			this.button5.Text = "button5";
-			this.button5.UseVisualStyleBackColor = true;
+			this.btnSalvarExpedienteDoCliente.Location = new System.Drawing.Point(375, 45);
+			this.btnSalvarExpedienteDoCliente.Name = "btnSalvarExpedienteDoCliente";
+			this.btnSalvarExpedienteDoCliente.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarExpedienteDoCliente.TabIndex = 13;
+			this.btnSalvarExpedienteDoCliente.Text = "Salvar";
+			this.btnSalvarExpedienteDoCliente.UseVisualStyleBackColor = true;
 			// 
-			// comboBox4
+			// comboBox_RazaoSocial
 			// 
-			this.comboBox4.FormattingEnabled = true;
-			this.comboBox4.Location = new System.Drawing.Point(119, 15);
-			this.comboBox4.Name = "comboBox4";
-			this.comboBox4.Size = new System.Drawing.Size(250, 21);
-			this.comboBox4.TabIndex = 11;
+			this.comboBox_RazaoSocial.FormattingEnabled = true;
+			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(119, 15);
+			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
+			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 21);
+			this.comboBox_RazaoSocial.TabIndex = 11;
 			// 
 			// button2
 			// 
@@ -142,17 +142,18 @@ namespace NOC_Email
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 8;
-			this.button2.Text = "button2";
+			this.button2.Text = "Salvar";
 			this.button2.UseVisualStyleBackColor = true;
 			// 
-			// button6
+			// btnSalvarRazaoSocial
 			// 
-			this.button6.Location = new System.Drawing.Point(375, 15);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(75, 23);
-			this.button6.TabIndex = 12;
-			this.button6.Text = "button6";
-			this.button6.UseVisualStyleBackColor = true;
+			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 15);
+			this.btnSalvarRazaoSocial.Name = "btnSalvarRazaoSocial";
+			this.btnSalvarRazaoSocial.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarRazaoSocial.TabIndex = 12;
+			this.btnSalvarRazaoSocial.Text = "Salvar";
+			this.btnSalvarRazaoSocial.UseVisualStyleBackColor = true;
+			this.btnSalvarRazaoSocial.Click += new System.EventHandler(this.BtnSalvarRazaoSocialClick);
 			// 
 			// button1
 			// 
@@ -160,16 +161,16 @@ namespace NOC_Email
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 7;
-			this.button1.Text = "button1";
+			this.button1.Text = "Salvar";
 			this.button1.UseVisualStyleBackColor = true;
 			// 
-			// comboBox3
+			// comboBox_ExpedienteDoCliente
 			// 
-			this.comboBox3.FormattingEnabled = true;
-			this.comboBox3.Location = new System.Drawing.Point(119, 42);
-			this.comboBox3.Name = "comboBox3";
-			this.comboBox3.Size = new System.Drawing.Size(250, 21);
-			this.comboBox3.TabIndex = 10;
+			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
+			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(119, 42);
+			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
+			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(250, 21);
+			this.comboBox_ExpedienteDoCliente.TabIndex = 10;
 			// 
 			// label5
 			// 
@@ -193,21 +194,21 @@ namespace NOC_Email
 			this.label4.TabIndex = 5;
 			this.label4.Text = "E-mail";
 			// 
-			// comboBox1
+			// comboBox_EmailDaTelecom
 			// 
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(152, 125);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(217, 21);
-			this.comboBox1.TabIndex = 3;
+			this.comboBox_EmailDaTelecom.FormattingEnabled = true;
+			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(152, 125);
+			this.comboBox_EmailDaTelecom.Name = "comboBox_EmailDaTelecom";
+			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(217, 21);
+			this.comboBox_EmailDaTelecom.TabIndex = 3;
 			// 
-			// comboBox2
+			// comboBox_ContatoTelecom
 			// 
-			this.comboBox2.FormattingEnabled = true;
-			this.comboBox2.Location = new System.Drawing.Point(152, 152);
-			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(217, 21);
-			this.comboBox2.TabIndex = 4;
+			this.comboBox_ContatoTelecom.FormattingEnabled = true;
+			this.comboBox_ContatoTelecom.Location = new System.Drawing.Point(152, 152);
+			this.comboBox_ContatoTelecom.Name = "comboBox_ContatoTelecom";
+			this.comboBox_ContatoTelecom.Size = new System.Drawing.Size(217, 21);
+			this.comboBox_ContatoTelecom.TabIndex = 4;
 			// 
 			// label3
 			// 
@@ -252,21 +253,22 @@ namespace NOC_Email
 			this.btnExitApplication.UseVisualStyleBackColor = true;
 			this.btnExitApplication.Click += new System.EventHandler(this.BtnExitApplicationClick);
 			// 
-			// button4
+			// btnHistórico
 			// 
-			this.button4.Location = new System.Drawing.Point(211, 239);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(75, 23);
-			this.button4.TabIndex = 12;
-			this.button4.Text = "Salvos...";
-			this.button4.UseVisualStyleBackColor = true;
+			this.btnHistórico.Location = new System.Drawing.Point(211, 239);
+			this.btnHistórico.Name = "btnHistórico";
+			this.btnHistórico.Size = new System.Drawing.Size(75, 23);
+			this.btnHistórico.TabIndex = 12;
+			this.btnHistórico.Text = "Histórico ...";
+			this.btnHistórico.UseVisualStyleBackColor = true;
+			this.btnHistórico.Click += new System.EventHandler(this.BtnHistoricoDeInformacoesSalvasClick);
 			// 
 			// UserConfig
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(457, 270);
-			this.Controls.Add(this.button4);
+			this.Controls.Add(this.btnHistórico);
 			this.Controls.Add(this.btnExitApplication);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.label1);
