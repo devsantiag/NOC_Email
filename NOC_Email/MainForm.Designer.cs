@@ -24,7 +24,7 @@ namespace NOC_Email
 		private System.Windows.Forms.TextBox tituloDeReparo;
 		private System.Windows.Forms.Button btnMensagemAoClientePorEmail;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
 		private System.Windows.Forms.ComboBox formaDeContato;
 		
 		protected override void Dispose(bool disposing)
@@ -54,7 +54,7 @@ namespace NOC_Email
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
 			this.btnMensagemAoClientePorEmail = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
 			this.formaDeContato = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
@@ -211,14 +211,14 @@ namespace NOC_Email
 			this.label7.TabIndex = 21;
 			this.label7.Text = "Razão Social";
 			// 
-			// comboBox1
+			// comboBox_RazaoSocial
 			// 
-			this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(145, 38);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(268, 26);
-			this.comboBox1.TabIndex = 22;
+			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_RazaoSocial.FormattingEnabled = true;
+			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(145, 38);
+			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
+			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(268, 26);
+			this.comboBox_RazaoSocial.TabIndex = 22;
 			// 
 			// formaDeContato
 			// 
@@ -236,7 +236,7 @@ namespace NOC_Email
 			this.BackColor = System.Drawing.SystemColors.Menu;
 			this.ClientSize = new System.Drawing.Size(424, 302);
 			this.Controls.Add(this.formaDeContato);
-			this.Controls.Add(this.comboBox1);
+			this.Controls.Add(this.comboBox_RazaoSocial);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnMensagemAoClientePorEmail);
 			this.Controls.Add(this.label6);

@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Caminhos.cs" />
     <Compile Include="Historico.cs" />
     <Compile Include="Historico.Designer.cs">
       <DependentUpon>Historico.cs</DependentUpon>
