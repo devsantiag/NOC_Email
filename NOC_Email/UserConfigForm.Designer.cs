@@ -7,11 +7,9 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.ComboBox comboBox_EmailDaTelecom;
-		private System.Windows.Forms.ComboBox comboBox_ContatoTelecom;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnSalvarEmail;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
 		private System.Windows.Forms.ComboBox comboBox_ExpedienteDoCliente;
@@ -22,6 +20,8 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Button btnHistórico;
 		private System.Windows.Forms.Label label_aviso;
+		private System.Windows.Forms.ComboBox comboBox_TelefoneDeContato;
+		private System.Windows.Forms.Button btnSalvarTelefone;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -38,16 +38,16 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.btnSalvarTelefone = new System.Windows.Forms.Button();
+			this.comboBox_TelefoneDeContato = new System.Windows.Forms.ComboBox();
 			this.btnSalvarExpedienteDoCliente = new System.Windows.Forms.Button();
 			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
-			this.button2 = new System.Windows.Forms.Button();
 			this.btnSalvarRazaoSocial = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnSalvarEmail = new System.Windows.Forms.Button();
 			this.comboBox_ExpedienteDoCliente = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.comboBox_EmailDaTelecom = new System.Windows.Forms.ComboBox();
-			this.comboBox_ContatoTelecom = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.button3 = new System.Windows.Forms.Button();
@@ -83,23 +83,41 @@
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.panel1.Controls.Add(this.btnSalvarTelefone);
+			this.panel1.Controls.Add(this.comboBox_TelefoneDeContato);
 			this.panel1.Controls.Add(this.btnSalvarExpedienteDoCliente);
 			this.panel1.Controls.Add(this.comboBox_RazaoSocial);
-			this.panel1.Controls.Add(this.button2);
 			this.panel1.Controls.Add(this.btnSalvarRazaoSocial);
-			this.panel1.Controls.Add(this.button1);
+			this.panel1.Controls.Add(this.btnSalvarEmail);
 			this.panel1.Controls.Add(this.comboBox_ExpedienteDoCliente);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label4);
 			this.panel1.Controls.Add(this.comboBox_EmailDaTelecom);
-			this.panel1.Controls.Add(this.comboBox_ContatoTelecom);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label6);
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(463, 230);
 			this.panel1.TabIndex = 9;
+			// 
+			// btnSalvarTelefone
+			// 
+			this.btnSalvarTelefone.Location = new System.Drawing.Point(375, 154);
+			this.btnSalvarTelefone.Name = "btnSalvarTelefone";
+			this.btnSalvarTelefone.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarTelefone.TabIndex = 16;
+			this.btnSalvarTelefone.Text = "Salvar";
+			this.btnSalvarTelefone.UseVisualStyleBackColor = true;
+			this.btnSalvarTelefone.Click += new System.EventHandler(this.BtnSalvarTelefoneClick);
+			// 
+			// comboBox_TelefoneDeContato
+			// 
+			this.comboBox_TelefoneDeContato.FormattingEnabled = true;
+			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 154);
+			this.comboBox_TelefoneDeContato.Name = "comboBox_TelefoneDeContato";
+			this.comboBox_TelefoneDeContato.Size = new System.Drawing.Size(254, 21);
+			this.comboBox_TelefoneDeContato.TabIndex = 15;
 			// 
 			// btnSalvarExpedienteDoCliente
 			// 
@@ -119,15 +137,6 @@
 			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 21);
 			this.comboBox_RazaoSocial.TabIndex = 11;
 			// 
-			// button2
-			// 
-			this.button2.Location = new System.Drawing.Point(377, 153);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 8;
-			this.button2.Text = "Salvar";
-			this.button2.UseVisualStyleBackColor = true;
-			// 
 			// btnSalvarRazaoSocial
 			// 
 			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 15);
@@ -138,14 +147,15 @@
 			this.btnSalvarRazaoSocial.UseVisualStyleBackColor = true;
 			this.btnSalvarRazaoSocial.Click += new System.EventHandler(this.BtnSalvarRazaoSocialClick);
 			// 
-			// button1
+			// btnSalvarEmail
 			// 
-			this.button1.Location = new System.Drawing.Point(377, 123);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 7;
-			this.button1.Text = "Salvar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnSalvarEmail.Location = new System.Drawing.Point(375, 125);
+			this.btnSalvarEmail.Name = "btnSalvarEmail";
+			this.btnSalvarEmail.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarEmail.TabIndex = 7;
+			this.btnSalvarEmail.Text = "Salvar";
+			this.btnSalvarEmail.UseVisualStyleBackColor = true;
+			this.btnSalvarEmail.Click += new System.EventHandler(this.BtnSalvarEmailClick);
 			// 
 			// comboBox_ExpedienteDoCliente
 			// 
@@ -160,7 +170,7 @@
 			this.label5.AutoSize = true;
 			this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(79, 152);
+			this.label5.Location = new System.Drawing.Point(42, 152);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(67, 21);
 			this.label5.TabIndex = 6;
@@ -171,7 +181,7 @@
 			this.label4.AutoSize = true;
 			this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(92, 125);
+			this.label4.Location = new System.Drawing.Point(55, 125);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(54, 21);
 			this.label4.TabIndex = 5;
@@ -180,18 +190,10 @@
 			// comboBox_EmailDaTelecom
 			// 
 			this.comboBox_EmailDaTelecom.FormattingEnabled = true;
-			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(152, 125);
+			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(115, 125);
 			this.comboBox_EmailDaTelecom.Name = "comboBox_EmailDaTelecom";
-			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(217, 21);
+			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(254, 21);
 			this.comboBox_EmailDaTelecom.TabIndex = 3;
-			// 
-			// comboBox_ContatoTelecom
-			// 
-			this.comboBox_ContatoTelecom.FormattingEnabled = true;
-			this.comboBox_ContatoTelecom.Location = new System.Drawing.Point(152, 152);
-			this.comboBox_ContatoTelecom.Name = "comboBox_ContatoTelecom";
-			this.comboBox_ContatoTelecom.Size = new System.Drawing.Size(217, 21);
-			this.comboBox_ContatoTelecom.TabIndex = 4;
 			// 
 			// label3
 			// 

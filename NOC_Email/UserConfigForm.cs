@@ -10,6 +10,8 @@ namespace NOC_Email
 		string getArquivo_class_caminho_razaoSocial = Caminhos.ArquivoRazaoSocial;
 		string getArquivo_class_caminho_ExpedienteDoCliente = Caminhos.ArquivoExpedienteDoCliente;
 		
+		string getArquivo_class_caminho_email = Caminhos.ArquivoEmail;
+		string getArquivo_class_caminho_Telefone = Caminhos.ArquivoTelefone;
 		
 		public UserConfigForm()
 		{
@@ -148,10 +150,141 @@ namespace NOC_Email
 			}
 		}
 		
+		void BtnSalvarEmailClick(object sender, EventArgs e)
+		{
+			try
+			{
+				string emailEntrada = comboBox_EmailDaTelecom.Text.Trim();
+
+				if (emailEntrada.Equals(":empty all email", StringComparison.OrdinalIgnoreCase))
+				{
+					var resultado = MessageBox.Show(
+						"Você está prestes a apagar todos os dados salvos de e-mail. " +
+						"Esta ação não pode ser desfeita e todos os registros serão removidos permanentemente. " +
+						"Deseja continuar?",
+						"Confirmação de Exclusão",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Warning
+					);
+
+					if (resultado == DialogResult.Yes)
+					{
+						comboBox_EmailDaTelecom.Text = "";
+						File.WriteAllText(getArquivo_class_caminho_email, string.Empty);
+						AtualizarEmailsNoComboBox();
+						MessageBox.Show("Todos os dados de e-mail foram apagados com sucesso.");
+					}
+					else
+					{
+						MessageBox.Show("Operação cancelada.");
+					}
+
+					return;
+				}
+
+				if (!string.IsNullOrEmpty(emailEntrada))
+				{
+					File.AppendAllText(getArquivo_class_caminho_email, emailEntrada + Environment.NewLine);
+					AtualizarEmailsNoComboBox();
+					MessageBox.Show("E-mail salvo com sucesso!");
+				}
+				else
+				{
+					MessageBox.Show("Por favor, digite um e-mail válido.");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao processar: " + ex.Message);
+			}
+		}
+
+		
+		private void AtualizarEmailsNoComboBox()
+		{
+			if (File.Exists(getArquivo_class_caminho_email))
+			{
+				string[] linhas = File.ReadAllLines(getArquivo_class_caminho_email);
+				comboBox_EmailDaTelecom.Items.Clear();
+
+				foreach (var linha in linhas.Distinct().Where(l => !string.IsNullOrWhiteSpace(l)))
+				{
+					comboBox_EmailDaTelecom.Items.Add(linha.Trim());
+				}
+			}
+		}
+		
+		
+		void BtnSalvarTelefoneClick(object sender, EventArgs e)
+		{
+			try
+			{
+				string telefoneDeContato = comboBox_TelefoneDeContato.Text.Trim();
+
+				if (telefoneDeContato.Equals(":empty all telefone", StringComparison.OrdinalIgnoreCase))
+				{
+					var resultado = MessageBox.Show(
+						"Você está prestes a apagar todos os dados salvos de Telefone. " +
+						"Esta ação não pode ser desfeita e todos os registros serão removidos permanentemente. " +
+						"Deseja continuar?",
+						"Confirmação de Exclusão",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Warning
+					);
+
+					if (resultado == DialogResult.Yes)
+					{
+						comboBox_TelefoneDeContato.Text = "";
+						File.WriteAllText(getArquivo_class_caminho_Telefone, string.Empty);
+						AtualizarTelefonesNoComboBox();
+						MessageBox.Show("Todos os dados de e-mail foram apagados com sucesso.");
+					}
+					else
+					{
+						MessageBox.Show("Operação cancelada.");
+					}
+
+					return;
+				}
+
+				if (!string.IsNullOrEmpty(telefoneDeContato))
+				{
+					File.AppendAllText(getArquivo_class_caminho_Telefone, telefoneDeContato + Environment.NewLine);
+					AtualizarTelefonesNoComboBox();
+					MessageBox.Show("Telefone para contato salvo com sucesso!");
+				}
+				else
+				{
+					MessageBox.Show("Por favor, digite um telefone válido.");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao processar: " + ex.Message);
+			}
+		}
+		
+		private void AtualizarTelefonesNoComboBox()
+		{
+			if (File.Exists(getArquivo_class_caminho_Telefone))
+			{
+				string[] linhas = File.ReadAllLines(getArquivo_class_caminho_Telefone);
+				comboBox_TelefoneDeContato.Items.Clear();
+
+				foreach (var linha in linhas.Distinct().Where(l => !string.IsNullOrWhiteSpace(l)))
+				{
+					comboBox_TelefoneDeContato.Items.Add(linha.Trim());
+				}
+			}
+		}
+		
 		private void UserConfigForm_Load(object sender, EventArgs e)
 		{
 			AtualizarRazoesNaComboBox();
 			AtualizarExpedientesNoComboBox();
+			AtualizarEmailsNoComboBox();
+			AtualizarTelefonesNoComboBox();
 		}
+		
 	}
 }
