@@ -109,6 +109,7 @@
 			this.btnSalvarExpedienteDoCliente.TabIndex = 13;
 			this.btnSalvarExpedienteDoCliente.Text = "Salvar";
 			this.btnSalvarExpedienteDoCliente.UseVisualStyleBackColor = true;
+			this.btnSalvarExpedienteDoCliente.Click += new System.EventHandler(this.BtnSalvarExpedienteDoClienteClick);
 			// 
 			// comboBox_RazaoSocial
 			// 
