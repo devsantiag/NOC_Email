@@ -26,6 +26,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
 		private System.Windows.Forms.ComboBox formaDeContato;
+		private System.Windows.Forms.Button btnConfig;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -52,10 +53,11 @@ namespace NOC_Email
 			this.buttonApagar = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
-			this.btnMensagemAoClientePorEmail = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
 			this.formaDeContato = new System.Windows.Forms.ComboBox();
+			this.btnMensagemAoClientePorEmail = new System.Windows.Forms.Button();
+			this.btnConfig = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// designacao
@@ -107,7 +109,6 @@ namespace NOC_Email
 			this.buttonEncaminharEmail.TabIndex = 8;
 			this.buttonEncaminharEmail.Text = "Encaminhar";
 			this.buttonEncaminharEmail.UseVisualStyleBackColor = true;
-			this.buttonEncaminharEmail.Click += new System.EventHandler(this.ButtonEncaminharEmail);
 			// 
 			// label1
 			// 
@@ -168,7 +169,6 @@ namespace NOC_Email
 			this.buttonApagar.TabIndex = 15;
 			this.buttonApagar.Text = "Apagar";
 			this.buttonApagar.UseVisualStyleBackColor = true;
-			this.buttonApagar.Click += new System.EventHandler(this.ButtonApagarClick);
 			// 
 			// label6
 			// 
@@ -189,17 +189,6 @@ namespace NOC_Email
 			this.tituloDeReparo.Name = "tituloDeReparo";
 			this.tituloDeReparo.Size = new System.Drawing.Size(268, 26);
 			this.tituloDeReparo.TabIndex = 16;
-			// 
-			// btnMensagemAoClientePorEmail
-			// 
-			this.btnMensagemAoClientePorEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnMensagemAoClientePorEmail.Location = new System.Drawing.Point(146, 251);
-			this.btnMensagemAoClientePorEmail.Name = "btnMensagemAoClientePorEmail";
-			this.btnMensagemAoClientePorEmail.Size = new System.Drawing.Size(85, 40);
-			this.btnMensagemAoClientePorEmail.TabIndex = 19;
-			this.btnMensagemAoClientePorEmail.Text = "Notificar Cliente";
-			this.btnMensagemAoClientePorEmail.UseVisualStyleBackColor = true;
-			this.btnMensagemAoClientePorEmail.Click += new System.EventHandler(this.BtnMensagemAoClientePorEmailClick);
 			// 
 			// label7
 			// 
@@ -229,12 +218,34 @@ namespace NOC_Email
 			this.formaDeContato.Size = new System.Drawing.Size(268, 26);
 			this.formaDeContato.TabIndex = 23;
 			// 
+			// btnMensagemAoClientePorEmail
+			// 
+			this.btnMensagemAoClientePorEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnMensagemAoClientePorEmail.Location = new System.Drawing.Point(146, 251);
+			this.btnMensagemAoClientePorEmail.Name = "btnMensagemAoClientePorEmail";
+			this.btnMensagemAoClientePorEmail.Size = new System.Drawing.Size(85, 40);
+			this.btnMensagemAoClientePorEmail.TabIndex = 19;
+			this.btnMensagemAoClientePorEmail.Text = "Notificar Cliente";
+			this.btnMensagemAoClientePorEmail.UseVisualStyleBackColor = true;
+			// 
+			// btnConfig
+			// 
+			this.btnConfig.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnConfig.Location = new System.Drawing.Point(55, 251);
+			this.btnConfig.Name = "btnConfig";
+			this.btnConfig.Size = new System.Drawing.Size(85, 40);
+			this.btnConfig.TabIndex = 24;
+			this.btnConfig.Text = "Config";
+			this.btnConfig.UseVisualStyleBackColor = true;
+			this.btnConfig.Click += new System.EventHandler(this.BtnConfigClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Menu;
 			this.ClientSize = new System.Drawing.Size(424, 302);
+			this.Controls.Add(this.btnConfig);
 			this.Controls.Add(this.formaDeContato);
 			this.Controls.Add(this.comboBox_RazaoSocial);
 			this.Controls.Add(this.label7);

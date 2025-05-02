@@ -27,5 +27,5 @@ C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NO
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csproj.GenerateResource.Cache
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.exe
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
-C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.UserConfig.resources
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.Historico.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.UserConfigForm.resources

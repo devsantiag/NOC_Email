@@ -16,7 +16,7 @@ namespace NOC_Email
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new UserConfig());
+			Application.Run(new UserConfigForm());
 		}
 	}
 }

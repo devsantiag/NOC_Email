@@ -69,9 +69,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserConfig.cs" />
-    <Compile Include="UserConfig.Designer.cs">
-      <DependentUpon>UserConfig.cs</DependentUpon>
+    <Compile Include="UserConfigForm.cs" />
+    <Compile Include="UserConfigForm.Designer.cs">
+      <DependentUpon>UserConfigForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -90,8 +90,8 @@
     <EmbeddedResource Include="obj\NoteClipBoard.resx">
       <DependentUpon>NoteClipBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserConfig.resx">
-      <DependentUpon>UserConfig.cs</DependentUpon>
+    <EmbeddedResource Include="UserConfigForm.resx">
+      <DependentUpon>UserConfigForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,22 +1,22 @@
-﻿/*
- * Created by SharpDevelop.
- * User: fjstavares
- * Date: 01/05/2025
- * Time: 10:50
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-using System;
+﻿using System;
+using System.IO;
 
 namespace NOC_Email
 {
-	/// <summary>
-	/// Description of Caminhos.
-	/// </summary>
-	public class Caminhos
+	public static class Caminhos
 	{
-		public Caminhos()
-		{
-		}
+		public static readonly string PastaConfig = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NOC_Email");
+
+        public static readonly string ArquivoRazaoSocial = Path.Combine(PastaConfig, "razao_social_da_empresa.txt");
+        public static readonly string ArquivoFormaDeContato = Path.Combine(PastaConfig, "forma_de_contato_com_a_telecom.txt");
+        
+        static Caminhos()
+        {
+        	if (!Directory.Exists(PastaConfig))
+            {
+                Directory.CreateDirectory(PastaConfig);
+            }
+        }
+        
 	}
 }
