@@ -103,7 +103,7 @@
 			// 
 			// btnSalvarTelefone
 			// 
-			this.btnSalvarTelefone.Location = new System.Drawing.Point(375, 154);
+			this.btnSalvarTelefone.Location = new System.Drawing.Point(373, 154);
 			this.btnSalvarTelefone.Name = "btnSalvarTelefone";
 			this.btnSalvarTelefone.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarTelefone.TabIndex = 16;
@@ -113,10 +113,11 @@
 			// 
 			// comboBox_TelefoneDeContato
 			// 
+			this.comboBox_TelefoneDeContato.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_TelefoneDeContato.FormattingEnabled = true;
-			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 154);
+			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 152);
 			this.comboBox_TelefoneDeContato.Name = "comboBox_TelefoneDeContato";
-			this.comboBox_TelefoneDeContato.Size = new System.Drawing.Size(254, 21);
+			this.comboBox_TelefoneDeContato.Size = new System.Drawing.Size(254, 25);
 			this.comboBox_TelefoneDeContato.TabIndex = 15;
 			// 
 			// btnSalvarExpedienteDoCliente
@@ -131,15 +132,16 @@
 			// 
 			// comboBox_RazaoSocial
 			// 
+			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_RazaoSocial.FormattingEnabled = true;
 			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(119, 15);
 			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
-			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 21);
+			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 25);
 			this.comboBox_RazaoSocial.TabIndex = 11;
 			// 
 			// btnSalvarRazaoSocial
 			// 
-			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 15);
+			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 16);
 			this.btnSalvarRazaoSocial.Name = "btnSalvarRazaoSocial";
 			this.btnSalvarRazaoSocial.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarRazaoSocial.TabIndex = 12;
@@ -149,7 +151,7 @@
 			// 
 			// btnSalvarEmail
 			// 
-			this.btnSalvarEmail.Location = new System.Drawing.Point(375, 125);
+			this.btnSalvarEmail.Location = new System.Drawing.Point(373, 127);
 			this.btnSalvarEmail.Name = "btnSalvarEmail";
 			this.btnSalvarEmail.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarEmail.TabIndex = 7;
@@ -159,10 +161,11 @@
 			// 
 			// comboBox_ExpedienteDoCliente
 			// 
+			this.comboBox_ExpedienteDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
 			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(119, 42);
 			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
-			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(250, 21);
+			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(250, 25);
 			this.comboBox_ExpedienteDoCliente.TabIndex = 10;
 			// 
 			// label5
@@ -189,10 +192,11 @@
 			// 
 			// comboBox_EmailDaTelecom
 			// 
+			this.comboBox_EmailDaTelecom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_EmailDaTelecom.FormattingEnabled = true;
 			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(115, 125);
 			this.comboBox_EmailDaTelecom.Name = "comboBox_EmailDaTelecom";
-			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(254, 21);
+			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(254, 25);
 			this.comboBox_EmailDaTelecom.TabIndex = 3;
 			// 
 			// label3
