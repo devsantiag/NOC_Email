@@ -285,5 +285,62 @@ namespace NOC_Email
 			AtualizarEmailsNoComboBox();
 			AtualizarTelefonesNoComboBox();
 		}
+		
+//		responsável por excluir valores selecionados no comboBox pelo usuário
+		void BtnExcluirClick(object sender, EventArgs e)
+		{
+			try
+			{
+				if (comboBox_RazaoSocial.SelectedItem != null)
+				{
+					ExcluirItemSelecionado(comboBox_RazaoSocial, getArquivo_class_caminho_razaoSocial);
+					AtualizarRazoesNaComboBox();
+					return;
+				}
+
+				if (comboBox_ExpedienteDoCliente.SelectedItem != null)
+				{
+					ExcluirItemSelecionado(comboBox_ExpedienteDoCliente, getArquivo_class_caminho_ExpedienteDoCliente);
+					AtualizarExpedientesNoComboBox();
+					return;
+				}
+
+				if (comboBox_EmailDaTelecom.SelectedItem != null)
+				{
+					ExcluirItemSelecionado(comboBox_EmailDaTelecom, getArquivo_class_caminho_email);
+					AtualizarEmailsNoComboBox();
+					return;
+				}
+
+				if (comboBox_TelefoneDeContato.SelectedItem != null)
+				{
+					ExcluirItemSelecionado(comboBox_TelefoneDeContato, getArquivo_class_caminho_Telefone);
+					AtualizarTelefonesNoComboBox();
+					return;
+				}
+
+				MessageBox.Show("Nenhum item selecionado para exclusão.");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao excluir item: " + ex.Message);
+			}
+		}
+
+		private void ExcluirItemSelecionado(ComboBox comboBox, string caminhoArquivo)
+		{
+			string itemSelecionado = comboBox.SelectedItem.ToString();
+
+			if (File.Exists(caminhoArquivo))
+			{
+				var linhas = File.ReadAllLines(caminhoArquivo)
+					.Where(l => !string.IsNullOrWhiteSpace(l) && l.Trim() != itemSelecionado)
+					.Distinct()
+					.ToArray();
+
+				File.WriteAllLines(caminhoArquivo, linhas);
+				MessageBox.Show("Item {0} excluído com sucesso." +itemSelecionado);
+			}
+		}
 	}
 }

@@ -22,6 +22,7 @@
 		private System.Windows.Forms.Label label_aviso;
 		private System.Windows.Forms.ComboBox comboBox_TelefoneDeContato;
 		private System.Windows.Forms.Button btnSalvarTelefone;
+		private System.Windows.Forms.Button btnExcluir;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -54,6 +55,7 @@
 			this.btnExitApplication = new System.Windows.Forms.Button();
 			this.btnHistórico = new System.Windows.Forms.Button();
 			this.label_aviso = new System.Windows.Forms.Label();
+			this.btnExcluir = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -258,11 +260,22 @@
 			this.label_aviso.Size = new System.Drawing.Size(0, 13);
 			this.label_aviso.TabIndex = 13;
 			// 
+			// btnExcluir
+			// 
+			this.btnExcluir.Location = new System.Drawing.Point(130, 239);
+			this.btnExcluir.Name = "btnExcluir";
+			this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+			this.btnExcluir.TabIndex = 14;
+			this.btnExcluir.Text = "Excluir";
+			this.btnExcluir.UseVisualStyleBackColor = true;
+			this.btnExcluir.Click += new System.EventHandler(this.BtnExcluirClick);
+			// 
 			// UserConfigForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(457, 270);
+			this.Controls.Add(this.btnExcluir);
 			this.Controls.Add(this.label_aviso);
 			this.Controls.Add(this.btnHistórico);
 			this.Controls.Add(this.btnExitApplication);
