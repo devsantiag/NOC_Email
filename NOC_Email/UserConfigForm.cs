@@ -9,10 +9,10 @@ namespace NOC_Email
 	{
 		string getArquivo_class_caminho_razaoSocial = Caminhos.ArquivoRazaoSocial;
 		string getArquivo_class_caminho_ExpedienteDoCliente = Caminhos.ArquivoExpedienteDoCliente;
-		
+
 		string getArquivo_class_caminho_email = Caminhos.ArquivoEmail;
 		string getArquivo_class_caminho_Telefone = Caminhos.ArquivoTelefone;
-		
+
 		public UserConfigForm()
 		{
 			InitializeComponent();
@@ -82,15 +82,14 @@ namespace NOC_Email
 				}
 			}
 		}
-		
-//		expediente do cliente
+
+		// expediente do cliente
 		void BtnSalvarExpedienteDoClienteClick(object sender, EventArgs e)
 		{
-			
 			try
 			{
 				string entrada = comboBox_ExpedienteDoCliente.Text.Trim();
-				
+
 				if (entrada.Equals(":empty all expediente", StringComparison.OrdinalIgnoreCase))
 				{
 					var resultado = MessageBox.Show(
@@ -117,7 +116,7 @@ namespace NOC_Email
 
 					return; // encerra aqui, não continua com o salvamento
 				}
-				
+
 				if (!string.IsNullOrEmpty(entrada))
 				{
 					File.AppendAllText(getArquivo_class_caminho_ExpedienteDoCliente, entrada + Environment.NewLine);
@@ -128,14 +127,13 @@ namespace NOC_Email
 				{
 					MessageBox.Show("Por favor, o expediente do cliente.");
 				}
-				
-			} catch (Exception ex) {
-				
+			}
+			catch (Exception ex)
+			{
 				MessageBox.Show("Erro ao processar: " + ex.Message);
-				
 			}
 		}
-		
+
 		private void AtualizarExpedientesNoComboBox()
 		{
 			if (File.Exists(getArquivo_class_caminho_ExpedienteDoCliente))
@@ -149,12 +147,19 @@ namespace NOC_Email
 				}
 			}
 		}
-		
+
 		void BtnSalvarEmailClick(object sender, EventArgs e)
 		{
 			try
 			{
 				string emailEntrada = comboBox_EmailDaTelecom.Text.Trim();
+
+				// Validação simples de e-mail
+				if (!IsValidEmail(emailEntrada))
+				{
+					MessageBox.Show("Por favor, digite um e-mail válido.");
+					return;
+				}
 
 				if (emailEntrada.Equals(":empty all email", StringComparison.OrdinalIgnoreCase))
 				{
@@ -199,7 +204,6 @@ namespace NOC_Email
 			}
 		}
 
-		
 		private void AtualizarEmailsNoComboBox()
 		{
 			if (File.Exists(getArquivo_class_caminho_email))
@@ -213,8 +217,7 @@ namespace NOC_Email
 				}
 			}
 		}
-		
-		
+
 		void BtnSalvarTelefoneClick(object sender, EventArgs e)
 		{
 			try
@@ -237,7 +240,7 @@ namespace NOC_Email
 						comboBox_TelefoneDeContato.Text = "";
 						File.WriteAllText(getArquivo_class_caminho_Telefone, string.Empty);
 						AtualizarTelefonesNoComboBox();
-						MessageBox.Show("Todos os dados de e-mail foram apagados com sucesso.");
+						MessageBox.Show("Todos os dados de telefone foram apagados com sucesso.");
 					}
 					else
 					{
@@ -263,7 +266,7 @@ namespace NOC_Email
 				MessageBox.Show("Erro ao processar: " + ex.Message);
 			}
 		}
-		
+
 		private void AtualizarTelefonesNoComboBox()
 		{
 			if (File.Exists(getArquivo_class_caminho_Telefone))
@@ -277,7 +280,7 @@ namespace NOC_Email
 				}
 			}
 		}
-		
+
 		private void UserConfigForm_Load(object sender, EventArgs e)
 		{
 			AtualizarRazoesNaComboBox();
@@ -285,8 +288,8 @@ namespace NOC_Email
 			AtualizarEmailsNoComboBox();
 			AtualizarTelefonesNoComboBox();
 		}
-		
-//		responsável por excluir valores selecionados no comboBox pelo usuário
+
+		// responsável por excluir valores selecionados no comboBox pelo usuário
 		void BtnExcluirClick(object sender, EventArgs e)
 		{
 			try
@@ -339,8 +342,33 @@ namespace NOC_Email
 					.ToArray();
 
 				File.WriteAllLines(caminhoArquivo, linhas);
-				MessageBox.Show("Item {0} excluído com sucesso." +itemSelecionado);
+				// Recarregar o ComboBox após a exclusão
+				comboBox.Items.Clear();
+				foreach (var linha in linhas)
+				{
+					comboBox.Items.Add(linha.Trim());
+				}
+				MessageBox.Show("O item '" + itemSelecionado + "' foi excluído com sucesso.");
+			}
+			else
+			{
+				MessageBox.Show("Erro ao tentar acessar o arquivo de dados.");
+			}
+		}
+
+		// Validação simples para e-mail
+		private bool IsValidEmail(string email)
+		{
+			try
+			{
+				var addr = new System.Net.Mail.MailAddress(email);
+				return addr.Address == email;
+			}
+			catch
+			{
+				return false;
 			}
 		}
 	}
 }
+
