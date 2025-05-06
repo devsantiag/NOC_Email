@@ -99,6 +99,7 @@ namespace NOC_Email
 			this.buttonEncaminharEmail.TabIndex = 8;
 			this.buttonEncaminharEmail.Text = "Encaminhar";
 			this.buttonEncaminharEmail.UseVisualStyleBackColor = true;
+			this.buttonEncaminharEmail.Click += new System.EventHandler(this.ButtonEncaminharEmailClick);
 			// 
 			// label1
 			// 

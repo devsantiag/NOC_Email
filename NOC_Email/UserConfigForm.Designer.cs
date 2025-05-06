@@ -13,8 +13,7 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
 		private System.Windows.Forms.ComboBox comboBox_ExpedienteDoCliente;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button btnExitApplication;
+		private System.Windows.Forms.Button btnSair;
 		private System.Windows.Forms.Button btnSalvarExpedienteDoCliente;
 		private System.Windows.Forms.Button btnSalvarRazaoSocial;
 		private System.Windows.Forms.Label label6;
@@ -51,8 +50,7 @@
 			this.comboBox_EmailDaTelecom = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
-			this.btnExitApplication = new System.Windows.Forms.Button();
+			this.btnSair = new System.Windows.Forms.Button();
 			this.btnHistórico = new System.Windows.Forms.Button();
 			this.label_aviso = new System.Windows.Forms.Label();
 			this.btnExcluir = new System.Windows.Forms.Button();
@@ -224,28 +222,18 @@
 			this.label6.TabIndex = 14;
 			this.label6.Text = "_________________________________________________________________";
 			// 
-			// button3
+			// btnSair
 			// 
-			this.button3.BackColor = System.Drawing.Color.Transparent;
-			this.button3.Location = new System.Drawing.Point(373, 239);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(75, 23);
-			this.button3.TabIndex = 10;
-			this.button3.Text = "Cancelar";
-			this.button3.UseVisualStyleBackColor = false;
-			// 
-			// btnExitApplication
-			// 
-			this.btnExitApplication.Location = new System.Drawing.Point(292, 239);
-			this.btnExitApplication.Name = "btnExitApplication";
-			this.btnExitApplication.Size = new System.Drawing.Size(75, 23);
-			this.btnExitApplication.TabIndex = 11;
-			this.btnExitApplication.Text = "Ok";
-			this.btnExitApplication.UseVisualStyleBackColor = true;
+			this.btnSair.Location = new System.Drawing.Point(375, 238);
+			this.btnSair.Name = "btnSair";
+			this.btnSair.Size = new System.Drawing.Size(75, 23);
+			this.btnSair.TabIndex = 11;
+			this.btnSair.Text = "Ok";
+			this.btnSair.UseVisualStyleBackColor = true;
 			// 
 			// btnHistórico
 			// 
-			this.btnHistórico.Location = new System.Drawing.Point(211, 239);
+			this.btnHistórico.Location = new System.Drawing.Point(294, 238);
 			this.btnHistórico.Name = "btnHistórico";
 			this.btnHistórico.Size = new System.Drawing.Size(75, 23);
 			this.btnHistórico.TabIndex = 12;
@@ -262,7 +250,7 @@
 			// 
 			// btnExcluir
 			// 
-			this.btnExcluir.Location = new System.Drawing.Point(130, 239);
+			this.btnExcluir.Location = new System.Drawing.Point(213, 238);
 			this.btnExcluir.Name = "btnExcluir";
 			this.btnExcluir.Size = new System.Drawing.Size(75, 23);
 			this.btnExcluir.TabIndex = 14;
@@ -278,8 +266,7 @@
 			this.Controls.Add(this.btnExcluir);
 			this.Controls.Add(this.label_aviso);
 			this.Controls.Add(this.btnHistórico);
-			this.Controls.Add(this.btnExitApplication);
-			this.Controls.Add(this.button3);
+			this.Controls.Add(this.btnSair);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
 			this.Name = "UserConfigForm";
