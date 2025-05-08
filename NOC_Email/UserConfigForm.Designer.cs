@@ -3,7 +3,6 @@
 	partial class UserConfigForm
 	{
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.ComboBox comboBox_EmailDaTelecom;
@@ -13,15 +12,25 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
 		private System.Windows.Forms.ComboBox comboBox_ExpedienteDoCliente;
-		private System.Windows.Forms.Button btnSair;
 		private System.Windows.Forms.Button btnSalvarExpedienteDoCliente;
 		private System.Windows.Forms.Button btnSalvarRazaoSocial;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button btnHistórico;
+		private System.Windows.Forms.Button btnSair;
 		private System.Windows.Forms.Label label_aviso;
 		private System.Windows.Forms.ComboBox comboBox_TelefoneDeContato;
 		private System.Windows.Forms.Button btnSalvarTelefone;
 		private System.Windows.Forms.Button btnExcluir;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Panel panelConfiguracoes;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label btnCloseWindow;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.Label label1;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -35,9 +44,15 @@
 		
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
 			this.btnSalvarTelefone = new System.Windows.Forms.Button();
 			this.comboBox_TelefoneDeContato = new System.Windows.Forms.ComboBox();
 			this.btnSalvarExpedienteDoCliente = new System.Windows.Forms.Button();
@@ -51,29 +66,22 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.btnSair = new System.Windows.Forms.Button();
-			this.btnHistórico = new System.Windows.Forms.Button();
 			this.label_aviso = new System.Windows.Forms.Label();
 			this.btnExcluir = new System.Windows.Forms.Button();
+			this.panelConfiguracoes = new System.Windows.Forms.Panel();
+			this.btnCloseWindow = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
+			this.label13 = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
+			this.panelConfiguracoes.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(97, 21);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Razão Social";
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
 			this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(17, 42);
+			this.label2.Location = new System.Drawing.Point(24, 70);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(85, 21);
 			this.label2.TabIndex = 1;
@@ -83,6 +91,13 @@
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.label10);
+			this.panel1.Controls.Add(this.label9);
+			this.panel1.Controls.Add(this.button1);
+			this.panel1.Controls.Add(this.comboBox1);
+			this.panel1.Controls.Add(this.label8);
+			this.panel1.Controls.Add(this.label7);
 			this.panel1.Controls.Add(this.btnSalvarTelefone);
 			this.panel1.Controls.Add(this.comboBox_TelefoneDeContato);
 			this.panel1.Controls.Add(this.btnSalvarExpedienteDoCliente);
@@ -96,14 +111,89 @@
 			this.panel1.Controls.Add(this.comboBox_EmailDaTelecom);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label6);
-			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Location = new System.Drawing.Point(12, 36);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(463, 230);
+			this.panel1.Size = new System.Drawing.Size(463, 326);
 			this.panel1.TabIndex = 9;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label1.Location = new System.Drawing.Point(2, 304);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(458, 21);
+			this.label1.TabIndex = 23;
+			this.label1.Text = "________________________________________________________________";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.Location = new System.Drawing.Point(11, 238);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(111, 21);
+			this.label10.TabIndex = 22;
+			this.label10.Text = "Tipo de reparo";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(11, 9);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(183, 21);
+			this.label9.TabIndex = 21;
+			this.label9.Text = "Informações do Contrato";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(373, 273);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 20;
+			this.button1.Text = "Salvar";
+			this.button1.UseVisualStyleBackColor = true;
+			// 
+			// comboBox1
+			// 
+			this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox1.FormattingEnabled = true;
+			this.comboBox1.Location = new System.Drawing.Point(115, 272);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(254, 25);
+			this.comboBox1.TabIndex = 19;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(42, 273);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(60, 21);
+			this.label8.TabIndex = 18;
+			this.label8.Text = "Defeito";
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.label7.Location = new System.Drawing.Point(2, 209);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(458, 21);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "________________________________________________________________";
 			// 
 			// btnSalvarTelefone
 			// 
-			this.btnSalvarTelefone.Location = new System.Drawing.Point(373, 154);
+			this.btnSalvarTelefone.Location = new System.Drawing.Point(373, 180);
 			this.btnSalvarTelefone.Name = "btnSalvarTelefone";
 			this.btnSalvarTelefone.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarTelefone.TabIndex = 16;
@@ -115,14 +205,14 @@
 			// 
 			this.comboBox_TelefoneDeContato.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_TelefoneDeContato.FormattingEnabled = true;
-			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 152);
+			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 178);
 			this.comboBox_TelefoneDeContato.Name = "comboBox_TelefoneDeContato";
 			this.comboBox_TelefoneDeContato.Size = new System.Drawing.Size(254, 25);
 			this.comboBox_TelefoneDeContato.TabIndex = 15;
 			// 
 			// btnSalvarExpedienteDoCliente
 			// 
-			this.btnSalvarExpedienteDoCliente.Location = new System.Drawing.Point(375, 45);
+			this.btnSalvarExpedienteDoCliente.Location = new System.Drawing.Point(375, 71);
 			this.btnSalvarExpedienteDoCliente.Name = "btnSalvarExpedienteDoCliente";
 			this.btnSalvarExpedienteDoCliente.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarExpedienteDoCliente.TabIndex = 13;
@@ -134,14 +224,14 @@
 			// 
 			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_RazaoSocial.FormattingEnabled = true;
-			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(119, 15);
+			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(119, 41);
 			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
 			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 25);
 			this.comboBox_RazaoSocial.TabIndex = 11;
 			// 
 			// btnSalvarRazaoSocial
 			// 
-			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 16);
+			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 42);
 			this.btnSalvarRazaoSocial.Name = "btnSalvarRazaoSocial";
 			this.btnSalvarRazaoSocial.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarRazaoSocial.TabIndex = 12;
@@ -151,7 +241,7 @@
 			// 
 			// btnSalvarEmail
 			// 
-			this.btnSalvarEmail.Location = new System.Drawing.Point(373, 127);
+			this.btnSalvarEmail.Location = new System.Drawing.Point(373, 153);
 			this.btnSalvarEmail.Name = "btnSalvarEmail";
 			this.btnSalvarEmail.Size = new System.Drawing.Size(75, 23);
 			this.btnSalvarEmail.TabIndex = 7;
@@ -163,7 +253,7 @@
 			// 
 			this.comboBox_ExpedienteDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
-			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(119, 42);
+			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(119, 68);
 			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
 			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(250, 25);
 			this.comboBox_ExpedienteDoCliente.TabIndex = 10;
@@ -173,7 +263,7 @@
 			this.label5.AutoSize = true;
 			this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(42, 152);
+			this.label5.Location = new System.Drawing.Point(42, 179);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(67, 21);
 			this.label5.TabIndex = 6;
@@ -184,7 +274,7 @@
 			this.label4.AutoSize = true;
 			this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(55, 125);
+			this.label4.Location = new System.Drawing.Point(55, 151);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(54, 21);
 			this.label4.TabIndex = 5;
@@ -194,7 +284,7 @@
 			// 
 			this.comboBox_EmailDaTelecom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_EmailDaTelecom.FormattingEnabled = true;
-			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(115, 125);
+			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(115, 151);
 			this.comboBox_EmailDaTelecom.Name = "comboBox_EmailDaTelecom";
 			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(254, 25);
 			this.comboBox_EmailDaTelecom.TabIndex = 3;
@@ -204,7 +294,7 @@
 			this.label3.AutoSize = true;
 			this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(16, 89);
+			this.label3.Location = new System.Drawing.Point(11, 118);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(135, 21);
 			this.label3.TabIndex = 2;
@@ -216,29 +306,20 @@
 			this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.label6.Location = new System.Drawing.Point(2, 61);
+			this.label6.Location = new System.Drawing.Point(2, 87);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(465, 21);
+			this.label6.Size = new System.Drawing.Size(458, 21);
 			this.label6.TabIndex = 14;
-			this.label6.Text = "_________________________________________________________________";
+			this.label6.Text = "________________________________________________________________";
 			// 
 			// btnSair
 			// 
-			this.btnSair.Location = new System.Drawing.Point(375, 238);
+			this.btnSair.Location = new System.Drawing.Point(371, 378);
 			this.btnSair.Name = "btnSair";
-			this.btnSair.Size = new System.Drawing.Size(75, 23);
-			this.btnSair.TabIndex = 11;
+			this.btnSair.Size = new System.Drawing.Size(111, 40);
+			this.btnSair.TabIndex = 12;
 			this.btnSair.Text = "Ok";
 			this.btnSair.UseVisualStyleBackColor = true;
-			// 
-			// btnHistórico
-			// 
-			this.btnHistórico.Location = new System.Drawing.Point(294, 238);
-			this.btnHistórico.Name = "btnHistórico";
-			this.btnHistórico.Size = new System.Drawing.Size(75, 23);
-			this.btnHistórico.TabIndex = 12;
-			this.btnHistórico.Text = "Histórico ...";
-			this.btnHistórico.UseVisualStyleBackColor = true;
 			// 
 			// label_aviso
 			// 
@@ -250,29 +331,77 @@
 			// 
 			// btnExcluir
 			// 
-			this.btnExcluir.Location = new System.Drawing.Point(213, 238);
+			this.btnExcluir.Location = new System.Drawing.Point(254, 378);
 			this.btnExcluir.Name = "btnExcluir";
-			this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+			this.btnExcluir.Size = new System.Drawing.Size(111, 40);
 			this.btnExcluir.TabIndex = 14;
 			this.btnExcluir.Text = "Excluir";
 			this.btnExcluir.UseVisualStyleBackColor = true;
 			this.btnExcluir.Click += new System.EventHandler(this.BtnExcluirClick);
 			// 
+			// panelConfiguracoes
+			// 
+			this.panelConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(93)))));
+			this.panelConfiguracoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.panelConfiguracoes.Controls.Add(this.btnCloseWindow);
+			this.panelConfiguracoes.Controls.Add(this.label11);
+			this.panelConfiguracoes.Location = new System.Drawing.Point(0, 0);
+			this.panelConfiguracoes.Name = "panelConfiguracoes";
+			this.panelConfiguracoes.Size = new System.Drawing.Size(490, 32);
+			this.panelConfiguracoes.TabIndex = 23;
+			// 
+			// btnCloseWindow
+			// 
+			this.btnCloseWindow.AutoSize = true;
+			this.btnCloseWindow.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCloseWindow.Location = new System.Drawing.Point(459, 1);
+			this.btnCloseWindow.Name = "btnCloseWindow";
+			this.btnCloseWindow.Size = new System.Drawing.Size(25, 30);
+			this.btnCloseWindow.TabIndex = 23;
+			this.btnCloseWindow.Text = "X";
+			this.btnCloseWindow.Click += new System.EventHandler(this.BtnCloseWindowClick);
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.ForeColor = System.Drawing.Color.White;
+			this.label11.Location = new System.Drawing.Point(3, 5);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(134, 25);
+			this.label11.TabIndex = 23;
+			this.label11.Text = "Configurações";
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label13.Location = new System.Drawing.Point(24, 78);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(97, 21);
+			this.label13.TabIndex = 24;
+			this.label13.Text = "Razão Social";
+			// 
 			// UserConfigForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(457, 270);
+			this.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.ClientSize = new System.Drawing.Size(488, 441);
+			this.Controls.Add(this.label13);
+			this.Controls.Add(this.panelConfiguracoes);
 			this.Controls.Add(this.btnExcluir);
 			this.Controls.Add(this.label_aviso);
-			this.Controls.Add(this.btnHistórico);
 			this.Controls.Add(this.btnSair);
-			this.Controls.Add(this.label1);
 			this.Controls.Add(this.panel1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "UserConfigForm";
 			this.Text = "UserConfig";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			this.panelConfiguracoes.ResumeLayout(false);
+			this.panelConfiguracoes.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

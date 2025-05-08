@@ -29,3 +29,15 @@ C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NO
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.Historico.resources
 C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\NOC_Email\NOC_Email\obj\Debug\NOC_Email.UserConfigForm.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe.config
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\NOC_Email.exe
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\NOC_Email.pdb
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csprojResolveAssemblyReference.cache
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.Historico.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.MainForm.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.NotificarClientePorMensagemDeTexto.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.obj.NoteClipBoard.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.UserConfigForm.resources
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.csproj.GenerateResource.Cache
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.exe
+C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\obj\Debug\NOC_Email.pdb
