@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
 
-
 namespace NOC_Email
 {
 	public partial class UserConfigForm : Form
@@ -448,7 +447,7 @@ namespace NOC_Email
 			}
 		}
 
-
+		// Carrega os tipos de defeito ao ComboBox quando o formulário é iniciado
 		private void AtualizarTiposDeDefeitoNoComboBox()
 		{
 			if (File.Exists(getArquivo_class_caminho_tipoDeDefeito))

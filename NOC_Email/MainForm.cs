@@ -7,33 +7,33 @@ using System.Linq;
 
 namespace NOC_Email
 {
-    // Formulário principal do aplicativo de envio de e-mails.
+	// Formulário principal do aplicativo de envio de e-mails.
 	public partial class MainForm : Form
 	{
-        // Caminho para o arquivo de e-mail configurado.
+		// Caminho para o arquivo de e-mail configurado.
 		string seeValue = Caminhos.ArquivoEmail;
 
-        // Construtor do formulário. Inicializa o formulário e define o evento de carregamento.
+		// Construtor do formulário. Inicializa o formulário e define o evento de carregamento.
 		public MainForm()
 		{
 			InitializeComponent();
 			this.Load += MainForm_Load;
 		}
 		
-        // Evento acionado quando o formulário é carregado. Carrega as configurações salvas.
+		// Evento acionado quando o formulário é carregado. Carrega as configurações salvas.
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			CarregarConfiguracoesSalvas();
 		}
 		
-        // Evento que abre o formulário de configurações do usuário.
+		// Evento que abre o formulário de configurações do usuário.
 		void BtnConfigClick(object sender, EventArgs e)
 		{
 			UserConfigForm userConfig = new UserConfigForm();
 			userConfig.Show();
 		}
 
-        // Evento para encaminhar um e-mail com as informações do reparo.
+		// Evento para encaminhar um e-mail com as informações do reparo.
 		void ButtonEncaminharEmailClick(object sender, EventArgs e)
 		{
 			// Chama o método de envio de e-mail passando os dados do formulário.
@@ -44,11 +44,11 @@ namespace NOC_Email
 				enderecoComercial.Text,
 				comboBox_ExpedienteDoCliente.Text,
 				comboBox_FormaDeContatoComCliente.Text,
-				motivoDoReparo.Text
+				comboBox_TipoDeReparo.Text
 			);
 		}
 		
-        // Método que cria e envia um e-mail com as informações fornecidas.
+		// Método que cria e envia um e-mail com as informações fornecidas.
 		private void EnviarEmail(
 			string tituloEmail,
 			string razaoSocialDoCliente,
@@ -58,11 +58,11 @@ namespace NOC_Email
 			string formaDeContatoComCliente,
 			string motivoDoReparoParaOCliente)
 		{
-            // Cria uma nova instância do Outlook e prepara o e-mail.
+			// Cria uma nova instância do Outlook e prepara o e-mail.
 			Outlook.Application outlookApp = new Outlook.Application();
 			Outlook.MailItem mail = (Outlook.MailItem)outlookApp.CreateItem(Outlook.OlItemType.olMailItem);
 
-            // Corpo do e-mail em formato HTML com os dados do cliente e do reparo.
+			// Corpo do e-mail em formato HTML com os dados do cliente e do reparo.
 			string corpoHtml =
 				"<p>Prezados,</p>" +
 				"<p>Favor processar o chamado abaixo.</p>" +
@@ -76,18 +76,18 @@ namespace NOC_Email
 				"</p>" +
 				"<p>Atenciosamente,</p>";
 
-            // Define o título e o corpo do e-mail.
+			// Define o título e o corpo do e-mail.
 			mail.Subject = tituloEmail;
 			mail.HTMLBody = corpoHtml;
 
-            // Exibe o e-mail para revisão antes de enviar. Pode ser alterado para enviar diretamente.
+			// Exibe o e-mail para revisão antes de enviar. Pode ser alterado para enviar diretamente.
 			mail.Display(); // ou mail.Send() para enviar diretamente.
 		}
 
-        // Método que carrega as configurações salvas nos arquivos e as exibe nos ComboBoxes.
+		// Método que carrega as configurações salvas nos arquivos e as exibe nos ComboBoxes.
 		private void CarregarConfiguracoesSalvas()
 		{
-            // Carrega as opções de razão social a partir de um arquivo e as adiciona ao ComboBox.
+			// Carrega as opções de razão social a partir de um arquivo e as adiciona ao ComboBox.
 			if (File.Exists(Caminhos.ArquivoRazaoSocial))
 			{
 				var linhas = File.ReadAllLines(Caminhos.ArquivoRazaoSocial)
@@ -99,7 +99,7 @@ namespace NOC_Email
 				comboBox_RazaoSocial.Items.AddRange(linhas); // Adiciona as novas opções.
 			}
 
-            // Carrega as opções de expediente do cliente a partir de um arquivo e as adiciona ao ComboBox.
+			// Carrega as opções de expediente do cliente a partir de um arquivo e as adiciona ao ComboBox.
 			if (File.Exists(Caminhos.ArquivoExpedienteDoCliente))
 			{
 				var linhas = File.ReadAllLines(Caminhos.ArquivoExpedienteDoCliente)
@@ -111,7 +111,7 @@ namespace NOC_Email
 				comboBox_ExpedienteDoCliente.Items.AddRange(linhas); // Adiciona as novas opções.
 			}
 
-            // Carrega as opções de forma de contato com o cliente a partir de um arquivo e as adiciona ao ComboBox.
+			// Carrega as opções de forma de contato com o cliente a partir de um arquivo e as adiciona ao ComboBox.
 			if (File.Exists(Caminhos.ArquivoTelefone))
 			{
 				var linhas = File.ReadAllLines(Caminhos.ArquivoTelefone)
@@ -122,6 +122,17 @@ namespace NOC_Email
 				comboBox_FormaDeContatoComCliente.Items.Clear(); // Limpa as opções existentes.
 				comboBox_FormaDeContatoComCliente.Items.AddRange(linhas); // Adiciona as novas opções.
 			}
+			
+			if (File.Exists(Caminhos.ArquivoTipoDeDefeito))
+			{
+				var linhas = File.ReadAllLines(Caminhos.ArquivoTipoDeDefeito)
+					.Where(l => !string.IsNullOrWhiteSpace(l)) // Filtra linhas em branco.
+					.Distinct() // Remove entradas duplicadas.
+					.ToArray();
+				
+				comboBox_TipoDeReparo.Items.Clear();
+				comboBox_TipoDeReparo.Items.AddRange(linhas);
+			};
 		}
 	}
 }
