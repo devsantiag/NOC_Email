@@ -21,8 +21,7 @@
 		private System.Windows.Forms.Button btnSalvarTelefone;
 		private System.Windows.Forms.Button btnExcluir;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.ComboBox comboBox1;
+		private System.Windows.Forms.ComboBox comboBox_TipoDeDefeito;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Label label9;
@@ -31,6 +30,7 @@
 		private System.Windows.Forms.Label btnCloseWindow;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnSalvarTipoDeDefeito;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -49,8 +49,8 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.comboBox1 = new System.Windows.Forms.ComboBox();
+			this.btnSalvarTipoDeDefeito = new System.Windows.Forms.Button();
+			this.comboBox_TipoDeDefeito = new System.Windows.Forms.ComboBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.btnSalvarTelefone = new System.Windows.Forms.Button();
@@ -94,8 +94,8 @@
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.label10);
 			this.panel1.Controls.Add(this.label9);
-			this.panel1.Controls.Add(this.button1);
-			this.panel1.Controls.Add(this.comboBox1);
+			this.panel1.Controls.Add(this.btnSalvarTipoDeDefeito);
+			this.panel1.Controls.Add(this.comboBox_TipoDeDefeito);
 			this.panel1.Controls.Add(this.label8);
 			this.panel1.Controls.Add(this.label7);
 			this.panel1.Controls.Add(this.btnSalvarTelefone);
@@ -150,23 +150,24 @@
 			this.label9.TabIndex = 21;
 			this.label9.Text = "Informações do Contrato";
 			// 
-			// button1
+			// btnSalvarTipoDeDefeito
 			// 
-			this.button1.Location = new System.Drawing.Point(373, 273);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 20;
-			this.button1.Text = "Salvar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnSalvarTipoDeDefeito.Location = new System.Drawing.Point(373, 273);
+			this.btnSalvarTipoDeDefeito.Name = "btnSalvarTipoDeDefeito";
+			this.btnSalvarTipoDeDefeito.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarTipoDeDefeito.TabIndex = 20;
+			this.btnSalvarTipoDeDefeito.Text = "Salvar";
+			this.btnSalvarTipoDeDefeito.UseVisualStyleBackColor = true;
+			this.btnSalvarTipoDeDefeito.Click += new System.EventHandler(this.BtnSalvarTipoDeDefeitoClick);
 			// 
-			// comboBox1
+			// comboBox_TipoDeDefeito
 			// 
-			this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox1.FormattingEnabled = true;
-			this.comboBox1.Location = new System.Drawing.Point(115, 272);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(254, 25);
-			this.comboBox1.TabIndex = 19;
+			this.comboBox_TipoDeDefeito.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_TipoDeDefeito.FormattingEnabled = true;
+			this.comboBox_TipoDeDefeito.Location = new System.Drawing.Point(115, 272);
+			this.comboBox_TipoDeDefeito.Name = "comboBox_TipoDeDefeito";
+			this.comboBox_TipoDeDefeito.Size = new System.Drawing.Size(254, 25);
+			this.comboBox_TipoDeDefeito.TabIndex = 19;
 			// 
 			// label8
 			// 

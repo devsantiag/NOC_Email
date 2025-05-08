@@ -11,6 +11,7 @@ namespace NOC_Email
         public static readonly string ArquivoExpedienteDoCliente = Path.Combine(PastaConfig, "expediente_do_cliente.txt");
         public static readonly string ArquivoEmail = Path.Combine(PastaConfig, "emails_da_telecom.txt");
         public static readonly string ArquivoTelefone = Path.Combine(PastaConfig, "telefones_de_contato.txt");
+        public static readonly string ArquivoTipoDeDefeito = Path.Combine(PastaConfig, "tipo_de_defeito_do_contrato.txt");
 
         static Caminhos()
         {

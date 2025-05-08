@@ -14,8 +14,7 @@ namespace NOC_Email
 		string getArquivo_class_caminho_ExpedienteDoCliente = Caminhos.ArquivoExpedienteDoCliente;
 		string getArquivo_class_caminho_email = Caminhos.ArquivoEmail;
 		string getArquivo_class_caminho_Telefone = Caminhos.ArquivoTelefone;
-
-		// Variáveis para armazenar a posição inicial do mouse e se está sendo arrastado
+		string getArquivo_class_caminho_tipoDeDefeito = Caminhos.ArquivoTipoDeDefeito;
 
 		public UserConfigForm()
 		{
@@ -272,7 +271,13 @@ namespace NOC_Email
 				}
 
 				// Verifica se a entrada não está vazia e salva no arquivo
-				if (!string.IsNullOrEmpty(telefoneDeContato))
+				if (!IsValidPhoneNumber(telefoneDeContato)) 
+				{
+					MessageBox.Show("Por favor, digite um telefone válido.");
+					return;
+				}
+
+				if (!string.IsNullOrEmpty(telefoneDeContato)) 
 				{
 					File.AppendAllText(getArquivo_class_caminho_Telefone, telefoneDeContato + Environment.NewLine);
 					AtualizarTelefonesNoComboBox();
@@ -287,6 +292,12 @@ namespace NOC_Email
 			{
 				MessageBox.Show("Erro ao processar: " + ex.Message);
 			}
+		}
+
+		private bool IsValidPhoneNumber(string telefone)
+		{
+			var regex = new System.Text.RegularExpressions.Regex(@"^(\d{10,11}|\d{2,3}[\s-]?\d{4}[\s-]?\d{4})$");
+			return regex.IsMatch(telefone);
 		}
 
 		// Atualiza os itens da ComboBox com os telefones salvos
@@ -312,6 +323,7 @@ namespace NOC_Email
 			AtualizarExpedientesNoComboBox();
 			AtualizarEmailsNoComboBox();
 			AtualizarTelefonesNoComboBox();
+			AtualizarTiposDeDefeitoNoComboBox();
 		}
 
 		// Método para excluir o item selecionado no ComboBox
@@ -383,7 +395,75 @@ namespace NOC_Email
 			}
 		}
 
-		// Validação simples para e-mail
+		// Evento disparado ao clicar no botão "Salvar Tipo de Defeito"
+		// Este método salva o valor digitado no ComboBox_TipoDeDefeito no arquivo de armazenamento
+		// Também permite apagar todos os registros se o comando ":empty all tipo defeito" for digitado
+		void BtnSalvarTipoDeDefeitoClick(object sender, EventArgs e)
+
+		{
+			try
+			{
+				string tipoDefeito = comboBox_TipoDeDefeito.Text.Trim();
+
+				if (tipoDefeito.Equals(":empty all tipo defeito", StringComparison.OrdinalIgnoreCase))
+				{
+					var resultado = MessageBox.Show(
+						"Você está prestes a apagar todos os dados salvos de Tipo de Defeito. " +
+						"Esta ação não pode ser desfeita e todos os registros serão removidos permanentemente. " +
+						"Deseja continuar?",
+						"Confirmação de Exclusão",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Warning
+					);
+
+					if (resultado == DialogResult.Yes)
+					{
+						comboBox_TipoDeDefeito.Text = "";
+						File.WriteAllText(getArquivo_class_caminho_tipoDeDefeito, string.Empty);
+						AtualizarTiposDeDefeitoNoComboBox();
+						MessageBox.Show("Todos os tipos de defeito foram apagados com sucesso.");
+					}
+					else
+					{
+						MessageBox.Show("Operação cancelada.");
+					}
+
+					return;
+				}
+
+				if (!string.IsNullOrEmpty(tipoDefeito))
+				{
+					File.AppendAllText(getArquivo_class_caminho_tipoDeDefeito, tipoDefeito + Environment.NewLine);
+					AtualizarTiposDeDefeitoNoComboBox();
+					MessageBox.Show("Tipo de defeito salvo com sucesso!");
+				}
+				else
+				{
+					MessageBox.Show("Por favor, digite o tipo de defeito.");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Erro ao processar: " + ex.Message);
+			}
+		}
+
+
+		private void AtualizarTiposDeDefeitoNoComboBox()
+		{
+			if (File.Exists(getArquivo_class_caminho_tipoDeDefeito))
+			{
+				string[] linhas = File.ReadAllLines(getArquivo_class_caminho_tipoDeDefeito);
+				comboBox_TipoDeDefeito.Items.Clear();
+
+				foreach (var linha in linhas.Distinct().Where(l => !string.IsNullOrWhiteSpace(l)))
+				{
+					comboBox_TipoDeDefeito.Items.Add(linha.Trim());
+				}
+			}
+		}
+		
+		// Verifica se o e-mail fornecido possui um formato válido, utilizando a classe MailAddress para validação formal
 		private bool IsValidEmail(string email)
 		{
 			try
@@ -398,7 +478,7 @@ namespace NOC_Email
 		}
 		void BtnCloseWindowClick(object sender, EventArgs e)
 		{
-			Application.Exit();
+			this.Close();
 		}
 	}
 }
