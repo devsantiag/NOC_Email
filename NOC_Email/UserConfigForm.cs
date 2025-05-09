@@ -479,5 +479,9 @@ namespace NOC_Email
 		{
 			this.Close();
 		}
+		void BtnSairClick(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
 	}
 }

@@ -31,6 +31,7 @@
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnSalvarTipoDeDefeito;
+		private System.Windows.Forms.Button btnDuvida;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -72,6 +73,7 @@
 			this.btnCloseWindow = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
+			this.btnDuvida = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panelConfiguracoes.SuspendLayout();
 			this.SuspendLayout();
@@ -321,6 +323,7 @@
 			this.btnSair.TabIndex = 12;
 			this.btnSair.Text = "Ok";
 			this.btnSair.UseVisualStyleBackColor = true;
+			this.btnSair.Click += new System.EventHandler(this.BtnSairClick);
 			// 
 			// label_aviso
 			// 
@@ -346,7 +349,7 @@
 			this.panelConfiguracoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.panelConfiguracoes.Controls.Add(this.btnCloseWindow);
 			this.panelConfiguracoes.Controls.Add(this.label11);
-			this.panelConfiguracoes.Location = new System.Drawing.Point(0, 0);
+			this.panelConfiguracoes.Location = new System.Drawing.Point(-1, 0);
 			this.panelConfiguracoes.Name = "panelConfiguracoes";
 			this.panelConfiguracoes.Size = new System.Drawing.Size(490, 32);
 			this.panelConfiguracoes.TabIndex = 23;
@@ -384,12 +387,22 @@
 			this.label13.TabIndex = 24;
 			this.label13.Text = "Razão Social";
 			// 
+			// btnDuvida
+			// 
+			this.btnDuvida.Location = new System.Drawing.Point(12, 384);
+			this.btnDuvida.Name = "btnDuvida";
+			this.btnDuvida.Size = new System.Drawing.Size(33, 29);
+			this.btnDuvida.TabIndex = 1;
+			this.btnDuvida.Text = "?";
+			this.btnDuvida.UseVisualStyleBackColor = true;
+			// 
 			// UserConfigForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.ClientSize = new System.Drawing.Size(488, 441);
+			this.Controls.Add(this.btnDuvida);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.panelConfiguracoes);
 			this.Controls.Add(this.btnExcluir);

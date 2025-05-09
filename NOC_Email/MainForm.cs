@@ -134,5 +134,10 @@ namespace NOC_Email
 				comboBox_TipoDeReparo.Items.AddRange(linhas);
 			};
 		}
+		void BtnNotificarClienteClick(object sender, EventArgs e)
+		{
+			NotificarClientePorMensagemDeTexto notificarCliente = new NotificarClientePorMensagemDeTexto();
+			notificarCliente.Show();
+		}
 	}
 }

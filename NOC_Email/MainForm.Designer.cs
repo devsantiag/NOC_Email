@@ -20,7 +20,7 @@ namespace NOC_Email
 		private System.Windows.Forms.Button buttonApagar;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox tituloDeReparo;
-		private System.Windows.Forms.Button btnMensagemAoClientePorEmail;
+		private System.Windows.Forms.Button btnNotificarCliente;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
 		private System.Windows.Forms.ComboBox comboBox_FormaDeContatoComCliente;
@@ -54,7 +54,7 @@ namespace NOC_Email
 			this.label7 = new System.Windows.Forms.Label();
 			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
 			this.comboBox_FormaDeContatoComCliente = new System.Windows.Forms.ComboBox();
-			this.btnMensagemAoClientePorEmail = new System.Windows.Forms.Button();
+			this.btnNotificarCliente = new System.Windows.Forms.Button();
 			this.btnConfig = new System.Windows.Forms.Button();
 			this.comboBox_ExpedienteDoCliente = new System.Windows.Forms.ComboBox();
 			this.comboBox_TipoDeReparo = new System.Windows.Forms.ComboBox();
@@ -199,15 +199,16 @@ namespace NOC_Email
 			this.comboBox_FormaDeContatoComCliente.Size = new System.Drawing.Size(268, 26);
 			this.comboBox_FormaDeContatoComCliente.TabIndex = 23;
 			// 
-			// btnMensagemAoClientePorEmail
+			// btnNotificarCliente
 			// 
-			this.btnMensagemAoClientePorEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnMensagemAoClientePorEmail.Location = new System.Drawing.Point(146, 251);
-			this.btnMensagemAoClientePorEmail.Name = "btnMensagemAoClientePorEmail";
-			this.btnMensagemAoClientePorEmail.Size = new System.Drawing.Size(85, 40);
-			this.btnMensagemAoClientePorEmail.TabIndex = 19;
-			this.btnMensagemAoClientePorEmail.Text = "Notificar Cliente";
-			this.btnMensagemAoClientePorEmail.UseVisualStyleBackColor = true;
+			this.btnNotificarCliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnNotificarCliente.Location = new System.Drawing.Point(146, 251);
+			this.btnNotificarCliente.Name = "btnNotificarCliente";
+			this.btnNotificarCliente.Size = new System.Drawing.Size(85, 40);
+			this.btnNotificarCliente.TabIndex = 19;
+			this.btnNotificarCliente.Text = "Notificar Cliente";
+			this.btnNotificarCliente.UseVisualStyleBackColor = true;
+			this.btnNotificarCliente.Click += new System.EventHandler(this.BtnNotificarClienteClick);
 			// 
 			// btnConfig
 			// 
@@ -250,7 +251,7 @@ namespace NOC_Email
 			this.Controls.Add(this.comboBox_FormaDeContatoComCliente);
 			this.Controls.Add(this.comboBox_RazaoSocial);
 			this.Controls.Add(this.label7);
-			this.Controls.Add(this.btnMensagemAoClientePorEmail);
+			this.Controls.Add(this.btnNotificarCliente);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.tituloDeReparo);
 			this.Controls.Add(this.buttonApagar);
@@ -265,7 +266,7 @@ namespace NOC_Email
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
-			this.Text = "NOC_Email";
+			this.Text = "NOC - Sistema de Abertura de Reparo";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

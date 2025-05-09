@@ -18,6 +18,8 @@ namespace NOC_Email
 		private System.Windows.Forms.Button btnApagarMensagem;
 		private System.Windows.Forms.Button btnEncaminharEmail;
 		private System.Windows.Forms.TextBox textBox1_TitutloEmail;
+		private System.Windows.Forms.Button btnAnexar;
+		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -44,6 +46,8 @@ namespace NOC_Email
 			this.btnApagarMensagem = new System.Windows.Forms.Button();
 			this.btnEncaminharEmail = new System.Windows.Forms.Button();
 			this.textBox1_TitutloEmail = new System.Windows.Forms.TextBox();
+			this.btnAnexar = new System.Windows.Forms.Button();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.SuspendLayout();
 			// 
 			// richTextBox1_CorpoDeMensagemDeTexto
@@ -85,12 +89,28 @@ namespace NOC_Email
 			this.textBox1_TitutloEmail.Size = new System.Drawing.Size(482, 26);
 			this.textBox1_TitutloEmail.TabIndex = 3;
 			// 
+			// btnAnexar
+			// 
+			this.btnAnexar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAnexar.Location = new System.Drawing.Point(80, 215);
+			this.btnAnexar.Name = "btnAnexar";
+			this.btnAnexar.Size = new System.Drawing.Size(134, 47);
+			this.btnAnexar.TabIndex = 4;
+			this.btnAnexar.Text = "Anexar";
+			this.btnAnexar.UseVisualStyleBackColor = true;
+			this.btnAnexar.Click += new System.EventHandler(this.BtnAnexarClick);
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.FileName = "openFileDialog_AnexarArquivo";
+			// 
 			// NotificarClientePorMensagemDeTexto
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.ClientSize = new System.Drawing.Size(506, 267);
+			this.Controls.Add(this.btnAnexar);
 			this.Controls.Add(this.textBox1_TitutloEmail);
 			this.Controls.Add(this.btnEncaminharEmail);
 			this.Controls.Add(this.btnApagarMensagem);
