@@ -23,10 +23,12 @@ namespace NOC_Email
 		private System.Windows.Forms.Button btnNotificarCliente;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.ComboBox comboBox_RazaoSocial;
-		private System.Windows.Forms.ComboBox comboBox_FormaDeContatoComCliente;
+		private System.Windows.Forms.ComboBox comboBox_FormaDeContatoComCliente_Telefone;
 		private System.Windows.Forms.Button btnConfig;
 		private System.Windows.Forms.ComboBox comboBox_ExpedienteDoCliente;
 		private System.Windows.Forms.ComboBox comboBox_TipoDeReparo;
+		private System.Windows.Forms.ComboBox comboBox_FormaDeContatoComCliente_Email;
+		private System.Windows.Forms.Label label8;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -53,11 +55,13 @@ namespace NOC_Email
 			this.tituloDeReparo = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
 			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
-			this.comboBox_FormaDeContatoComCliente = new System.Windows.Forms.ComboBox();
+			this.comboBox_FormaDeContatoComCliente_Telefone = new System.Windows.Forms.ComboBox();
 			this.btnNotificarCliente = new System.Windows.Forms.Button();
 			this.btnConfig = new System.Windows.Forms.Button();
 			this.comboBox_ExpedienteDoCliente = new System.Windows.Forms.ComboBox();
 			this.comboBox_TipoDeReparo = new System.Windows.Forms.ComboBox();
+			this.comboBox_FormaDeContatoComCliente_Email = new System.Windows.Forms.ComboBox();
+			this.label8 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// designacao
@@ -83,7 +87,7 @@ namespace NOC_Email
 			// buttonEncaminharEmail
 			// 
 			this.buttonEncaminharEmail.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonEncaminharEmail.Location = new System.Drawing.Point(237, 251);
+			this.buttonEncaminharEmail.Location = new System.Drawing.Point(237, 305);
 			this.buttonEncaminharEmail.Name = "buttonEncaminharEmail";
 			this.buttonEncaminharEmail.Size = new System.Drawing.Size(85, 40);
 			this.buttonEncaminharEmail.TabIndex = 8;
@@ -95,7 +99,7 @@ namespace NOC_Email
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(16, 77);
+			this.label1.Location = new System.Drawing.Point(12, 77);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(82, 16);
 			this.label1.TabIndex = 10;
@@ -105,7 +109,7 @@ namespace NOC_Email
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(16, 114);
+			this.label2.Location = new System.Drawing.Point(12, 114);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(67, 16);
 			this.label2.TabIndex = 11;
@@ -115,7 +119,7 @@ namespace NOC_Email
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(16, 151);
+			this.label3.Location = new System.Drawing.Point(12, 151);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(76, 16);
 			this.label3.TabIndex = 12;
@@ -125,7 +129,7 @@ namespace NOC_Email
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(16, 223);
+			this.label4.Location = new System.Drawing.Point(12, 260);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(116, 16);
 			this.label4.TabIndex = 13;
@@ -135,16 +139,16 @@ namespace NOC_Email
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(16, 187);
+			this.label5.Location = new System.Drawing.Point(12, 223);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(115, 16);
+			this.label5.Size = new System.Drawing.Size(62, 16);
 			this.label5.TabIndex = 14;
-			this.label5.Text = "Forma de Contato";
+			this.label5.Text = "Telefone";
 			// 
 			// buttonApagar
 			// 
 			this.buttonApagar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonApagar.Location = new System.Drawing.Point(328, 251);
+			this.buttonApagar.Location = new System.Drawing.Point(328, 305);
 			this.buttonApagar.Name = "buttonApagar";
 			this.buttonApagar.Size = new System.Drawing.Size(85, 40);
 			this.buttonApagar.TabIndex = 15;
@@ -155,7 +159,7 @@ namespace NOC_Email
 			// 
 			this.label6.AutoSize = true;
 			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(16, 9);
+			this.label6.Location = new System.Drawing.Point(12, 9);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(82, 16);
 			this.label6.TabIndex = 17;
@@ -175,7 +179,7 @@ namespace NOC_Email
 			// 
 			this.label7.AutoSize = true;
 			this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(16, 43);
+			this.label7.Location = new System.Drawing.Point(12, 42);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(89, 16);
 			this.label7.TabIndex = 21;
@@ -190,19 +194,19 @@ namespace NOC_Email
 			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(267, 26);
 			this.comboBox_RazaoSocial.TabIndex = 22;
 			// 
-			// comboBox_FormaDeContatoComCliente
+			// comboBox_FormaDeContatoComCliente_Telefone
 			// 
-			this.comboBox_FormaDeContatoComCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_FormaDeContatoComCliente.FormattingEnabled = true;
-			this.comboBox_FormaDeContatoComCliente.Location = new System.Drawing.Point(146, 182);
-			this.comboBox_FormaDeContatoComCliente.Name = "comboBox_FormaDeContatoComCliente";
-			this.comboBox_FormaDeContatoComCliente.Size = new System.Drawing.Size(266, 26);
-			this.comboBox_FormaDeContatoComCliente.TabIndex = 23;
+			this.comboBox_FormaDeContatoComCliente_Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_FormaDeContatoComCliente_Telefone.FormattingEnabled = true;
+			this.comboBox_FormaDeContatoComCliente_Telefone.Location = new System.Drawing.Point(146, 218);
+			this.comboBox_FormaDeContatoComCliente_Telefone.Name = "comboBox_FormaDeContatoComCliente_Telefone";
+			this.comboBox_FormaDeContatoComCliente_Telefone.Size = new System.Drawing.Size(266, 26);
+			this.comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 23;
 			// 
 			// btnNotificarCliente
 			// 
 			this.btnNotificarCliente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnNotificarCliente.Location = new System.Drawing.Point(146, 251);
+			this.btnNotificarCliente.Location = new System.Drawing.Point(146, 305);
 			this.btnNotificarCliente.Name = "btnNotificarCliente";
 			this.btnNotificarCliente.Size = new System.Drawing.Size(85, 40);
 			this.btnNotificarCliente.TabIndex = 19;
@@ -213,7 +217,7 @@ namespace NOC_Email
 			// btnConfig
 			// 
 			this.btnConfig.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnConfig.Location = new System.Drawing.Point(55, 251);
+			this.btnConfig.Location = new System.Drawing.Point(55, 305);
 			this.btnConfig.Name = "btnConfig";
 			this.btnConfig.Size = new System.Drawing.Size(85, 40);
 			this.btnConfig.TabIndex = 24;
@@ -234,21 +238,42 @@ namespace NOC_Email
 			// 
 			this.comboBox_TipoDeReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboBox_TipoDeReparo.FormattingEnabled = true;
-			this.comboBox_TipoDeReparo.Location = new System.Drawing.Point(145, 219);
+			this.comboBox_TipoDeReparo.Location = new System.Drawing.Point(145, 255);
 			this.comboBox_TipoDeReparo.Name = "comboBox_TipoDeReparo";
 			this.comboBox_TipoDeReparo.Size = new System.Drawing.Size(267, 26);
 			this.comboBox_TipoDeReparo.TabIndex = 26;
+			// 
+			// comboBox_FormaDeContatoComCliente_Email
+			// 
+			this.comboBox_FormaDeContatoComCliente_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_FormaDeContatoComCliente_Email.FormattingEnabled = true;
+			this.comboBox_FormaDeContatoComCliente_Email.Location = new System.Drawing.Point(146, 182);
+			this.comboBox_FormaDeContatoComCliente_Email.Name = "comboBox_FormaDeContatoComCliente_Email";
+			this.comboBox_FormaDeContatoComCliente_Email.Size = new System.Drawing.Size(266, 26);
+			this.comboBox_FormaDeContatoComCliente_Email.TabIndex = 28;
+			// 
+			// label8
+			// 
+			this.label8.AutoSize = true;
+			this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(12, 187);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(46, 16);
+			this.label8.TabIndex = 27;
+			this.label8.Text = "E-mail";
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Menu;
-			this.ClientSize = new System.Drawing.Size(424, 302);
+			this.ClientSize = new System.Drawing.Size(424, 365);
+			this.Controls.Add(this.comboBox_FormaDeContatoComCliente_Email);
+			this.Controls.Add(this.label8);
 			this.Controls.Add(this.comboBox_TipoDeReparo);
 			this.Controls.Add(this.comboBox_ExpedienteDoCliente);
 			this.Controls.Add(this.btnConfig);
-			this.Controls.Add(this.comboBox_FormaDeContatoComCliente);
+			this.Controls.Add(this.comboBox_FormaDeContatoComCliente_Telefone);
 			this.Controls.Add(this.comboBox_RazaoSocial);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.btnNotificarCliente);
@@ -266,7 +291,7 @@ namespace NOC_Email
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
-			this.Text = "NOC - Sistema de Abertura de Reparo";
+			this.Text = "NOC | Sistema de Abertura de Reparo";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

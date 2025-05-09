@@ -119,7 +119,7 @@ namespace NOC_Email
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "NotificarClientePorMensagemDeTexto";
-			this.Text = "NOC_NotificarClientePorEmail";
+			this.Text = "NOC | Comunicação com Cliente via E-mail";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

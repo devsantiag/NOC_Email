@@ -44,7 +44,8 @@ namespace NOC_Email
 				designacao.Text,
 				enderecoComercial.Text,
 				comboBox_ExpedienteDoCliente.Text,
-				comboBox_FormaDeContatoComCliente.Text,
+				comboBox_FormaDeContatoComCliente_Email.Text,
+				comboBox_FormaDeContatoComCliente_Telefone.Text,
 				comboBox_TipoDeReparo.Text
 			);
 		}
@@ -56,7 +57,8 @@ namespace NOC_Email
 			string designacaoDoCliente,
 			string enderecoDoCliente,
 			string expedienteDeFuncionamento,
-			string formaDeContatoComCliente,
+			string formaDeContatoComCliente_Telefone,
+			string formaDeContatoComCliente_Email,
 			string motivoDoReparoParaOCliente)
 		{
 			// Cria uma nova instância do Outlook e prepara o e-mail.
@@ -66,16 +68,17 @@ namespace NOC_Email
 			// Corpo do e-mail em formato HTML com os dados do cliente e do reparo.
 			string corpoHtml =
 				"<p>Prezados,</p>" +
-				"<p>Favor processar o chamado abaixo.</p>" +
+				"<p>Solicitamos o devido processamento do chamado conforme as informações abaixo:</p>" +
 				"<p>" +
-				"Razão Social: " + razaoSocialDoCliente + "<br>" +
-				"Designação: " + designacaoDoCliente + "<br>" +
-				"Endereço: " + enderecoDoCliente + "<br>" +
-				"Expediente: " + expedienteDeFuncionamento + "<br>" +
-				"Forma de Contato: " + formaDeContatoComCliente + "<br>" +
-				"Motivo do Reparo: " + motivoDoReparoParaOCliente + "<br>" +
+				"<strong>Razão Social:</strong> " + razaoSocialDoCliente + "<br>" +
+				"<strong>Designação:</strong> " + designacaoDoCliente + "<br>" +
+				"<strong>Endereço:</strong> " + enderecoDoCliente + "<br>" +
+				"<strong>Expediente:</strong> " + expedienteDeFuncionamento + "<br>" +
+				"<strong>Forma de Contato:</strong> E-mail: " + formaDeContatoComCliente_Email + " | Telefone: " + formaDeContatoComCliente_Telefone + "<br>" +
+				"<strong>Motivo do Reparo:</strong> " + motivoDoReparoParaOCliente + "<br>" +
 				"</p>" +
 				"<p>Atenciosamente,</p>";
+
 
 			// Define o título e o corpo do e-mail.
 			mail.Subject = tituloEmail;
@@ -120,8 +123,8 @@ namespace NOC_Email
 					.Distinct() // Remove entradas duplicadas.
 					.ToArray();
 
-				comboBox_FormaDeContatoComCliente.Items.Clear(); // Limpa as opções existentes.
-				comboBox_FormaDeContatoComCliente.Items.AddRange(linhas); // Adiciona as novas opções.
+				comboBox_FormaDeContatoComCliente_Telefone.Items.Clear(); // Limpa as opções existentes.
+				comboBox_FormaDeContatoComCliente_Telefone.Items.AddRange(linhas); // Adiciona as novas opções.
 			}
 			
 			if (File.Exists(Caminhos.ArquivoTipoDeDefeito))
@@ -134,12 +137,28 @@ namespace NOC_Email
 				comboBox_TipoDeReparo.Items.Clear();
 				comboBox_TipoDeReparo.Items.AddRange(linhas);
 			};
+
+			if (File.Exists(Caminhos.ArquivoEmail))
+			{
+				var linhas = File.ReadAllLines(Caminhos.ArquivoEmail)
+					.Where(l => !string.IsNullOrWhiteSpace(l)) // Filtra linhas em branco.
+					.Distinct() // Remove entradas duplicadas.
+					.ToArray();
+
+				comboBox_FormaDeContatoComCliente_Email.Items.Clear();
+				comboBox_FormaDeContatoComCliente_Email.Items.AddRange(linhas);
+			}
+
 		}
+
+
 		void BtnNotificarClienteClick(object sender, EventArgs e)
 		{
 			NotificarClientePorMensagemDeTexto notificarCliente = new NotificarClientePorMensagemDeTexto();
 			notificarCliente.Show();
 		}
+		
+
 		private void atalhoTabIndex()
 		{
 			tituloDeReparo.TabIndex = 0;
@@ -147,7 +166,7 @@ namespace NOC_Email
 			designacao.TabIndex = 2;
 			enderecoComercial.TabIndex = 3;
 			comboBox_ExpedienteDoCliente.TabIndex = 4;
-			comboBox_FormaDeContatoComCliente.TabIndex = 5;
+			comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 5;
 			comboBox_TipoDeReparo.TabIndex = 6;
 
 		}
