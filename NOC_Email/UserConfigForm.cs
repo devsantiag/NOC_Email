@@ -20,6 +20,7 @@ namespace NOC_Email
 			InitializeComponent();
 			this.Load += UserConfigForm_Load; // Evento de carregamento do formulário
 			this.StartPosition = FormStartPosition.CenterScreen;
+			OrdenarTabIndex();
 		}
 
 		// Método para salvar a razão social no arquivo
@@ -270,13 +271,13 @@ namespace NOC_Email
 				}
 
 				// Verifica se a entrada não está vazia e salva no arquivo
-				if (!IsValidPhoneNumber(telefoneDeContato)) 
+				if (!IsValidPhoneNumber(telefoneDeContato))
 				{
 					MessageBox.Show("Por favor, digite um telefone válido.");
 					return;
 				}
 
-				if (!string.IsNullOrEmpty(telefoneDeContato)) 
+				if (!string.IsNullOrEmpty(telefoneDeContato))
 				{
 					File.AppendAllText(getArquivo_class_caminho_Telefone, telefoneDeContato + Environment.NewLine);
 					AtualizarTelefonesNoComboBox();
@@ -475,13 +476,45 @@ namespace NOC_Email
 				return false;
 			}
 		}
+		
+		// Método genérico para fechar ou ocultar a janela, dependendo do valor de 'fechar'.
+		void WindowClose(bool fechar)
+		{
+			if (fechar)
+				this.Close();
+			else
+				this.Hide();
+		}
 		void BtnCloseWindowClick(object sender, EventArgs e)
 		{
-			this.Close();
+			WindowClose(fechar: true);
 		}
-		void BtnSairClick(object sender, EventArgs e)
+		void btnWindowOkClick (object sender, EventArgs e)
 		{
-			this.Hide();
+			WindowClose(fechar: false);
 		}
+		
+		// Define a ordem de navegação entre os campos usando a tecla TAB
+		void OrdenarTabIndex()
+		{
+			comboBox_RazaoSocial.TabIndex = 0;
+			btnSalvarRazaoSocial.TabIndex = 1;
+
+			comboBox_ExpedienteDoCliente.TabIndex = 2;
+			btnSalvarExpedienteDoCliente.TabIndex = 3;
+
+			comboBox_EmailDaTelecom.TabIndex = 4;
+			btnSalvarEmail.TabIndex = 5;
+
+			comboBox_TelefoneDeContato.TabIndex = 6;
+			btnSalvarTelefone.TabIndex = 7;
+
+			comboBox_TipoDeDefeito.TabIndex = 8;
+			btnSalvarTipoDeDefeito.TabIndex = 9;
+			btnExcluir.TabIndex = 11;
+			btnDuvida.TabIndex = 12;
+			btnCloseWindow.TabIndex = 13;
+		}
+		
 	}
 }

@@ -15,7 +15,7 @@
 		private System.Windows.Forms.Button btnSalvarExpedienteDoCliente;
 		private System.Windows.Forms.Button btnSalvarRazaoSocial;
 		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.Button btnSair;
+//		private System.Windows.Forms.Button btnWindowSair;
 		private System.Windows.Forms.Label label_aviso;
 		private System.Windows.Forms.ComboBox comboBox_TelefoneDeContato;
 		private System.Windows.Forms.Button btnSalvarTelefone;
@@ -32,6 +32,7 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnSalvarTipoDeDefeito;
 		private System.Windows.Forms.Button btnDuvida;
+		private System.Windows.Forms.Button btnWindowOk;
 		
 		protected override void Dispose(bool disposing)
 		{
@@ -47,26 +48,25 @@
 		{
 			this.label2 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.comboBox_TipoDeDefeito = new System.Windows.Forms.ComboBox();
+			this.comboBox_TelefoneDeContato = new System.Windows.Forms.ComboBox();
+			this.comboBox_EmailDaTelecom = new System.Windows.Forms.ComboBox();
+			this.comboBox_ExpedienteDoCliente = new System.Windows.Forms.ComboBox();
+			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.btnSalvarTipoDeDefeito = new System.Windows.Forms.Button();
-			this.comboBox_TipoDeDefeito = new System.Windows.Forms.ComboBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
 			this.btnSalvarTelefone = new System.Windows.Forms.Button();
-			this.comboBox_TelefoneDeContato = new System.Windows.Forms.ComboBox();
 			this.btnSalvarExpedienteDoCliente = new System.Windows.Forms.Button();
-			this.comboBox_RazaoSocial = new System.Windows.Forms.ComboBox();
 			this.btnSalvarRazaoSocial = new System.Windows.Forms.Button();
 			this.btnSalvarEmail = new System.Windows.Forms.Button();
-			this.comboBox_ExpedienteDoCliente = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.comboBox_EmailDaTelecom = new System.Windows.Forms.ComboBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.btnSair = new System.Windows.Forms.Button();
 			this.label_aviso = new System.Windows.Forms.Label();
 			this.btnExcluir = new System.Windows.Forms.Button();
 			this.panelConfiguracoes = new System.Windows.Forms.Panel();
@@ -74,6 +74,7 @@
 			this.label11 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
 			this.btnDuvida = new System.Windows.Forms.Button();
+			this.btnWindowOk = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panelConfiguracoes.SuspendLayout();
 			this.SuspendLayout();
@@ -93,30 +94,75 @@
 			// 
 			this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+			this.panel1.Controls.Add(this.comboBox_TipoDeDefeito);
+			this.panel1.Controls.Add(this.comboBox_TelefoneDeContato);
+			this.panel1.Controls.Add(this.comboBox_EmailDaTelecom);
+			this.panel1.Controls.Add(this.comboBox_ExpedienteDoCliente);
+			this.panel1.Controls.Add(this.comboBox_RazaoSocial);
 			this.panel1.Controls.Add(this.label1);
 			this.panel1.Controls.Add(this.label10);
 			this.panel1.Controls.Add(this.label9);
 			this.panel1.Controls.Add(this.btnSalvarTipoDeDefeito);
-			this.panel1.Controls.Add(this.comboBox_TipoDeDefeito);
 			this.panel1.Controls.Add(this.label8);
 			this.panel1.Controls.Add(this.label7);
 			this.panel1.Controls.Add(this.btnSalvarTelefone);
-			this.panel1.Controls.Add(this.comboBox_TelefoneDeContato);
 			this.panel1.Controls.Add(this.btnSalvarExpedienteDoCliente);
-			this.panel1.Controls.Add(this.comboBox_RazaoSocial);
 			this.panel1.Controls.Add(this.btnSalvarRazaoSocial);
 			this.panel1.Controls.Add(this.btnSalvarEmail);
-			this.panel1.Controls.Add(this.comboBox_ExpedienteDoCliente);
 			this.panel1.Controls.Add(this.label5);
 			this.panel1.Controls.Add(this.label2);
 			this.panel1.Controls.Add(this.label4);
-			this.panel1.Controls.Add(this.comboBox_EmailDaTelecom);
 			this.panel1.Controls.Add(this.label3);
 			this.panel1.Controls.Add(this.label6);
 			this.panel1.Location = new System.Drawing.Point(12, 36);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(463, 326);
 			this.panel1.TabIndex = 9;
+			// 
+			// comboBox_TipoDeDefeito
+			// 
+			this.comboBox_TipoDeDefeito.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_TipoDeDefeito.FormattingEnabled = true;
+			this.comboBox_TipoDeDefeito.Location = new System.Drawing.Point(115, 272);
+			this.comboBox_TipoDeDefeito.Name = "comboBox_TipoDeDefeito";
+			this.comboBox_TipoDeDefeito.Size = new System.Drawing.Size(254, 25);
+			this.comboBox_TipoDeDefeito.TabIndex = 19;
+			// 
+			// comboBox_TelefoneDeContato
+			// 
+			this.comboBox_TelefoneDeContato.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_TelefoneDeContato.FormattingEnabled = true;
+			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 178);
+			this.comboBox_TelefoneDeContato.Name = "comboBox_TelefoneDeContato";
+			this.comboBox_TelefoneDeContato.Size = new System.Drawing.Size(254, 25);
+			this.comboBox_TelefoneDeContato.TabIndex = 15;
+			// 
+			// comboBox_EmailDaTelecom
+			// 
+			this.comboBox_EmailDaTelecom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_EmailDaTelecom.FormattingEnabled = true;
+			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(115, 151);
+			this.comboBox_EmailDaTelecom.Name = "comboBox_EmailDaTelecom";
+			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(254, 25);
+			this.comboBox_EmailDaTelecom.TabIndex = 3;
+			// 
+			// comboBox_ExpedienteDoCliente
+			// 
+			this.comboBox_ExpedienteDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
+			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(119, 68);
+			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
+			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(250, 25);
+			this.comboBox_ExpedienteDoCliente.TabIndex = 10;
+			// 
+			// comboBox_RazaoSocial
+			// 
+			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_RazaoSocial.FormattingEnabled = true;
+			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(119, 41);
+			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
+			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 25);
+			this.comboBox_RazaoSocial.TabIndex = 11;
 			// 
 			// label1
 			// 
@@ -162,15 +208,6 @@
 			this.btnSalvarTipoDeDefeito.UseVisualStyleBackColor = true;
 			this.btnSalvarTipoDeDefeito.Click += new System.EventHandler(this.BtnSalvarTipoDeDefeitoClick);
 			// 
-			// comboBox_TipoDeDefeito
-			// 
-			this.comboBox_TipoDeDefeito.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_TipoDeDefeito.FormattingEnabled = true;
-			this.comboBox_TipoDeDefeito.Location = new System.Drawing.Point(115, 272);
-			this.comboBox_TipoDeDefeito.Name = "comboBox_TipoDeDefeito";
-			this.comboBox_TipoDeDefeito.Size = new System.Drawing.Size(254, 25);
-			this.comboBox_TipoDeDefeito.TabIndex = 19;
-			// 
 			// label8
 			// 
 			this.label8.AutoSize = true;
@@ -204,15 +241,6 @@
 			this.btnSalvarTelefone.UseVisualStyleBackColor = true;
 			this.btnSalvarTelefone.Click += new System.EventHandler(this.BtnSalvarTelefoneClick);
 			// 
-			// comboBox_TelefoneDeContato
-			// 
-			this.comboBox_TelefoneDeContato.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_TelefoneDeContato.FormattingEnabled = true;
-			this.comboBox_TelefoneDeContato.Location = new System.Drawing.Point(115, 178);
-			this.comboBox_TelefoneDeContato.Name = "comboBox_TelefoneDeContato";
-			this.comboBox_TelefoneDeContato.Size = new System.Drawing.Size(254, 25);
-			this.comboBox_TelefoneDeContato.TabIndex = 15;
-			// 
 			// btnSalvarExpedienteDoCliente
 			// 
 			this.btnSalvarExpedienteDoCliente.Location = new System.Drawing.Point(375, 71);
@@ -222,15 +250,6 @@
 			this.btnSalvarExpedienteDoCliente.Text = "Salvar";
 			this.btnSalvarExpedienteDoCliente.UseVisualStyleBackColor = true;
 			this.btnSalvarExpedienteDoCliente.Click += new System.EventHandler(this.BtnSalvarExpedienteDoClienteClick);
-			// 
-			// comboBox_RazaoSocial
-			// 
-			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_RazaoSocial.FormattingEnabled = true;
-			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(119, 41);
-			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
-			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(250, 25);
-			this.comboBox_RazaoSocial.TabIndex = 11;
 			// 
 			// btnSalvarRazaoSocial
 			// 
@@ -251,15 +270,6 @@
 			this.btnSalvarEmail.Text = "Salvar";
 			this.btnSalvarEmail.UseVisualStyleBackColor = true;
 			this.btnSalvarEmail.Click += new System.EventHandler(this.BtnSalvarEmailClick);
-			// 
-			// comboBox_ExpedienteDoCliente
-			// 
-			this.comboBox_ExpedienteDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
-			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(119, 68);
-			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
-			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(250, 25);
-			this.comboBox_ExpedienteDoCliente.TabIndex = 10;
 			// 
 			// label5
 			// 
@@ -283,15 +293,6 @@
 			this.label4.TabIndex = 5;
 			this.label4.Text = "E-mail";
 			// 
-			// comboBox_EmailDaTelecom
-			// 
-			this.comboBox_EmailDaTelecom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBox_EmailDaTelecom.FormattingEnabled = true;
-			this.comboBox_EmailDaTelecom.Location = new System.Drawing.Point(115, 151);
-			this.comboBox_EmailDaTelecom.Name = "comboBox_EmailDaTelecom";
-			this.comboBox_EmailDaTelecom.Size = new System.Drawing.Size(254, 25);
-			this.comboBox_EmailDaTelecom.TabIndex = 3;
-			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
@@ -314,16 +315,6 @@
 			this.label6.Size = new System.Drawing.Size(458, 21);
 			this.label6.TabIndex = 14;
 			this.label6.Text = "________________________________________________________________";
-			// 
-			// btnSair
-			// 
-			this.btnSair.Location = new System.Drawing.Point(371, 378);
-			this.btnSair.Name = "btnSair";
-			this.btnSair.Size = new System.Drawing.Size(111, 40);
-			this.btnSair.TabIndex = 12;
-			this.btnSair.Text = "Ok";
-			this.btnSair.UseVisualStyleBackColor = true;
-			this.btnSair.Click += new System.EventHandler(this.BtnSairClick);
 			// 
 			// label_aviso
 			// 
@@ -349,7 +340,7 @@
 			this.panelConfiguracoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.panelConfiguracoes.Controls.Add(this.btnCloseWindow);
 			this.panelConfiguracoes.Controls.Add(this.label11);
-			this.panelConfiguracoes.Location = new System.Drawing.Point(-1, 0);
+			this.panelConfiguracoes.Location = new System.Drawing.Point(0, 0);
 			this.panelConfiguracoes.Name = "panelConfiguracoes";
 			this.panelConfiguracoes.Size = new System.Drawing.Size(490, 32);
 			this.panelConfiguracoes.TabIndex = 23;
@@ -396,18 +387,28 @@
 			this.btnDuvida.Text = "?";
 			this.btnDuvida.UseVisualStyleBackColor = true;
 			// 
+			// btnWindowOk
+			// 
+			this.btnWindowOk.Location = new System.Drawing.Point(371, 378);
+			this.btnWindowOk.Name = "btnWindowOk";
+			this.btnWindowOk.Size = new System.Drawing.Size(111, 40);
+			this.btnWindowOk.TabIndex = 25;
+			this.btnWindowOk.Text = "Ok";
+			this.btnWindowOk.UseVisualStyleBackColor = true;
+			this.btnWindowOk.Click += new System.EventHandler(this.btnWindowOkClick);
+			// 
 			// UserConfigForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.ClientSize = new System.Drawing.Size(488, 441);
+			this.Controls.Add(this.btnWindowOk);
 			this.Controls.Add(this.btnDuvida);
 			this.Controls.Add(this.label13);
 			this.Controls.Add(this.panelConfiguracoes);
 			this.Controls.Add(this.btnExcluir);
 			this.Controls.Add(this.label_aviso);
-			this.Controls.Add(this.btnSair);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "UserConfigForm";

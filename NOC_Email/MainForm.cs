@@ -18,6 +18,7 @@ namespace NOC_Email
 		{
 			InitializeComponent();
 			this.Load += MainForm_Load;
+			atalhoTabIndex();
 		}
 		
 		// Evento acionado quando o formulário é carregado. Carrega as configurações salvas.
@@ -138,6 +139,17 @@ namespace NOC_Email
 		{
 			NotificarClientePorMensagemDeTexto notificarCliente = new NotificarClientePorMensagemDeTexto();
 			notificarCliente.Show();
+		}
+		private void atalhoTabIndex()
+		{
+			tituloDeReparo.TabIndex = 0;
+			comboBox_RazaoSocial.TabIndex = 1;
+			designacao.TabIndex = 2;
+			enderecoComercial.TabIndex = 3;
+			comboBox_ExpedienteDoCliente.TabIndex = 4;
+			comboBox_FormaDeContatoComCliente.TabIndex = 5;
+			comboBox_TipoDeReparo.TabIndex = 6;
+
 		}
 	}
 }

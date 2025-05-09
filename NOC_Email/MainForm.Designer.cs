@@ -67,7 +67,7 @@ namespace NOC_Email
 			this.designacao.MaxLength = 700000;
 			this.designacao.Multiline = true;
 			this.designacao.Name = "designacao";
-			this.designacao.Size = new System.Drawing.Size(268, 26);
+			this.designacao.Size = new System.Drawing.Size(267, 26);
 			this.designacao.TabIndex = 0;
 			// 
 			// enderecoComercial
@@ -77,7 +77,7 @@ namespace NOC_Email
 			this.enderecoComercial.MaxLength = 700000;
 			this.enderecoComercial.Multiline = true;
 			this.enderecoComercial.Name = "enderecoComercial";
-			this.enderecoComercial.Size = new System.Drawing.Size(268, 26);
+			this.enderecoComercial.Size = new System.Drawing.Size(267, 26);
 			this.enderecoComercial.TabIndex = 1;
 			// 
 			// buttonEncaminharEmail
@@ -187,7 +187,7 @@ namespace NOC_Email
 			this.comboBox_RazaoSocial.FormattingEnabled = true;
 			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(145, 38);
 			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
-			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(268, 26);
+			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(267, 26);
 			this.comboBox_RazaoSocial.TabIndex = 22;
 			// 
 			// comboBox_FormaDeContatoComCliente
@@ -196,7 +196,7 @@ namespace NOC_Email
 			this.comboBox_FormaDeContatoComCliente.FormattingEnabled = true;
 			this.comboBox_FormaDeContatoComCliente.Location = new System.Drawing.Point(146, 182);
 			this.comboBox_FormaDeContatoComCliente.Name = "comboBox_FormaDeContatoComCliente";
-			this.comboBox_FormaDeContatoComCliente.Size = new System.Drawing.Size(268, 26);
+			this.comboBox_FormaDeContatoComCliente.Size = new System.Drawing.Size(266, 26);
 			this.comboBox_FormaDeContatoComCliente.TabIndex = 23;
 			// 
 			// btnNotificarCliente
@@ -217,7 +217,7 @@ namespace NOC_Email
 			this.btnConfig.Name = "btnConfig";
 			this.btnConfig.Size = new System.Drawing.Size(85, 40);
 			this.btnConfig.TabIndex = 24;
-			this.btnConfig.Text = "Config";
+			this.btnConfig.Text = "Config ...";
 			this.btnConfig.UseVisualStyleBackColor = true;
 			this.btnConfig.Click += new System.EventHandler(this.BtnConfigClick);
 			// 
@@ -227,7 +227,7 @@ namespace NOC_Email
 			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
 			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(145, 146);
 			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
-			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(268, 26);
+			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(267, 26);
 			this.comboBox_ExpedienteDoCliente.TabIndex = 25;
 			// 
 			// comboBox_TipoDeReparo
@@ -236,7 +236,7 @@ namespace NOC_Email
 			this.comboBox_TipoDeReparo.FormattingEnabled = true;
 			this.comboBox_TipoDeReparo.Location = new System.Drawing.Point(145, 219);
 			this.comboBox_TipoDeReparo.Name = "comboBox_TipoDeReparo";
-			this.comboBox_TipoDeReparo.Size = new System.Drawing.Size(268, 26);
+			this.comboBox_TipoDeReparo.Size = new System.Drawing.Size(267, 26);
 			this.comboBox_TipoDeReparo.TabIndex = 26;
 			// 
 			// MainForm
