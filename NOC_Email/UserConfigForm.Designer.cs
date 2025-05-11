@@ -202,9 +202,11 @@
 			// 
 			// btnSalvarTipoDeDefeito
 			// 
-			this.btnSalvarTipoDeDefeito.Location = new System.Drawing.Point(373, 273);
+			this.btnSalvarTipoDeDefeito.AutoSize = true;
+			this.btnSalvarTipoDeDefeito.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnSalvarTipoDeDefeito.Location = new System.Drawing.Point(373, 271);
 			this.btnSalvarTipoDeDefeito.Name = "btnSalvarTipoDeDefeito";
-			this.btnSalvarTipoDeDefeito.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarTipoDeDefeito.Size = new System.Drawing.Size(75, 27);
 			this.btnSalvarTipoDeDefeito.TabIndex = 20;
 			this.btnSalvarTipoDeDefeito.Text = "Salvar";
 			this.btnSalvarTipoDeDefeito.UseVisualStyleBackColor = true;
@@ -235,9 +237,11 @@
 			// 
 			// btnSalvarTelefone
 			// 
-			this.btnSalvarTelefone.Location = new System.Drawing.Point(373, 180);
+			this.btnSalvarTelefone.AutoSize = true;
+			this.btnSalvarTelefone.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnSalvarTelefone.Location = new System.Drawing.Point(373, 176);
 			this.btnSalvarTelefone.Name = "btnSalvarTelefone";
-			this.btnSalvarTelefone.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarTelefone.Size = new System.Drawing.Size(75, 27);
 			this.btnSalvarTelefone.TabIndex = 16;
 			this.btnSalvarTelefone.Text = "Salvar";
 			this.btnSalvarTelefone.UseVisualStyleBackColor = true;
@@ -245,9 +249,11 @@
 			// 
 			// btnSalvarExpedienteDoCliente
 			// 
-			this.btnSalvarExpedienteDoCliente.Location = new System.Drawing.Point(375, 71);
+			this.btnSalvarExpedienteDoCliente.AutoSize = true;
+			this.btnSalvarExpedienteDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnSalvarExpedienteDoCliente.Location = new System.Drawing.Point(373, 67);
 			this.btnSalvarExpedienteDoCliente.Name = "btnSalvarExpedienteDoCliente";
-			this.btnSalvarExpedienteDoCliente.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarExpedienteDoCliente.Size = new System.Drawing.Size(75, 27);
 			this.btnSalvarExpedienteDoCliente.TabIndex = 13;
 			this.btnSalvarExpedienteDoCliente.Text = "Salvar";
 			this.btnSalvarExpedienteDoCliente.UseVisualStyleBackColor = true;
@@ -255,9 +261,11 @@
 			// 
 			// btnSalvarRazaoSocial
 			// 
-			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(375, 42);
+			this.btnSalvarRazaoSocial.AutoSize = true;
+			this.btnSalvarRazaoSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnSalvarRazaoSocial.Location = new System.Drawing.Point(373, 39);
 			this.btnSalvarRazaoSocial.Name = "btnSalvarRazaoSocial";
-			this.btnSalvarRazaoSocial.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarRazaoSocial.Size = new System.Drawing.Size(75, 27);
 			this.btnSalvarRazaoSocial.TabIndex = 12;
 			this.btnSalvarRazaoSocial.Text = "Salvar";
 			this.btnSalvarRazaoSocial.UseVisualStyleBackColor = true;
@@ -265,9 +273,11 @@
 			// 
 			// btnSalvarEmail
 			// 
-			this.btnSalvarEmail.Location = new System.Drawing.Point(373, 153);
+			this.btnSalvarEmail.AutoSize = true;
+			this.btnSalvarEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnSalvarEmail.Location = new System.Drawing.Point(373, 149);
 			this.btnSalvarEmail.Name = "btnSalvarEmail";
-			this.btnSalvarEmail.Size = new System.Drawing.Size(75, 23);
+			this.btnSalvarEmail.Size = new System.Drawing.Size(75, 27);
 			this.btnSalvarEmail.TabIndex = 7;
 			this.btnSalvarEmail.Text = "Salvar";
 			this.btnSalvarEmail.UseVisualStyleBackColor = true;
@@ -312,7 +322,7 @@
 			this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
-			this.label6.Location = new System.Drawing.Point(2, 87);
+			this.label6.Location = new System.Drawing.Point(2, 91);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(458, 21);
 			this.label6.TabIndex = 14;
@@ -328,6 +338,7 @@
 			// 
 			// btnExcluir
 			// 
+			this.btnExcluir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnExcluir.Location = new System.Drawing.Point(254, 378);
 			this.btnExcluir.Name = "btnExcluir";
 			this.btnExcluir.Size = new System.Drawing.Size(111, 40);
@@ -382,6 +393,7 @@
 			// 
 			// btnDuvida
 			// 
+			this.btnDuvida.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.btnDuvida.Location = new System.Drawing.Point(12, 384);
 			this.btnDuvida.Name = "btnDuvida";
 			this.btnDuvida.Size = new System.Drawing.Size(33, 29);
@@ -392,6 +404,7 @@
 			// 
 			// btnWindowOk
 			// 
+			this.btnWindowOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnWindowOk.Location = new System.Drawing.Point(371, 378);
 			this.btnWindowOk.Name = "btnWindowOk";
 			this.btnWindowOk.Size = new System.Drawing.Size(111, 40);
