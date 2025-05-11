@@ -386,6 +386,7 @@
 			this.btnDuvida.TabIndex = 1;
 			this.btnDuvida.Text = "?";
 			this.btnDuvida.UseVisualStyleBackColor = true;
+			this.btnDuvida.Click += new System.EventHandler(this.BtnDuvidaClick);
 			// 
 			// btnWindowOk
 			// 

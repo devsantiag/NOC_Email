@@ -80,7 +80,7 @@ namespace NOC_Email
 
 
 			// Define o título e o corpo do e-mail.
-			mail.Subject = "ABERTURA DE REPARO" + tituloEmail.ToUpper();
+			mail.Subject = "🔧 ABERTURA DE REPARO |" + tituloEmail.ToUpper() + "| DESIGNAÇÃO: ".ToUpper() +designacao.Text.ToUpper();
 			mail.HTMLBody = corpoHtml;
 
 			// Exibe o e-mail para revisão antes de enviar. Pode ser alterado para enviar diretamente.

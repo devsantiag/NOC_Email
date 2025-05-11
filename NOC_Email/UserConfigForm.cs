@@ -122,7 +122,6 @@ namespace NOC_Email
 						comboBox_ExpedienteDoCliente.Text = ""; // Cancela e limpa o campo
 						MessageBox.Show("Operação cancelada.");
 					}
-
 					return; // Interrompe o processo se os dados forem apagados
 				}
 
@@ -166,6 +165,30 @@ namespace NOC_Email
 			try
 			{
 				string emailEntrada = comboBox_EmailDaTelecom.Text.Trim();
+
+				if (emailEntrada.Equals(":empty all emails", StringComparison.OrdinalIgnoreCase))
+				{
+					var resultado = MessageBox.Show(
+						"Você está prestes a apagar todos os dados salvos de Telefone. " +
+						"Esta ação não pode ser desfeita e todos os registros serão removidos permanentemente. " +
+						"Deseja continuar?",
+						"Confirmação de Exclusão",
+						MessageBoxButtons.YesNo,
+						MessageBoxIcon.Warning
+					);
+					if (resultado == DialogResult.Yes)
+					{
+						comboBox_EmailDaTelecom.Text = "";
+						File.WriteAllText(getArquivo_class_caminho_email, string.Empty);
+						AtualizarEmailsNoComboBox();
+						MessageBox.Show("Todos os dados de E-mails foram apagados com sucesso.");
+					}
+					else
+					{
+						MessageBox.Show("Operação cancelada.");
+					}
+					return;
+				}
 
 				// Validação simples de e-mail
 				if (!IsValidEmail(emailEntrada))
@@ -493,6 +516,11 @@ namespace NOC_Email
 			WindowClose(fechar: false);
 		}
 		
+		void BtnDuvidaClick(object sender, EventArgs e)
+		{
+			
+		}
+		
 		// Define a ordem de navegação entre os campos usando a tecla TAB
 		void OrdenarTabIndex()
 		{
@@ -514,6 +542,5 @@ namespace NOC_Email
 			btnDuvida.TabIndex = 12;
 			btnCloseWindow.TabIndex = 13;
 		}
-		
 	}
 }
