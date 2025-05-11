@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using System.Windows.Forms;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using System.IO;
@@ -150,6 +149,7 @@ namespace NOC_Email
 			}
 		}
 
+		// Responsável por acessar o ambitente de Configuração de usuário
 		void BtnNotificarClienteClick(object sender, EventArgs e)
 		{
 			NotificarClientePorMensagemDeTexto notificarCliente = new NotificarClientePorMensagemDeTexto();
