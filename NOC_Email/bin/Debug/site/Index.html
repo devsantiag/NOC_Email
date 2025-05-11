@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manual NOC_Email</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+    nav {
+      background-color: #ecf0f1;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+    nav a.active, nav a:hover {
+      background-color: #2c3e50;
+      color: white;
+    }
+    main {
+      padding: 20px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 40px;
+    }
+    section {
+      display: none;
+      margin-bottom: 40px;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Manual do Sistema NOC_Email</h1>
+    <p>Versão 1.0 | Desenvolvido por Fabiano Santiago</p>
+  </header>
+
+  <nav>
+    <a href="#introducao" id="tab-introducao">Introdução</a>
+    <a href="#instalacao" id="tab-instalacao">Instalação</a>
+    <a href="#uso" id="tab-uso">Como Usar</a>
+    <a href="#configuracoes" id="tab-configuracoes">Configurações</a>
+    <a href="#envio" id="tab-envio">Envio de E-mails</a>
+    <a href="#suporte" id="tab-suporte">Suporte</a>
+  </nav>
+
+  <main>
+    <section id="introducao" class="active">
+      <h2>1. Introdução</h2>
+      <p>O <strong>NOC_Email</strong> é uma aplicação Windows Forms desenvolvida para automatizar o envio de e-mails operacionais a partir de modelos pré-configurados. Seu objetivo principal é padronizar a comunicação entre os setores técnicos e clientes, utilizando integração com o Microsoft Outlook e dados salvos em arquivos de texto locais.</p>
+    </section>
+
+    <section id="instalacao">
+      <h2>2. Instalação</h2>
+      <p>Para utilizar o sistema:</p>
+      <ul>
+        <li>Copie a pasta do executável <code>NOC_Email.exe</code> para o computador desejado.</li>
+        <li>Certifique-se de que o Outlook está instalado, configurado e com uma conta autenticada.</li>
+        <li>Não é necessária instalação adicional — trata-se de uma aplicação portátil.</li>
+        <li>Crie a pasta <code>/data/</code> na raiz do executável, se ainda não existir.</li>
+      </ul>
+    </section>
+
+    <section id="uso">
+      <h2>3. Como Usar</h2>
+      <p>Ao abrir o sistema:</p>
+      <ul>
+        <li>Selecione um cliente no ComboBox da tela principal.</li>
+        <li>As informações cadastradas aparecerão automaticamente nos campos (razão social, e-mails, tipo de defeito etc.).</li>
+        <li>Clique em “Enviar” para preparar o e-mail com base no modelo.</li>
+      </ul>
+      <p>O conteúdo será preenchido automaticamente e exibido em uma nova janela do Outlook, permitindo revisão antes do envio.</p>
+    </section>
+
+    <section id="configuracoes">
+      <h2>4. Configurações</h2>
+      <p>O botão “Configurar Dados” permite que você cadastre ou edite os dados dos clientes. É possível configurar:</p>
+      <ul>
+        <li><strong>Razão Social</strong></li>
+        <li><strong>E-mails de Contato</strong></li>
+        <li><strong>Telefone</strong></li>
+        <li><strong>Tipo de Defeito</strong></li>
+      </ul>
+      <p>Esses dados são salvos em arquivos de texto na pasta <code>/data/</code>, com um arquivo por cliente. O nome do arquivo segue o padrão <code>razao_social.txt</code>.</p>
+    </section>
+
+    <section id="envio">
+      <h2>5. Envio de E-mails</h2>
+      <p>Ao clicar no botão de envio, o sistema:</p>
+      <ol>
+        <li>Carrega os dados salvos do cliente selecionado.</li>
+        <li>Insere essas informações no modelo de e-mail.</li>
+        <li>Aciona o Outlook via interop para abrir um novo e-mail pronto para envio.</li>
+      </ol>
+      <p><strong>Importante:</strong> o Outlook precisa estar aberto e com o perfil autenticado para que a automação funcione corretamente.</p>
+    </section>
+
+    <section id="suporte">
+      <h2>6. Suporte</h2>
+      <p>Em caso de dúvidas, sugestões ou problemas técnicos, entre em contato com o desenvolvedor:</p>
+      <ul>
+        <li><strong>Nome:</strong> Fabiano Santiago</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/devsantiag" target="_blank">devsantiag</a></li>
+        <li><strong>linkedin:</strong> <a href="https://www.linkedin.com/in/fabiano-santiago/" target="_blank">Fabiano Santiago</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 – Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function ativarAba(hash) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+      if (hash) {
+        const aba = document.querySelector(hash);
+        if (aba) aba.classList.add("active");
+        const link = document.querySelector("a[href='" + hash + "']");
+        if (link) link.classList.add("active");
+      }
+    }
+
+    window.addEventListener("load", () => {
+      ativarAba(location.hash || "#introducao");
+    });
+
+    window.addEventListener("hashchange", () => {
+      ativarAba(location.hash);
+    });
+  </script>
+</body>
+</html>

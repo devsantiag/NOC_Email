@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace NOC_Email
 {
@@ -530,9 +531,31 @@ namespace NOC_Email
 //		Responsável por apresentar o Manual de uso ao Usuário
 		void BtnDuvidaClick(object sender, EventArgs e)
 		{
-			ManualDeUso duvidaUsuario = new ManualDeUso();
-			duvidaUsuario.ShowDialog();
+			    string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\site\index.html");
+				
+			    MessageBox.Show(caminhoDoSite);
+			    
+			if (File.Exists(caminhoDoSite))
+			{
+				try
+				{
+					Process.Start(new ProcessStartInfo
+					              {
+					              	FileName = caminhoDoSite,
+					              	UseShellExecute = true
+					              });
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Erro ao tentar abrir o site: " + ex.Message);
+				}
+			}
+			else
+			{
+				MessageBox.Show("Arquivo 'index.html' não encontrado em:\n" + caminhoDoSite);
+			}
 		}
+
 		
 		// Define a ordem de navegação entre os campos usando a tecla TAB
 		void OrdenarTabIndex()

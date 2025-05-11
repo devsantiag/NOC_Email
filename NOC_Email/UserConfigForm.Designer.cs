@@ -44,6 +44,8 @@
 			base.Dispose(disposing);
 		}
 		
+		
+		
 		private void InitializeComponent()
 		{
 			this.label2 = new System.Windows.Forms.Label();

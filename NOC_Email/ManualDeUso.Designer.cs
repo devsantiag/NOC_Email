@@ -36,12 +36,17 @@ namespace NOC_Email
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.SuspendLayout();
 			// 
 			// ManualDeUso
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "ManualDeUso";
+			this.ClientSize = new System.Drawing.Size(1001, 597);
 			this.Name = "ManualDeUso";
+			this.Text = "ManualDeUso";
+			this.ResumeLayout(false);
+
 		}
 	}
 }
