@@ -351,38 +351,49 @@ namespace NOC_Email
 		// Método para excluir o item selecionado no ComboBox
 		void BtnExcluirClick(object sender, EventArgs e)
 		{
+			bool algoFoiExcluido = false;
+
 			try
 			{
-				// Exclui item do ComboBox dependendo da seleção
 				if (comboBox_RazaoSocial.SelectedItem != null)
 				{
 					ExcluirItemSelecionado(comboBox_RazaoSocial, getArquivo_class_caminho_razaoSocial);
 					AtualizarRazoesNaComboBox();
-					return;
+					algoFoiExcluido = true;
 				}
 
 				if (comboBox_ExpedienteDoCliente.SelectedItem != null)
 				{
 					ExcluirItemSelecionado(comboBox_ExpedienteDoCliente, getArquivo_class_caminho_ExpedienteDoCliente);
 					AtualizarExpedientesNoComboBox();
-					return;
+					algoFoiExcluido = true;
 				}
 
 				if (comboBox_EmailDaTelecom.SelectedItem != null)
 				{
 					ExcluirItemSelecionado(comboBox_EmailDaTelecom, getArquivo_class_caminho_email);
 					AtualizarEmailsNoComboBox();
-					return;
+					algoFoiExcluido = true;
 				}
 
 				if (comboBox_TelefoneDeContato.SelectedItem != null)
 				{
 					ExcluirItemSelecionado(comboBox_TelefoneDeContato, getArquivo_class_caminho_Telefone);
 					AtualizarTelefonesNoComboBox();
-					return;
+					algoFoiExcluido = true;
 				}
-
-				MessageBox.Show("Nenhum item selecionado para exclusão.");
+				
+				if (comboBox_TipoDeDefeito.SelectedItem != null)
+				{
+					ExcluirItemSelecionado(comboBox_TipoDeDefeito, getArquivo_class_caminho_tipoDeDefeito);
+					AtualizarTelefonesNoComboBox();
+					algoFoiExcluido = true;
+				}
+				
+				if (!algoFoiExcluido)
+				{
+					MessageBox.Show("Nenhum item selecionado para exclusão.");
+				}
 			}
 			catch (Exception ex)
 			{
