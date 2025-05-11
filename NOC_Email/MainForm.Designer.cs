@@ -154,6 +154,7 @@ namespace NOC_Email
 			this.buttonApagar.TabIndex = 15;
 			this.buttonApagar.Text = "Apagar";
 			this.buttonApagar.UseVisualStyleBackColor = true;
+			this.buttonApagar.Click += new System.EventHandler(this.ButtonApagarClick);
 			// 
 			// label6
 			// 

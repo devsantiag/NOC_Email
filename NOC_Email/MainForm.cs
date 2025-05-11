@@ -71,7 +71,7 @@ namespace NOC_Email
 				"<p>Solicitamos o devido processamento do chamado conforme as informações abaixo:</p>" +
 				"<p>" +
 				"<strong>Razão Social:</strong> " + razaoSocialDoCliente + "<br>" +
-				"<strong>Designação:</strong> " + designacaoDoCliente + "<br>" +
+				"<strong>Designação:</strong> " + designacaoDoCliente.ToUpper() + "<br>" +
 				"<strong>Endereço:</strong> " + enderecoDoCliente + "<br>" +
 				"<strong>Expediente:</strong> " + expedienteDeFuncionamento + "<br>" +
 				"<strong>Forma de Contato:</strong> E-mail: " + formaDeContatoComCliente_Email + " | Telefone: " + formaDeContatoComCliente_Telefone + "<br>" +
@@ -81,7 +81,7 @@ namespace NOC_Email
 
 
 			// Define o título e o corpo do e-mail.
-			mail.Subject = tituloEmail;
+			mail.Subject = "ABERTURA DE REPARO" + tituloEmail.ToUpper();
 			mail.HTMLBody = corpoHtml;
 
 			// Exibe o e-mail para revisão antes de enviar. Pode ser alterado para enviar diretamente.
@@ -148,9 +148,7 @@ namespace NOC_Email
 				comboBox_FormaDeContatoComCliente_Email.Items.Clear();
 				comboBox_FormaDeContatoComCliente_Email.Items.AddRange(linhas);
 			}
-
 		}
-
 
 		void BtnNotificarClienteClick(object sender, EventArgs e)
 		{
@@ -158,7 +156,22 @@ namespace NOC_Email
 			notificarCliente.Show();
 		}
 		
+		void ButtonApagarClick(object sender, EventArgs e)
+		{
+			// Limpeza dos campos de texto
+			tituloDeReparo.Clear();
+			designacao.Clear();
+			enderecoComercial.Clear();
 
+			// Limpeza dos ComboBoxes (textos selecionados)
+			comboBox_RazaoSocial.Text = string.Empty;
+			comboBox_ExpedienteDoCliente.Text = string.Empty;
+			comboBox_FormaDeContatoComCliente_Email.Text = string.Empty;
+			comboBox_FormaDeContatoComCliente_Telefone.Text = string.Empty;
+			comboBox_TipoDeReparo.Text = string.Empty;
+		}
+		
+//		Método responsável por alinhar o atalho Tab
 		private void atalhoTabIndex()
 		{
 			tituloDeReparo.TabIndex = 0;
@@ -166,9 +179,9 @@ namespace NOC_Email
 			designacao.TabIndex = 2;
 			enderecoComercial.TabIndex = 3;
 			comboBox_ExpedienteDoCliente.TabIndex = 4;
-			comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 5;
-			comboBox_TipoDeReparo.TabIndex = 6;
-
+			comboBox_FormaDeContatoComCliente_Email.TabIndex = 5;
+			comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 6;
+			comboBox_TipoDeReparo.TabIndex = 7;
 		}
 	}
 }
