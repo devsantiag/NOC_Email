@@ -516,9 +516,11 @@ namespace NOC_Email
 			WindowClose(fechar: false);
 		}
 		
+//		Responsável por apresentar o Manual de uso ao Usuário
 		void BtnDuvidaClick(object sender, EventArgs e)
 		{
-			
+			ManualDeUso duvidaUsuario = new ManualDeUso();
+			duvidaUsuario.ShowDialog();
 		}
 		
 		// Define a ordem de navegação entre os campos usando a tecla TAB

@@ -59,6 +59,10 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManualDeUso.cs" />
+    <Compile Include="ManualDeUso.Designer.cs">
+      <DependentUpon>ManualDeUso.cs</DependentUpon>
+    </Compile>
     <Compile Include="NotificarClientePorMensagemDeTexto.cs" />
     <Compile Include="NotificarClientePorMensagemDeTexto.Designer.cs">
       <DependentUpon>NotificarClientePorMensagemDeTexto.cs</DependentUpon>
