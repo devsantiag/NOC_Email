@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manual NOC_Email</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual do Sistema NOC_Email</title>
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      font-family: Segoe UI, sans-serif;
+    }
     body {
-      font-family: Arial, sans-serif;
       background-color: #f7f9fc;
       margin: 0;
       padding: 0;
@@ -17,7 +21,9 @@
       color: white;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 2;
     }
     nav {
       background-color: #ecf0f1;
@@ -26,22 +32,43 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     nav a {
       margin: 0 10px;
       text-decoration: none;
       color: #2c3e50;
       font-weight: bold;
-      padding: 8px 12px;
-      border-radius: 5px;
     }
-    nav a.active, nav a:hover {
+    nav a:hover {
+      color: #2980b9;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid #2c3e50;
+    }
+    .tab-button {
+      background-color: #ecf0f1;
+      padding: 10px 20px;
+      border: 1px solid #2c3e50;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .tab-button.active {
       background-color: #2c3e50;
       color: white;
     }
-    main {
+    .tab-content {
+      display: none;
       padding: 20px;
+      background-color: white;
+      border-top: 1px solid #2c3e50;
+    }
+    .tab-content.active {
+      display: block;
     }
     footer {
       background-color: #2c3e50;
@@ -49,16 +76,6 @@
       text-align: center;
       padding: 10px;
       margin-top: 40px;
-    }
-    section {
-      display: none;
-      margin-bottom: 40px;
-    }
-    section.active {
-      display: block;
-    }
-    h2 {
-      color: #2c3e50;
     }
   </style>
 </head>
@@ -68,99 +85,147 @@
     <p>Versão 1.0 | Desenvolvido por Fabiano Santiago</p>
   </header>
 
-  <nav>
-    <a href="#introducao" id="tab-introducao">Introdução</a>
-    <a href="#instalacao" id="tab-instalacao">Instalação</a>
-    <a href="#uso" id="tab-uso">Como Usar</a>
-    <a href="#configuracoes" id="tab-configuracoes">Configurações</a>
-    <a href="#envio" id="tab-envio">Envio de E-mails</a>
-    <a href="#suporte" id="tab-suporte">Suporte</a>
+  <nav class="tabs">
+    <a href="#introducao">Introdução</a>
+    <a href="#instalacao">Instalação</a>
+    <a href="#uso">Como Usar</a>
+    <a href="#configuracoes">Configurações</a>
+    <a href="#envio">Envio de E-mails</a>
+    <a href="#suporte">Suporte</a>
   </nav>
 
   <main>
-    <section id="introducao" class="active">
+    <div class="tab-content active" id="introducao">
       <h2>1. Introdução</h2>
-      <p>O <strong>NOC_Email</strong> é uma aplicação Windows Forms desenvolvida para automatizar o envio de e-mails operacionais a partir de modelos pré-configurados. Seu objetivo principal é padronizar a comunicação entre os setores técnicos e clientes, utilizando integração com o Microsoft Outlook e dados salvos em arquivos de texto locais.</p>
-    </section>
+      <p>O sistema NOC_Email foi desenvolvido para facilitar o envio de e-mails automatizados via Outlook e gerenciar dados de clientes usando arquivos locais. Este manual explica como instalar, configurar e utilizar o sistema.</p>
+    </div>
 
-    <section id="instalacao">
+    <div class="tab-content" id="instalacao">
       <h2>2. Instalação</h2>
-      <p>Para utilizar o sistema:</p>
-      <ul>
-        <li>Copie a pasta do executável <code>NOC_Email.exe</code> para o computador desejado.</li>
-        <li>Certifique-se de que o Outlook está instalado, configurado e com uma conta autenticada.</li>
-        <li>Não é necessária instalação adicional — trata-se de uma aplicação portátil.</li>
-        <li>Crie a pasta <code>/data/</code> na raiz do executável, se ainda não existir.</li>
-      </ul>
-    </section>
+      <p>Basta copiar a pasta do executável para o computador. Certifique-se de que o Outlook esteja instalado e configurado corretamente no sistema.</p>
+    </div>
 
-    <section id="uso">
+    <div class="tab-content" id="uso">
       <h2>3. Como Usar</h2>
-      <p>Ao abrir o sistema:</p>
+      <p>Abra o executável <strong>NOC_Email.exe</strong>. A interface principal permitirá selecionar um cliente, visualizar seus dados e enviar e-mails com base nos modelos configurados.</p>
+      <h3>Validação de Campos Vazios</h3>
+      <p>Para garantir a integridade dos dados e evitar o envio de e-mails incompletos ou o salvamento de registros inválidos, o sistema <strong>NOC_Email</strong> utiliza validações automáticas em todos os campos essenciais da interface.</p>
+      <p>Cada campo de entrada — como <strong>Razão Social</strong>, <strong>Expediente</strong>, <strong>E-mail</strong>, <strong>Telefone</strong> e <strong>Tipo de Defeito</strong> — entre outros, deve estar corretamente preenchido antes que o sistema permita salvar os dados ou enviar e-mails.</p>
+      <p>Se um campo obrigatório estiver vazio ou contiver apenas espaços em branco:</p>
       <ul>
-        <li>Selecione um cliente no ComboBox da tela principal.</li>
-        <li>As informações cadastradas aparecerão automaticamente nos campos (razão social, e-mails, tipo de defeito etc.).</li>
-        <li>Clique em “Enviar” para preparar o e-mail com base no modelo.</li>
+        <li>A ação é automaticamente bloqueada.</li>
+        <li>Uma mensagem de alerta é exibida: <strong>"Ação Bloqueada! Por favor, preencha todos os campos obrigatórios antes de enviar o e-mail."</strong></li>
+        <li>O usuário é orientado a preencher corretamente o campo.</li>
       </ul>
-      <p>O conteúdo será preenchido automaticamente e exibido em uma nova janela do Outlook, permitindo revisão antes do envio.</p>
-    </section>
+      <p>Antes de clicar em <strong>Salvar</strong> nas configurações ou <strong>Enviar E-mail</strong> no formulário principal, verifique se todos os campos estão:</p>
+      <ul>
+        <li>Preenchidos corretamente (sem espaços em branco apenas).</li>
+        <li>Com informações válidas (principalmente no campo de e-mail e telefone).</li>
+        <li>Sem campos deixados em branco acidentalmente.</li>
+      </ul>
+      <p>Isso garante um funcionamento seguro do sistema e evita falhas na comunicação com o cliente.</p>
+    </div>
 
-    <section id="configuracoes">
+    <div class="tab-content" id="configuracoes">
       <h2>4. Configurações</h2>
-      <p>O botão “Configurar Dados” permite que você cadastre ou edite os dados dos clientes. É possível configurar:</p>
-      <ul>
-        <li><strong>Razão Social</strong></li>
-        <li><strong>E-mails de Contato</strong></li>
-        <li><strong>Telefone</strong></li>
-        <li><strong>Tipo de Defeito</strong></li>
-      </ul>
-      <p>Esses dados são salvos em arquivos de texto na pasta <code>/data/</code>, com um arquivo por cliente. O nome do arquivo segue o padrão <code>razao_social.txt</code>.</p>
-    </section>
+      <p>Use o botão "Config ..." para cadastrar informações específicas, como e-mail, razão social e entre outras. Os dados serão salvos automaticamente em arquivos de texto.</p>
+      <p>Para deletar uma pasta por completo via comando, basta selecionar um campo de texto, por exemplo 'Razão Social' e digitar: <code>:empty all razao social</code>.</p>
 
-    <section id="envio">
+
+<h2>Comandos do Sistema - Exclusão de Dados</h2>
+
+  <div class="comando">
+    <strong>:empty all razao social</strong>
+    <div class="descricao">
+      Comando usado para apagar todos os dados salvos da <em>razão social</em>. O sistema pede confirmação do usuário e, se confirmada, limpa os registros e o campo do ComboBox correspondente.
+    </div>
+  </div>
+
+  <div class="comando">
+    <strong>:empty all expediente</strong>
+    <div class="descricao">
+      Comando utilizado para apagar todos os dados salvos do <em>expediente do cliente</em>. Após a confirmação, os dados são excluídos e o campo de exibição é limpo.
+    </div>
+  </div>
+
+  <div class="comando">
+    <strong>:empty all emails</strong>
+    <div class="descricao">
+      Comando para apagar todos os <em>e-mails</em> salvos. O sistema solicita confirmação do usuário antes de excluir definitivamente os registros.
+    </div>
+  </div>
+
+  <div class="comando">
+    <strong>:empty all telefone</strong>
+    <div class="descricao">
+      Comando usado para apagar todos os dados salvos relacionados a <em>números de telefone</em>. Exige confirmação prévia do usuário.
+    </div>
+  </div>
+
+  <div class="comando">
+    <strong>:empty all tipo defeito</strong>
+    <div class="descricao">
+      Comando para apagar todos os registros salvos de <em>tipo de defeito</em>. Assim como os demais, requer confirmação do usuário para evitar exclusões acidentais.
+    </div>
+  </div>
+
+
+<!-- Dentro da div com id="configuracoes", adicione logo após os comandos existentes: -->
+<div>
+
+<h3>Exclusão de Dados Individuais</h3>
+<p>Além dos comandos que excluem todos os dados de uma categoria, o sistema <strong>NOC_Email</strong> também possui um botão exclusivo para remover apenas um único item selecionado no <strong>ComboBox</strong>, sem afetar os demais registros.</p>
+<p>Para utilizá-lo:</p>
+<ul>
+  <li>Selecione o item desejado no ComboBox correspondente (ex: razão social).</li>
+  <li>Clique no botão <strong>"Excluir"</strong>.</li>
+  <li>O sistema removerá apenas o dado selecionado, mantendo os outros intactos.</li>
+</ul>
+<p>Essa função é ideal para gerenciar os registros individualmente, sem necessidade de limpar todos os dados salvos.</p>
+</div>
+
+    <div class="tab-content" id="envio">
       <h2>5. Envio de E-mails</h2>
-      <p>Ao clicar no botão de envio, o sistema:</p>
-      <ol>
-        <li>Carrega os dados salvos do cliente selecionado.</li>
-        <li>Insere essas informações no modelo de e-mail.</li>
-        <li>Aciona o Outlook via interop para abrir um novo e-mail pronto para envio.</li>
-      </ol>
-      <p><strong>Importante:</strong> o Outlook precisa estar aberto e com o perfil autenticado para que a automação funcione corretamente.</p>
-    </section>
+      <p>Com os dados carregados, clique no botão de envio para utilizar o Outlook e disparar o e-mail com os campos preenchidos. Verifique se o Outlook está aberto e autenticado.</p>
+    </div>
 
-    <section id="suporte">
+    <div class="tab-content" id="suporte">
       <h2>6. Suporte</h2>
-      <p>Em caso de dúvidas, sugestões ou problemas técnicos, entre em contato com o desenvolvedor:</p>
+      <p>Para dúvidas ou problemas técnicos, entre em contato com o desenvolvedor:</p>
       <ul>
-        <li><strong>Nome:</strong> Fabiano Santiago</li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/devsantiag" target="_blank">devsantiag</a></li>
-        <li><strong>linkedin:</strong> <a href="https://www.linkedin.com/in/fabiano-santiago/" target="_blank">Fabiano Santiago</a></li>
+        <li>Nome: Fabiano Santiago</li>
+        <li>GitHub: <a href="https://github.com/devsantiag" target="_blank">devsantiag</a></li>
+        <li>Email: (insira seu email de suporte aqui)</li>
       </ul>
-    </section>
+    </div>
   </main>
 
   <footer>
-    © 2025 – Todos os direitos reservados.
+    © 2025 Fabiano Santiago – Todos os direitos reservados.
   </footer>
 
   <script>
-    function ativarAba(hash) {
-      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
-      document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
-      if (hash) {
-        const aba = document.querySelector(hash);
-        if (aba) aba.classList.add("active");
-        const link = document.querySelector("a[href='" + hash + "']");
-        if (link) link.classList.add("active");
-      }
-    }
+    // Selecionar todos os links do nav
+    const tabLinks = document.querySelectorAll('nav a');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    window.addEventListener("load", () => {
-      ativarAba(location.hash || "#introducao");
-    });
+    tabLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
 
-    window.addEventListener("hashchange", () => {
-      ativarAba(location.hash);
+        // Remover a classe 'active' de todos os links
+        tabLinks.forEach(link => link.classList.remove('active'));
+
+        // Adicionar a classe 'active' ao link clicado
+        link.classList.add('active');
+
+        // Remover a classe 'active' de todos os conteúdos
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Adicionar a classe 'active' ao conteúdo correspondente ao link
+        const targetContent = document.querySelector(link.getAttribute('href'));
+        targetContent.classList.add('active');
+      });
     });
   </script>
 </body>

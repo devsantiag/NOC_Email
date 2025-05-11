@@ -66,22 +66,22 @@ namespace NOC_Email
 			// 
 			// designacao
 			// 
-			this.designacao.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.designacao.Location = new System.Drawing.Point(145, 73);
+			this.designacao.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.designacao.Location = new System.Drawing.Point(148, 77);
 			this.designacao.MaxLength = 700000;
 			this.designacao.Multiline = true;
 			this.designacao.Name = "designacao";
-			this.designacao.Size = new System.Drawing.Size(267, 26);
+			this.designacao.Size = new System.Drawing.Size(264, 25);
 			this.designacao.TabIndex = 0;
 			// 
 			// enderecoComercial
 			// 
-			this.enderecoComercial.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.enderecoComercial.Location = new System.Drawing.Point(145, 110);
+			this.enderecoComercial.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.enderecoComercial.Location = new System.Drawing.Point(148, 114);
 			this.enderecoComercial.MaxLength = 700000;
 			this.enderecoComercial.Multiline = true;
 			this.enderecoComercial.Name = "enderecoComercial";
-			this.enderecoComercial.Size = new System.Drawing.Size(267, 26);
+			this.enderecoComercial.Size = new System.Drawing.Size(264, 25);
 			this.enderecoComercial.TabIndex = 1;
 			// 
 			// buttonEncaminharEmail
@@ -168,12 +168,12 @@ namespace NOC_Email
 			// 
 			// tituloDeReparo
 			// 
-			this.tituloDeReparo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.tituloDeReparo.Location = new System.Drawing.Point(145, 5);
+			this.tituloDeReparo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.tituloDeReparo.Location = new System.Drawing.Point(148, 5);
 			this.tituloDeReparo.MaxLength = 700000;
 			this.tituloDeReparo.Multiline = true;
 			this.tituloDeReparo.Name = "tituloDeReparo";
-			this.tituloDeReparo.Size = new System.Drawing.Size(268, 26);
+			this.tituloDeReparo.Size = new System.Drawing.Size(264, 25);
 			this.tituloDeReparo.TabIndex = 16;
 			// 
 			// label7
@@ -188,20 +188,20 @@ namespace NOC_Email
 			// 
 			// comboBox_RazaoSocial
 			// 
-			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_RazaoSocial.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_RazaoSocial.FormattingEnabled = true;
-			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(145, 38);
+			this.comboBox_RazaoSocial.Location = new System.Drawing.Point(148, 42);
 			this.comboBox_RazaoSocial.Name = "comboBox_RazaoSocial";
-			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(267, 26);
+			this.comboBox_RazaoSocial.Size = new System.Drawing.Size(264, 25);
 			this.comboBox_RazaoSocial.TabIndex = 22;
 			// 
 			// comboBox_FormaDeContatoComCliente_Telefone
 			// 
-			this.comboBox_FormaDeContatoComCliente_Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_FormaDeContatoComCliente_Telefone.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_FormaDeContatoComCliente_Telefone.FormattingEnabled = true;
-			this.comboBox_FormaDeContatoComCliente_Telefone.Location = new System.Drawing.Point(146, 218);
+			this.comboBox_FormaDeContatoComCliente_Telefone.Location = new System.Drawing.Point(148, 223);
 			this.comboBox_FormaDeContatoComCliente_Telefone.Name = "comboBox_FormaDeContatoComCliente_Telefone";
-			this.comboBox_FormaDeContatoComCliente_Telefone.Size = new System.Drawing.Size(266, 26);
+			this.comboBox_FormaDeContatoComCliente_Telefone.Size = new System.Drawing.Size(264, 25);
 			this.comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 23;
 			// 
 			// btnNotificarCliente
@@ -228,29 +228,29 @@ namespace NOC_Email
 			// 
 			// comboBox_ExpedienteDoCliente
 			// 
-			this.comboBox_ExpedienteDoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_ExpedienteDoCliente.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_ExpedienteDoCliente.FormattingEnabled = true;
-			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(145, 146);
+			this.comboBox_ExpedienteDoCliente.Location = new System.Drawing.Point(148, 151);
 			this.comboBox_ExpedienteDoCliente.Name = "comboBox_ExpedienteDoCliente";
-			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(267, 26);
+			this.comboBox_ExpedienteDoCliente.Size = new System.Drawing.Size(264, 25);
 			this.comboBox_ExpedienteDoCliente.TabIndex = 25;
 			// 
 			// comboBox_TipoDeReparo
 			// 
-			this.comboBox_TipoDeReparo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_TipoDeReparo.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_TipoDeReparo.FormattingEnabled = true;
-			this.comboBox_TipoDeReparo.Location = new System.Drawing.Point(145, 255);
+			this.comboBox_TipoDeReparo.Location = new System.Drawing.Point(148, 260);
 			this.comboBox_TipoDeReparo.Name = "comboBox_TipoDeReparo";
-			this.comboBox_TipoDeReparo.Size = new System.Drawing.Size(267, 26);
+			this.comboBox_TipoDeReparo.Size = new System.Drawing.Size(264, 25);
 			this.comboBox_TipoDeReparo.TabIndex = 26;
 			// 
 			// comboBox_FormaDeContatoComCliente_Email
 			// 
-			this.comboBox_FormaDeContatoComCliente_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboBox_FormaDeContatoComCliente_Email.Font = new System.Drawing.Font("Segoe UI", 9.75F);
 			this.comboBox_FormaDeContatoComCliente_Email.FormattingEnabled = true;
-			this.comboBox_FormaDeContatoComCliente_Email.Location = new System.Drawing.Point(146, 182);
+			this.comboBox_FormaDeContatoComCliente_Email.Location = new System.Drawing.Point(148, 187);
 			this.comboBox_FormaDeContatoComCliente_Email.Name = "comboBox_FormaDeContatoComCliente_Email";
-			this.comboBox_FormaDeContatoComCliente_Email.Size = new System.Drawing.Size(266, 26);
+			this.comboBox_FormaDeContatoComCliente_Email.Size = new System.Drawing.Size(264, 25);
 			this.comboBox_FormaDeContatoComCliente_Email.TabIndex = 28;
 			// 
 			// label8
@@ -293,6 +293,7 @@ namespace NOC_Email
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
 			this.Text = "NOC | Sistema de Abertura de Reparo";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

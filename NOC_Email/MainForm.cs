@@ -36,6 +36,20 @@ namespace NOC_Email
 		// Evento para encaminhar um e-mail com as informações do reparo.
 		void ButtonEncaminharEmailClick(object sender, EventArgs e)
 		{
+			// Verifica se os campos obrigatórios não estão vazios
+			if (string.IsNullOrEmpty(tituloDeReparo.Text) ||
+			    string.IsNullOrEmpty(comboBox_RazaoSocial.Text) ||
+			    string.IsNullOrEmpty(designacao.Text) ||
+			    string.IsNullOrEmpty(enderecoComercial.Text) ||
+			    string.IsNullOrEmpty(comboBox_ExpedienteDoCliente.Text) ||
+			    string.IsNullOrEmpty(comboBox_FormaDeContatoComCliente_Email.Text) ||
+			    string.IsNullOrEmpty(comboBox_FormaDeContatoComCliente_Telefone.Text) ||
+			    string.IsNullOrEmpty(comboBox_TipoDeReparo.Text))
+			{
+				MessageBox.Show("Ação Bloqueada! Por favor, preencha todos os campos obrigatórios antes de enviar o e-mail.");
+				return; // Sai do método se algum campo estiver vazio
+			}
+
 			// Chama o método de envio de e-mail passando os dados do formulário.
 			EnviarEmail(
 				tituloDeReparo.Text,
@@ -182,6 +196,10 @@ namespace NOC_Email
 			comboBox_FormaDeContatoComCliente_Email.TabIndex = 5;
 			comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 6;
 			comboBox_TipoDeReparo.TabIndex = 7;
+		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+	
 		}
 	}
 }
