@@ -46,7 +46,7 @@ namespace NOC_Email
 					if (resultado == DialogResult.Yes)
 					{
 						comboBox_RazaoSocial.Text = "";
-						File.WriteAllText(getArquivo_class_caminho_razaoSocial, string.Empty); // Limpa o conteúdo do arquivo
+						File.WriteAllText(getArquivo_class_caminho_razaoSocial, string.Empty); 
 						AtualizarRazoesNaComboBox();
 						MessageBox.Show("Todos os dados foram apagados com sucesso.");
 					}
@@ -63,6 +63,7 @@ namespace NOC_Email
 					File.AppendAllText(getArquivo_class_caminho_razaoSocial, entrada + Environment.NewLine);
 					AtualizarRazoesNaComboBox();
 					MessageBox.Show("Razão Social salva com sucesso!");
+					comboBox_RazaoSocial.Text = "";
 				}
 				else
 				{
@@ -111,8 +112,8 @@ namespace NOC_Email
 
 					if (resultado == DialogResult.Yes)
 					{
-						comboBox_ExpedienteDoCliente.Text = ""; // Limpa o campo do ComboBox
-						File.WriteAllText(getArquivo_class_caminho_ExpedienteDoCliente, string.Empty); // Limpa o conteúdo do arquivo
+						comboBox_ExpedienteDoCliente.Text = ""; 
+						File.WriteAllText(getArquivo_class_caminho_ExpedienteDoCliente, string.Empty); 
 						AtualizarExpedientesNoComboBox();
 						MessageBox.Show("Todos os dados foram apagados com sucesso.");
 					}
@@ -128,6 +129,7 @@ namespace NOC_Email
 					File.AppendAllText(getArquivo_class_caminho_ExpedienteDoCliente, entrada + Environment.NewLine);
 					AtualizarExpedientesNoComboBox();
 					MessageBox.Show("Expediente do cliente salvo com sucesso");
+					comboBox_ExpedienteDoCliente.Text = "";
 				}
 				else
 				{
@@ -198,6 +200,7 @@ namespace NOC_Email
 					File.AppendAllText(getArquivo_class_caminho_email, emailEntrada + Environment.NewLine);
 					AtualizarEmailsNoComboBox();
 					MessageBox.Show("E-mail salvo com sucesso!");
+					comboBox_EmailDaTelecom.Text = "";
 				}
 			}
 			catch (Exception ex)
@@ -269,6 +272,7 @@ namespace NOC_Email
 					File.AppendAllText(getArquivo_class_caminho_Telefone, telefoneDeContato + Environment.NewLine);
 					AtualizarTelefonesNoComboBox();
 					MessageBox.Show("Telefone para contato salvo com sucesso!");
+					comboBox_TelefoneDeContato.Text = "";
 				}
 				else
 				{
@@ -502,7 +506,7 @@ namespace NOC_Email
 			WindowClose(fechar: false);
 		}
 		
-//		Responsável por apresentar o Manual de uso ao Usuário
+		//		Responsável por apresentar o Manual de uso ao Usuário
 		void BtnDuvidaClick(object sender, EventArgs e)
 		{
 			string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\site\index.html");
