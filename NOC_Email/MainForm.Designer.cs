@@ -293,7 +293,6 @@ namespace NOC_Email
 			this.MaximizeBox = false;
 			this.Name = "MainForm";
 			this.Text = "NOC | Sistema de Abertura de Reparo";
-			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

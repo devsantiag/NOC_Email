@@ -94,7 +94,7 @@ namespace NOC_Email
 
 
 			// Define o título e o corpo do e-mail.
-			mail.Subject = "🔧 ABERTURA DE REPARO | " + tituloEmail.ToUpper() + " | DESIGNAÇÃO: ".ToUpper() +designacao.Text.ToUpper();
+			mail.Subject = "🔧 REPARO | " + tituloEmail.ToUpper() + " | "  +designacao.Text.ToUpper();
 			mail.HTMLBody = corpoHtml;
 
 			// Exibe o e-mail para revisão antes de enviar. Pode ser alterado para enviar diretamente.
@@ -196,10 +196,6 @@ namespace NOC_Email
 			comboBox_FormaDeContatoComCliente_Email.TabIndex = 5;
 			comboBox_FormaDeContatoComCliente_Telefone.TabIndex = 6;
 			comboBox_TipoDeReparo.TabIndex = 7;
-		}
-		void MainFormLoad(object sender, EventArgs e)
-		{
-	
 		}
 	}
 }

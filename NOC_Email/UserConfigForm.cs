@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace NOC_Email
 {
@@ -18,7 +19,7 @@ namespace NOC_Email
 		public UserConfigForm()
 		{
 			InitializeComponent();
-			this.Load += UserConfigForm_Load; // Evento de carregamento do formulário
+			this.Load += UserConfigForm_Load;
 			this.StartPosition = FormStartPosition.CenterScreen;
 			OrdenarTabIndex();
 		}
@@ -28,7 +29,7 @@ namespace NOC_Email
 		{
 			try
 			{
-				string entrada = comboBox_RazaoSocial.Text.Trim(); // Obtém o texto do ComboBox
+				string entrada = comboBox_RazaoSocial.Text.Trim(); 
 
 				// Verifica se o texto é um comando para limpar todos os dados
 				if (entrada.Equals(":empty all razao social", StringComparison.OrdinalIgnoreCase))
@@ -44,18 +45,16 @@ namespace NOC_Email
 
 					if (resultado == DialogResult.Yes)
 					{
-						comboBox_RazaoSocial.Text = ""; // Limpa o campo do ComboBox
+						comboBox_RazaoSocial.Text = "";
 						File.WriteAllText(getArquivo_class_caminho_razaoSocial, string.Empty); // Limpa o conteúdo do arquivo
-						AtualizarRazoesNaComboBox(); // Atualiza os itens na ComboBox
+						AtualizarRazoesNaComboBox();
 						MessageBox.Show("Todos os dados foram apagados com sucesso.");
 					}
 					else
 					{
-						comboBox_RazaoSocial.Text = ""; // Cancela e limpa o campo
 						MessageBox.Show("Operação cancelada.");
 					}
 
-					return; // Interrompe o processo se os dados forem apagados
 				}
 
 				// Verifica se a entrada não está vazia e salva no arquivo
@@ -84,7 +83,6 @@ namespace NOC_Email
 				string[] linhas = File.ReadAllLines(getArquivo_class_caminho_razaoSocial);
 				comboBox_RazaoSocial.Items.Clear();
 
-				// Adiciona as razões sociais distintas e não vazias
 				foreach (var linha in linhas.Distinct().Where(l => !string.IsNullOrWhiteSpace(l)))
 				{
 					comboBox_RazaoSocial.Items.Add(linha.Trim());
@@ -120,10 +118,8 @@ namespace NOC_Email
 					}
 					else
 					{
-						comboBox_ExpedienteDoCliente.Text = ""; // Cancela e limpa o campo
 						MessageBox.Show("Operação cancelada.");
 					}
-					return; // Interrompe o processo se os dados forem apagados
 				}
 
 				// Verifica se a entrada não está vazia e salva no arquivo
@@ -152,7 +148,6 @@ namespace NOC_Email
 				string[] linhas = File.ReadAllLines(getArquivo_class_caminho_ExpedienteDoCliente);
 				comboBox_ExpedienteDoCliente.Items.Clear();
 
-				// Adiciona os expedientes distintos e não vazios
 				foreach (var linha in linhas.Distinct().Where(l => !string.IsNullOrWhiteSpace(l)))
 				{
 					comboBox_ExpedienteDoCliente.Items.Add(linha.Trim());
@@ -165,12 +160,12 @@ namespace NOC_Email
 		{
 			try
 			{
-				string emailEntrada = comboBox_EmailDaTelecom.Text.Trim();
+				string emailEntrada = comboBox_EmailDaTelecom.Text.Trim().ToLower();
 
 				if (emailEntrada.Equals(":empty all emails", StringComparison.OrdinalIgnoreCase))
 				{
 					var resultado = MessageBox.Show(
-						"Você está prestes a apagar todos os dados salvos de Telefone. " +
+						"Você está prestes a apagar todos os dados salvos de E-mail. " +
 						"Esta ação não pode ser desfeita e todos os registros serão removidos permanentemente. " +
 						"Deseja continuar?",
 						"Confirmação de Exclusão",
@@ -198,43 +193,11 @@ namespace NOC_Email
 					return;
 				}
 
-				// Verifica se o texto é um comando para limpar todos os e-mails
-				if (emailEntrada.Equals(":empty all email", StringComparison.OrdinalIgnoreCase))
-				{
-					var resultado = MessageBox.Show(
-						"Você está prestes a apagar todos os dados salvos de e-mail. " +
-						"Esta ação não pode ser desfeita e todos os registros serão removidos permanentemente. " +
-						"Deseja continuar?",
-						"Confirmação de Exclusão",
-						MessageBoxButtons.YesNo,
-						MessageBoxIcon.Warning
-					);
-
-					if (resultado == DialogResult.Yes)
-					{
-						comboBox_EmailDaTelecom.Text = ""; // Limpa o campo do ComboBox
-						File.WriteAllText(getArquivo_class_caminho_email, string.Empty); // Limpa o conteúdo do arquivo
-						AtualizarEmailsNoComboBox();
-						MessageBox.Show("Todos os dados de e-mail foram apagados com sucesso.");
-					}
-					else
-					{
-						MessageBox.Show("Operação cancelada.");
-					}
-
-					return; // Interrompe o processo se os dados forem apagados
-				}
-
-				// Verifica se a entrada não está vazia e salva no arquivo
 				if (!string.IsNullOrEmpty(emailEntrada))
 				{
 					File.AppendAllText(getArquivo_class_caminho_email, emailEntrada + Environment.NewLine);
 					AtualizarEmailsNoComboBox();
 					MessageBox.Show("E-mail salvo com sucesso!");
-				}
-				else
-				{
-					MessageBox.Show("Por favor, digite um e-mail válido.");
 				}
 			}
 			catch (Exception ex)
@@ -242,6 +205,7 @@ namespace NOC_Email
 				MessageBox.Show("Erro ao processar: " + ex.Message);
 			}
 		}
+
 
 		// Atualiza os itens da ComboBox com os e-mails salvos
 		private void AtualizarEmailsNoComboBox()
@@ -280,8 +244,8 @@ namespace NOC_Email
 
 					if (resultado == DialogResult.Yes)
 					{
-						comboBox_TelefoneDeContato.Text = ""; // Limpa o campo do ComboBox
-						File.WriteAllText(getArquivo_class_caminho_Telefone, string.Empty); // Limpa o conteúdo do arquivo
+						comboBox_TelefoneDeContato.Text = "";
+						File.WriteAllText(getArquivo_class_caminho_Telefone, string.Empty);
 						AtualizarTelefonesNoComboBox();
 						MessageBox.Show("Todos os dados de telefone foram apagados com sucesso.");
 					}
@@ -290,7 +254,7 @@ namespace NOC_Email
 						MessageBox.Show("Operação cancelada.");
 					}
 
-					return; // Interrompe o processo se os dados forem apagados
+					return;
 				}
 
 				// Verifica se a entrada não está vazia e salva no arquivo
@@ -360,6 +324,8 @@ namespace NOC_Email
 				{
 					ExcluirItemSelecionado(comboBox_RazaoSocial, getArquivo_class_caminho_razaoSocial);
 					AtualizarRazoesNaComboBox();
+					comboBox_RazaoSocial.Focus();
+					comboBox_RazaoSocial.Text = "";
 					algoFoiExcluido = true;
 				}
 
@@ -367,6 +333,8 @@ namespace NOC_Email
 				{
 					ExcluirItemSelecionado(comboBox_ExpedienteDoCliente, getArquivo_class_caminho_ExpedienteDoCliente);
 					AtualizarExpedientesNoComboBox();
+					comboBox_ExpedienteDoCliente.Focus();
+					comboBox_ExpedienteDoCliente.Text = "";
 					algoFoiExcluido = true;
 				}
 
@@ -374,6 +342,8 @@ namespace NOC_Email
 				{
 					ExcluirItemSelecionado(comboBox_EmailDaTelecom, getArquivo_class_caminho_email);
 					AtualizarEmailsNoComboBox();
+					comboBox_EmailDaTelecom.Focus();
+					comboBox_EmailDaTelecom.Text = "";
 					algoFoiExcluido = true;
 				}
 
@@ -381,13 +351,17 @@ namespace NOC_Email
 				{
 					ExcluirItemSelecionado(comboBox_TelefoneDeContato, getArquivo_class_caminho_Telefone);
 					AtualizarTelefonesNoComboBox();
+					comboBox_TelefoneDeContato.Focus();
+					comboBox_TelefoneDeContato.Text = "";
 					algoFoiExcluido = true;
 				}
 				
 				if (comboBox_TipoDeDefeito.SelectedItem != null)
 				{
 					ExcluirItemSelecionado(comboBox_TipoDeDefeito, getArquivo_class_caminho_tipoDeDefeito);
-					AtualizarTelefonesNoComboBox();
+					AtualizarTiposDeDefeitoNoComboBox();
+					comboBox_TipoDeDefeito.Focus();
+					comboBox_TipoDeDefeito.Text = "";
 					algoFoiExcluido = true;
 				}
 				
@@ -410,11 +384,11 @@ namespace NOC_Email
 			if (File.Exists(caminhoArquivo))
 			{
 				var linhas = File.ReadAllLines(caminhoArquivo)
-					.Where(l => !string.IsNullOrWhiteSpace(l) && l.Trim() != itemSelecionado) // Exclui o item selecionado
+					.Where(l => !string.IsNullOrWhiteSpace(l) && l.Trim() != itemSelecionado)
 					.Distinct()
 					.ToArray();
 
-				File.WriteAllLines(caminhoArquivo, linhas); // Reescreve o arquivo sem o item excluído
+				File.WriteAllLines(caminhoArquivo, linhas);
 				// Atualiza o ComboBox após a exclusão
 				comboBox.Items.Clear();
 				foreach (var linha in linhas)
@@ -531,10 +505,10 @@ namespace NOC_Email
 //		Responsável por apresentar o Manual de uso ao Usuário
 		void BtnDuvidaClick(object sender, EventArgs e)
 		{
-			    string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\site\index.html");
-				
-			    MessageBox.Show(caminhoDoSite);
-			    
+			string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\site\index.html");
+			
+			MessageBox.Show(caminhoDoSite);
+			
 			if (File.Exists(caminhoDoSite))
 			{
 				try
@@ -556,7 +530,6 @@ namespace NOC_Email
 			}
 		}
 
-		
 		// Define a ordem de navegação entre os campos usando a tecla TAB
 		void OrdenarTabIndex()
 		{
