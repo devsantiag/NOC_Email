@@ -5,7 +5,6 @@ using Outlook = Microsoft.Office.Interop.Outlook; // Alias para facilitar a cham
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-
 namespace NOC_Email
 {
 	public partial class NotificarClientePorMensagemDeTexto : Form
@@ -28,6 +27,7 @@ namespace NOC_Email
 			InitializeComponent(); 
 			OrdenarTabIndex(); 
 			panelConfiguracoes.MouseDown += PanelConfiguracoes_MouseDown;
+			textTitle.MouseDown += PanelConfiguracoes_MouseDown;
 		}
 
 		private void PanelConfiguracoes_MouseDown(object sender, MouseEventArgs e)
@@ -77,16 +77,12 @@ namespace NOC_Email
 			}
 		}
 
-		// Botão que limpa os campos do formulário e os anexos
-		void BtnApagarMensagemClick(object sender, EventArgs e)
-		{
-		}
-
 		// Função que limpa os campos do título e corpo da mensagem
-		void ApagarConteudo()
+		void BtnApagarMensagemClick(object sender, EventArgs e)
 		{
 			textBox1_TitutloEmail.Clear();
 			richTextBox1_CorpoDeMensagemDeTexto.Clear();
+			btnAnexar.Text = "Anexar";
 		}
 
 		// Define a ordem de navegação entre os campos usando a tecla TAB
@@ -114,6 +110,12 @@ namespace NOC_Email
 					btnAnexar.Text = "Anexar*";
 				}
 			}
+		}
+		
+//		Botão responsável por fechar a janela
+		void BtnCloseWindowClick(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

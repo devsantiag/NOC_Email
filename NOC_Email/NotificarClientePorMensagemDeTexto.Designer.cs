@@ -22,7 +22,7 @@ namespace NOC_Email
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 		private System.Windows.Forms.Panel panelConfiguracoes;
 		private System.Windows.Forms.Label btnCloseWindow;
-		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label textTitle;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -53,7 +53,7 @@ namespace NOC_Email
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.panelConfiguracoes = new System.Windows.Forms.Panel();
 			this.btnCloseWindow = new System.Windows.Forms.Label();
-			this.label11 = new System.Windows.Forms.Label();
+			this.textTitle = new System.Windows.Forms.Label();
 			this.panelConfiguracoes.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -116,8 +116,8 @@ namespace NOC_Email
 			this.panelConfiguracoes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(93)))));
 			this.panelConfiguracoes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
 			this.panelConfiguracoes.Controls.Add(this.btnCloseWindow);
-			this.panelConfiguracoes.Controls.Add(this.label11);
-			this.panelConfiguracoes.Location = new System.Drawing.Point(-1, 0);
+			this.panelConfiguracoes.Controls.Add(this.textTitle);
+			this.panelConfiguracoes.Location = new System.Drawing.Point(0, 0);
 			this.panelConfiguracoes.Name = "panelConfiguracoes";
 			this.panelConfiguracoes.Size = new System.Drawing.Size(492, 32);
 			this.panelConfiguracoes.TabIndex = 24;
@@ -131,17 +131,18 @@ namespace NOC_Email
 			this.btnCloseWindow.Size = new System.Drawing.Size(25, 30);
 			this.btnCloseWindow.TabIndex = 23;
 			this.btnCloseWindow.Text = "X";
+			this.btnCloseWindow.Click += new System.EventHandler(this.BtnCloseWindowClick);
 			// 
-			// label11
+			// textTitle
 			// 
-			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.ForeColor = System.Drawing.Color.White;
-			this.label11.Location = new System.Drawing.Point(3, 3);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(375, 25);
-			this.label11.TabIndex = 23;
-			this.label11.Text = "NOC | Comunicação com Cliente via E-mail";
+			this.textTitle.AutoSize = true;
+			this.textTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textTitle.ForeColor = System.Drawing.Color.White;
+			this.textTitle.Location = new System.Drawing.Point(3, 3);
+			this.textTitle.Name = "textTitle";
+			this.textTitle.Size = new System.Drawing.Size(375, 25);
+			this.textTitle.TabIndex = 23;
+			this.textTitle.Text = "NOC | Comunicação com Cliente via E-mail";
 			// 
 			// NotificarClientePorMensagemDeTexto
 			// 
