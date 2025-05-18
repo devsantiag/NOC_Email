@@ -1,7 +1,6 @@
-﻿// Referências necessárias para o projeto
-using System;
+﻿using System;
 using System.Windows.Forms;
-using Outlook = Microsoft.Office.Interop.Outlook; // Alias para facilitar a chamada do Outlook
+using Outlook = Microsoft.Office.Interop.Outlook; 
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
@@ -112,7 +111,7 @@ namespace NOC_Email
 			}
 		}
 		
-//		Botão responsável por fechar a janela
+		// Botão responsável por fechar a janela
 		void BtnCloseWindowClick(object sender, EventArgs e)
 		{
 			this.Hide();
