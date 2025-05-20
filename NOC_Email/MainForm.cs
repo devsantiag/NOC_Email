@@ -70,8 +70,8 @@ namespace NOC_Email
 			string designacaoDoCliente,
 			string enderecoDoCliente,
 			string expedienteDeFuncionamento,
-			string formaDeContatoComCliente_Telefone,
 			string formaDeContatoComCliente_Email,
+			string formaDeContatoComCliente_Telefone,
 			string motivoDoReparoParaOCliente)
 		{
 			// Cria uma nova instância do Outlook e prepara o e-mail.
@@ -87,7 +87,7 @@ namespace NOC_Email
 				"<strong>Designação:</strong> " + designacaoDoCliente.ToUpper() + "<br>" +
 				"<strong>Endereço:</strong> " + enderecoDoCliente + "<br>" +
 				"<strong>Expediente:</strong> " + expedienteDeFuncionamento + "<br>" +
-				"<strong>Forma de Contato:</strong> E-mail: " + formaDeContatoComCliente_Email + " | Telefone: " + formaDeContatoComCliente_Telefone + "<br>" +
+				"<strong>Forma de Contato:</strong> Telefone: " + formaDeContatoComCliente_Telefone + " | E-mail: " + formaDeContatoComCliente_Email + "<br>" +
 				"<strong>Motivo do Reparo:</strong> " + motivoDoReparoParaOCliente + "<br>" +
 				"</p>" +
 				"<p>Atenciosamente,</p>";

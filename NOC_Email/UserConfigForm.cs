@@ -509,9 +509,7 @@ namespace NOC_Email
 		//		Responsável por apresentar o Manual de uso ao Usuário
 		void BtnDuvidaClick(object sender, EventArgs e)
 		{
-			string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\site\index.html");
-			
-			MessageBox.Show(caminhoDoSite);
+			string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\index.html");
 			
 			if (File.Exists(caminhoDoSite))
 			{
