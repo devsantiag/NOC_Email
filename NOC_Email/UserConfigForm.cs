@@ -29,7 +29,7 @@ namespace NOC_Email
 		{
 			try
 			{
-				string entrada = comboBox_RazaoSocial.Text.Trim(); 
+				string entrada = comboBox_RazaoSocial.Text.Trim();
 
 				// Verifica se o texto é um comando para limpar todos os dados
 				if (entrada.Equals(":empty all razao social", StringComparison.OrdinalIgnoreCase))
@@ -46,7 +46,7 @@ namespace NOC_Email
 					if (resultado == DialogResult.Yes)
 					{
 						comboBox_RazaoSocial.Text = "";
-						File.WriteAllText(getArquivo_class_caminho_razaoSocial, string.Empty); 
+						File.WriteAllText(getArquivo_class_caminho_razaoSocial, string.Empty);
 						AtualizarRazoesNaComboBox();
 						MessageBox.Show("Todos os dados foram apagados com sucesso.");
 					}
@@ -112,8 +112,8 @@ namespace NOC_Email
 
 					if (resultado == DialogResult.Yes)
 					{
-						comboBox_ExpedienteDoCliente.Text = ""; 
-						File.WriteAllText(getArquivo_class_caminho_ExpedienteDoCliente, string.Empty); 
+						comboBox_ExpedienteDoCliente.Text = "";
+						File.WriteAllText(getArquivo_class_caminho_ExpedienteDoCliente, string.Empty);
 						AtualizarExpedientesNoComboBox();
 						MessageBox.Show("Todos os dados foram apagados com sucesso.");
 					}
@@ -506,30 +506,49 @@ namespace NOC_Email
 			WindowClose(fechar: false);
 		}
 		
+		private void MostrarManualDeUso()
+		{
+			string manual =
+				@"MANUAL DE USO - COMANDOS :empty all
+
+Este sistema permite apagar todos os registros de forma rápida através de comandos especiais digitados nas caixas de seleção (ComboBox).
+
+⚠️ Atenção: ao utilizar qualquer um dos comandos abaixo, todos os dados relacionados serão apagados permanentemente após a sua confirmação.
+
+1️⃣ :empty all razao social
+- Ao digitar este comando na ComboBox de Razão Social e pressionar 'Salvar', o sistema solicitará confirmação.
+- Confirmando, todos os registros de Razão Social serão apagados.
+
+2️⃣ :empty all expediente
+- Ao digitar este comando na ComboBox de Expediente do Cliente e pressionar 'Salvar', o sistema solicitará confirmação.
+- Confirmando, todos os registros de Expediente serão apagados.
+
+3️⃣ :empty all emails
+- Ao digitar este comando na ComboBox de E-mails e pressionar 'Salvar', o sistema solicitará confirmação.
+- Confirmando, todos os registros de E-mails serão apagados.
+
+4️⃣ :empty all telefone
+- Ao digitar este comando na ComboBox de Telefone e pressionar 'Salvar', o sistema solicitará confirmação.
+- Confirmando, todos os registros de Telefones serão apagados.
+
+5️⃣ :empty all tipo de defeito
+- Ao digitar este comando na ComboBox de Tipo de Defeito e pressionar 'Salvar', o sistema solicitará confirmação.
+- Confirmando, todos os registros de Tipos de Defeito serão apagados.
+
+✅ Sempre que utilizar um comando :empty all, certifique-se de que deseja realmente apagar todos os dados.
+
+❓ Dúvidas? Procure o responsável pelo sistema.
+
+Obrigado por utilizar o sistema NOC_Email!";
+
+			MessageBox.Show(manual, "Manual de Uso - Comando :empty all", MessageBoxButtons.OK, MessageBoxIcon.Information);
+		}
+
+		
 		//		Responsável por apresentar o Manual de uso ao Usuário
 		void BtnDuvidaClick(object sender, EventArgs e)
 		{
-			string caminhoDoSite = Path.Combine(Application.StartupPath, @"C:\Users\fjstavares\Tel&Com_desenvolvimento_noc\temporario\NOC_Email\NOC_Email\bin\Debug\index.html");
-			
-			if (File.Exists(caminhoDoSite))
-			{
-				try
-				{
-					Process.Start(new ProcessStartInfo
-					              {
-					              	FileName = caminhoDoSite,
-					              	UseShellExecute = true
-					              });
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show("Erro ao tentar abrir o site: " + ex.Message);
-				}
-			}
-			else
-			{
-				MessageBox.Show("Arquivo 'index.html' não encontrado em:\n" + caminhoDoSite);
-			}
+			MostrarManualDeUso();
 		}
 
 		// Define a ordem de navegação entre os campos usando a tecla TAB

@@ -75,8 +75,8 @@
 			this.btnCloseWindow = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label13 = new System.Windows.Forms.Label();
-			this.btnDuvida = new System.Windows.Forms.Button();
 			this.btnWindowOk = new System.Windows.Forms.Button();
+			this.btnDuvida = new System.Windows.Forms.Button();
 			this.panel1.SuspendLayout();
 			this.panelConfiguracoes.SuspendLayout();
 			this.SuspendLayout();
@@ -391,17 +391,6 @@
 			this.label13.TabIndex = 24;
 			this.label13.Text = "Razão Social";
 			// 
-			// btnDuvida
-			// 
-			this.btnDuvida.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.btnDuvida.Location = new System.Drawing.Point(12, 384);
-			this.btnDuvida.Name = "btnDuvida";
-			this.btnDuvida.Size = new System.Drawing.Size(33, 29);
-			this.btnDuvida.TabIndex = 1;
-			this.btnDuvida.Text = "?";
-			this.btnDuvida.UseVisualStyleBackColor = true;
-			this.btnDuvida.Click += new System.EventHandler(this.BtnDuvidaClick);
-			// 
 			// btnWindowOk
 			// 
 			this.btnWindowOk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -412,6 +401,17 @@
 			this.btnWindowOk.Text = "Ok";
 			this.btnWindowOk.UseVisualStyleBackColor = true;
 			this.btnWindowOk.Click += new System.EventHandler(this.btnWindowOkClick);
+			// 
+			// btnDuvida
+			// 
+			this.btnDuvida.Font = new System.Drawing.Font("Segoe UI", 9.75F);
+			this.btnDuvida.Location = new System.Drawing.Point(12, 384);
+			this.btnDuvida.Name = "btnDuvida";
+			this.btnDuvida.Size = new System.Drawing.Size(33, 29);
+			this.btnDuvida.TabIndex = 1;
+			this.btnDuvida.Text = "?";
+			this.btnDuvida.UseVisualStyleBackColor = true;
+			this.btnDuvida.Click += new System.EventHandler(this.BtnDuvidaClick);
 			// 
 			// UserConfigForm
 			// 

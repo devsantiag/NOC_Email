@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Outlook = Microsoft.Office.Interop.Outlook; 
+using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
@@ -23,8 +23,8 @@ namespace NOC_Email
 		// Construtor do formulário
 		public NotificarClientePorMensagemDeTexto()
 		{
-			InitializeComponent(); 
-			OrdenarTabIndex(); 
+			InitializeComponent();
+			OrdenarTabIndex();
 			panelConfiguracoes.MouseDown += PanelConfiguracoes_MouseDown;
 			textTitle.MouseDown += PanelConfiguracoes_MouseDown;
 		}
@@ -98,14 +98,14 @@ namespace NOC_Email
 		{
 			OpenFileDialog dialogo = new OpenFileDialog();
 			dialogo.Title = "Selecione o(s) arquivo(s)";
-			dialogo.Filter = "Todos os arquivos (*.*)|*.*"; 
-			dialogo.Multiselect = true; 
+			dialogo.Filter = "Todos os arquivos (*.*)|*.*";
+			dialogo.Multiselect = true;
 
 			if (dialogo.ShowDialog() == DialogResult.OK)
 			{
 				foreach (string arq in dialogo.FileNames)
 				{
-					arquivoAnexadoPeloAgente.Add(arq); 
+					arquivoAnexadoPeloAgente.Add(arq);
 					btnAnexar.Text = "Anexar*";
 				}
 			}
