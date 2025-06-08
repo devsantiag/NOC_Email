@@ -372,11 +372,11 @@
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label11.ForeColor = System.Drawing.Color.White;
-			this.label11.Location = new System.Drawing.Point(3, 5);
+			this.label11.Location = new System.Drawing.Point(3, 3);
 			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(134, 25);
+			this.label11.Size = new System.Drawing.Size(141, 25);
 			this.label11.TabIndex = 23;
 			this.label11.Text = "Configurações";
 			// 
